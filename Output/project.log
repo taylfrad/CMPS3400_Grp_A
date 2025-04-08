@@ -1,0 +1,12 @@
+2025-04-07 20:39:51,806 Urban Air Quality Analysis started.
+2025-04-07 20:39:51,813 Data successfully read from ./Input/air_quality_data.csv
+2025-04-07 20:39:51,813 Data statistics computed successfully.
+2025-04-07 20:39:51,885 Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-07 20:39:51,886 Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-07 20:39:51,946 Visualization completed. Exiting program.
+2025-04-07 20:41:15,856 Urban Air Quality Analysis started.
+2025-04-07 20:41:15,861 Data successfully read from ./Input/air_quality_data.csv
+2025-04-07 20:41:15,861 Data statistics computed successfully.
+2025-04-07 20:41:15,920 Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-07 20:41:15,921 Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-04-07 20:41:15,975 Visualization completed. Exiting program.
