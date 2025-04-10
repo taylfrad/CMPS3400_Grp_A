@@ -1,0 +1,11 @@
+ProductID,ProductName,Category,HazardClass,Supplier
+101,Product 1,Electronics,C,Supplier B
+102,Product 2,Furniture,A,Supplier A
+103,Product 3,Furniture,A,Supplier B
+104,Product 4,Clothing,D,Supplier A
+105,Product 5,Electronics,C,Supplier A
+106,Product 6,Clothing,D,Supplier A
+107,Product 7,Electronics,A,Supplier A
+108,Product 8,Electronics,A,Supplier B
+109,Product 9,Electronics,D,Supplier A
+110,Product 10,Electronics,A,Supplier C
