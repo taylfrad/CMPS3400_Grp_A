@@ -1,12 +1,10 @@
-2025-04-10 11:47:42,258 Inventory Management System started.
-2025-04-10 11:47:42,268 Numeric Report: {'Total Stock': 538, 'Average Price': 13.95, 'Items Below Reorder': 2}
-2025-04-10 11:47:42,274 Categorical Report: {'Items by Category': {'Clothing': 3, 'Electronics': 4, 'Furniture': 3}, 'Items by Supplier': {'Supplier B': 6, 'Supplier C': 4}, 'Items by HazardClass': {'A': 3, 'B': 1, 'C': 3, 'D': 3}}
-2025-04-10 11:47:42,274 Inventory Management System completed successfully.
-2025-04-10 11:53:08,661 Inventory Management System started.
-2025-04-10 11:53:08,668 Numerical inventory data read successfully.
-2025-04-10 11:53:08,668 Numeric Report: {'Total Stock': 573, 'Average Price': 15.33, 'Items Below Reorder': 1}
-2025-04-10 11:53:08,923 Stock levels visualization generated successfully.
-2025-04-10 11:53:08,928 Categorical inventory data read successfully.
-2025-04-10 11:53:08,929 Categorical Report: {'Items by Category': {'Clothing': 2, 'Electronics': 6, 'Furniture': 2}, 'Items by Supplier': {'Supplier A': 6, 'Supplier B': 3, 'Supplier C': 1}, 'Items by HazardClass': {'A': 5, 'C': 2, 'D': 3}}
-2025-04-10 11:53:08,999 Hazard distribution visualization generated successfully.
-2025-04-10 11:53:08,999 Inventory Management System completed successfully.
+2025-04-12 23:01:03,579 Inventory Management System started
+2025-04-12 23:01:18,831 Numeric data processed successfully
+2025-04-12 23:01:23,560 Categorical data processed successfully
+2025-04-12 23:01:32,613 Numeric data processed successfully
+2025-04-12 23:01:38,343 Categorical data processed successfully
+2025-04-12 23:01:42,618 Run All process started
+2025-04-12 23:01:44,809 Numeric data processed successfully
+2025-04-12 23:01:46,144 Categorical data processed successfully
+2025-04-12 23:01:46,405 Run All process completed
+2025-04-12 23:01:49,275 Inventory Management System completed successfully

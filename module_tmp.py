@@ -14,7 +14,7 @@ Description:
     Template module to serve as a basis for additional functionalities.
     
 Authors:
-    Taylor Fradella
+    Taylor Fradella, Angel Njoku
 Date Created     :  2025-04-07
 Date Last Updated:  2025-04-07
 
