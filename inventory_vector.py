@@ -33,7 +33,10 @@ class InventoryVectorProcessor(InventoryVector):
 
     def unit_vector(self, vec):
         norm = np.linalg.norm(vec)
-        return vec / norm if norm != 0 else vec
+        if norm != 0:
+            return vec / norm if norm != 0 else vec
+        else:
+            raise ValueError("Zero vector cannot have a unit vector")
 
     def projection_vector(self, vec1, vec2):
         # project vec1 onto vec2
@@ -42,9 +45,12 @@ class InventoryVectorProcessor(InventoryVector):
         return scalar_proj * v2_unit
 
     def angle_between(self, vec1, vec2):
-        cos_theta = np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
-        return math.degrees(math.acos(np.clip(cos_theta, -1.0, 1.0)))
-
+        try:
+            cos_theta = np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
+            return math.degrees(math.acos(np.clip(cos_theta, -1.0, 1.0)))
+        except ZeroDivisionError:
+            raise ValueError("cannot compute angle between zero vectors")
+        
     def check_orthogonality(self, vec1, vec2):
         return np.isclose(self.dot_product(vec1, vec2), 0.0)
 
