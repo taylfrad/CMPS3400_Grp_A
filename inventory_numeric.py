@@ -59,7 +59,12 @@ class InventoryNumeric:
         OUTPUT:
             int: Total stock across all products
         """
-        return self.data['Stock'].sum()
+
+        try:
+            return self.data['Stock'].sum()
+        except KeyError as e:
+            raise ValueError(f"Missing column: {e}")
+        
     #
 
     def calculate_average_price(self):
@@ -70,7 +75,10 @@ class InventoryNumeric:
         OUTPUT:
             float: Average price
         """
-        return self.data['Price'].mean()
+        try:
+            return self.data['Price'].mean()
+        except KeyError as e:
+            raise ValueError(f"Missing column: {e}")
     #
     
     def display_basic_stats(self):

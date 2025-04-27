@@ -50,7 +50,7 @@ if __name__ == "__main__":
 
 #%% FUNCTION DEFINITIONS        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def main():
-    # Add module functionality here
+    # Module functionality here
     pass
 
 #%% SELF-RUN                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
