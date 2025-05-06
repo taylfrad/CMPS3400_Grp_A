@@ -1,21 +1,54 @@
-2025-04-12 23:01:03,579 Inventory Management System started
-2025-04-12 23:01:18,831 Numeric data processed successfully
-2025-04-12 23:01:23,560 Categorical data processed successfully
-2025-04-12 23:01:32,613 Numeric data processed successfully
-2025-04-12 23:01:38,343 Categorical data processed successfully
-2025-04-12 23:01:42,618 Run All process started
-2025-04-12 23:01:44,809 Numeric data processed successfully
-2025-04-12 23:01:46,144 Categorical data processed successfully
-2025-04-12 23:01:46,405 Run All process completed
-2025-04-12 23:01:49,275 Inventory Management System completed successfully
-2025-04-15 15:24:25,697 Inventory Management System started
-2025-04-15 15:24:33,848 Run All process started
-2025-04-15 15:24:45,392 Numeric data processed successfully
-2025-04-15 15:24:48,657 Categorical data processed successfully
-2025-04-15 15:24:49,894 Run All process completed
-2025-04-15 15:24:53,048 Inventory Management System completed successfully
-2025-04-27 20:30:59,497 Inventory Management System started
-2025-04-27 20:31:03,381 Run All process started
-2025-04-27 20:31:05,442 Numeric data processed successfully
-2025-04-27 20:31:06,498 Categorical data processed successfully
-2025-04-27 20:31:06,745 Run All process completed
+2025-05-05 19:26:25,386 INFO:Inventory Management System started
+2025-05-05 19:26:33,642 INFO:run_all_processes started
+2025-05-05 19:26:33,642 INFO:process_numeric_data started
+2025-05-05 19:26:33,645 INFO:InventoryNumeric.__init__
+2025-05-05 19:26:33,645 INFO:InventoryNumericProcessor.__init__
+2025-05-05 19:26:33,645 INFO:process_and_display started
+2025-05-05 19:26:33,645 INFO:calculate_total_stock called
+2025-05-05 19:26:33,645 INFO:calculate_average_price called
+2025-05-05 19:26:33,646 INFO:generate_numeric_report called
+2025-05-05 19:26:33,646 INFO:calculate_total_stock called
+2025-05-05 19:26:33,646 INFO:calculate_average_price called
+2025-05-05 19:26:33,646 INFO:items_below_reorder called
+2025-05-05 19:26:33,648 INFO:items_below_reorder called
+2025-05-05 19:26:34,929 INFO:plot_histogram called on Stock
+2025-05-05 19:26:35,090 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
+2025-05-05 19:26:35,090 INFO:plot_line called on ProductID vs Stock
+2025-05-05 19:26:35,174 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
+2025-05-05 19:26:35,174 INFO:plot_violin called on Stock
+2025-05-05 19:26:35,256 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_violin.png
+2025-05-05 19:26:35,256 INFO:plot_box called on Stock
+2025-05-05 19:26:35,317 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_box.png
+2025-05-05 19:26:35,317 INFO:plot_scatter called on ProductID vs Price
+2025-05-05 19:26:35,395 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Price_scatter.png
+2025-05-05 19:26:35,397 INFO:Exported below_reorder to c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\below_reorder.csv
+2025-05-05 19:26:35,397 INFO:process_and_display completed
+2025-05-05 19:26:35,397 INFO:plot_histogram called on Stock
+2025-05-05 19:26:35,503 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
+2025-05-05 19:26:35,503 INFO:plot_line called on ProductID vs Stock
+2025-05-05 19:26:35,585 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
+2025-05-05 19:26:35,585 INFO:plot_violin called on Stock
+2025-05-05 19:26:35,668 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_violin.png
+2025-05-05 19:26:35,668 INFO:plot_box called on Stock
+2025-05-05 19:26:35,728 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_box.png
+2025-05-05 19:26:35,728 INFO:plot_scatter called on ProductID vs Price
+2025-05-05 19:26:35,806 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Price_scatter.png
+2025-05-05 19:26:35,806 INFO:Numeric visualizations saved
+2025-05-05 19:26:35,806 INFO:process_numeric_data completed
+2025-05-05 19:26:35,806 INFO:process_vector_data started
+2025-05-05 19:26:35,806 INFO:InventoryVector.__init__
+2025-05-05 19:26:35,806 INFO:joint_counts called on A, B
+2025-05-05 19:26:35,807 INFO:joint_probabilities called on A, B
+2025-05-05 19:26:35,807 INFO:joint_counts called on A, B
+2025-05-05 19:26:35,809 INFO:InventoryVector.__init__
+2025-05-05 19:26:35,809 INFO:InventoryVectorProcessor.__init__
+2025-05-05 19:26:35,809 INFO:dot_product called
+2025-05-05 19:26:35,809 INFO:angle_between called
+2025-05-05 19:26:35,809 INFO:check_orthogonality called
+2025-05-05 19:26:35,809 INFO:dot_product called
+2025-05-05 19:26:35,810 INFO:InventoryVector.__init__
+2025-05-05 19:26:35,810 INFO:InventoryVectorProcessor.__init__
+2025-05-05 19:26:35,810 INFO:generate_combinations called on Category, r=2
+2025-05-05 19:26:35,810 INFO:generate_permutations called on Category, r=2
+2025-05-05 19:26:35,811 INFO:process_vector_data completed
+2025-05-05 19:26:35,811 INFO:run_all_processes completed

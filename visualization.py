@@ -1,224 +1,135 @@
-#Version: v0.2
-#Date Last Updated: 2025-04-12
-
+#%% MODULE BEGINS
 module_name_gl = 'visualization'
 
 '''
-Version: v0.2
-
+Version: v0.4
 Description:
-    Module for visualizing inventory management data.
-    
+    Plotting utilities for inventory data.
 Authors:
     Taylor Fradella, Angel Njoku
-Date Last Updated: 2025-04-12
-'''
+Date Created     : 2025-04-12
+Date Last Updated: 2025-05-05
 
+Doc:
+    Bar, histogram, box, pie, violin, scatter, and line charts;
+    all saved to CONFIG.output_dir.
+'''
+#%% IMPORTS
+import logging
+import os
+import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-import numpy as np
-import os
+
 from config import CONFIG
+#%% CONSTANTS
+HAZARD_COLORS = {'A': 'red', 'B': 'orange', 'C': 'gold', 'D': 'green'}
+#%% HELPERS
+def save_plot(fig, name: str) -> str:
+    path = os.path.join(CONFIG.output_dir, name)
+    fig.savefig(path, dpi=300, bbox_inches='tight')
+    plt.close(fig)
+    logging.info(f"Plot saved: {path}")
+    return path
 
-# Create output directory if it doesn't exist
-os.makedirs(CONFIG['output_dir'], exist_ok=True)
+#%% FUNCTIONS
+def plot_histogram(df: pd.DataFrame, col: str) -> str:
+    logging.info(f"plot_histogram called on {col}")
+    fig, ax = plt.subplots(figsize=(6,4))
+    ax.hist(df[col].dropna(), bins=10)
+    ax.set_title(f"{col} Histogram")
+    ax.set_xlabel(col); ax.set_ylabel("Frequency")
+    return save_plot(fig, f"{col}_histogram.png")
 
-# Hazard class colors for consistent visualization
-HAZARD_COLORS = {
-    'A': 'red',
-    'B': 'orange',
-    'C': 'gold',
-    'D': 'green'
-}
+def plot_line(df: pd.DataFrame, x_col: str, y_col: str) -> str:
+    logging.info(f"plot_line called on {x_col} vs {y_col}")
+    fig, ax = plt.subplots(figsize=(6,4))
+    ax.plot(df[x_col], df[y_col], marker='o')
+    ax.set_title(f"{y_col} vs {x_col}")
+    ax.set_xlabel(x_col); ax.set_ylabel(y_col)
+    return save_plot(fig, f"{x_col}_{y_col}_line.png")
 
-def save_plot(filename):
-    """Helper function to save plots to the output directory."""
-    output_path = os.path.join(CONFIG['output_dir'], filename)
-    plt.savefig(output_path, dpi=300, bbox_inches='tight')
-    plt.close()
-    return output_path
+def plot_stock_levels(df: pd.DataFrame) -> str:
+    logging.info("plot_stock_levels called")
+    fig, ax = plt.subplots(figsize=(12,6))
+    data = df.sort_values('ProductID')
+    ax.bar(data['ProductID'], data['Stock'])
+    ax.set_xlabel("ProductID"); ax.set_ylabel("Stock")
+    ax.set_title("Inventory Stock Levels")
+    return save_plot(fig, "stock_levels.png")
 
-def plot_stock_levels(numeric_data):
-    """
-    Plot a simple inventory stock level by product item.
-    
-    INPUT:
-        numeric_data (DataFrame): Must contain columns 'ProductID' and 'Stock'
-    
-    OUTPUT:
-        str: Path to the saved plot file
-    """
-    # Sort by ProductID for better presentation
-    sorted_data = numeric_data.sort_values('ProductID')
-    
-    # Create figure with better dimensions for readability
-    plt.figure(figsize=(14, 8))
-    
-    # Use a cleaner style
-    plt.style.use('seaborn-v0_8-whitegrid')
-    
-    # Create the x positions
-    x = np.arange(len(sorted_data))
-    width = 0.7
-    
-    # Create bars with a single color
-    bars = plt.bar(
-        x, 
-        sorted_data['Stock'],
-        width=width,
-        color='#3498db',  # Blue color for all bars
-        alpha=0.8
-    )
-    
-    # Add stock values as text labels
-    for i, (idx, row) in enumerate(sorted_data.iterrows()):
-        # Add stock labels directly on the bars
-        plt.text(
-            x[i], 
-            row['Stock'] + 2,  # Place text above the bar
-            f"{int(row['Stock'])}",
-            ha='center',
-            va='bottom',
-            color='black',
-            fontweight='bold',
-            fontsize=9
-        )
-    
-    # Better labels and title with improved formatting
-    plt.xlabel("Product ID", fontsize=12, fontweight='bold')
-    plt.ylabel("Quantity in Stock", fontsize=12, fontweight='bold')
-    plt.title("Inventory Stock Levels by Product", fontsize=16, fontweight='bold', pad=20)
-    
-    # Set x-ticks to product IDs with better spacing
-    # If many products, show a subset of IDs to avoid overcrowding
-    if len(sorted_data) > 30:
-        # Show every 5th product ID for readability
-        plt.xticks(x[::5], sorted_data['ProductID'].iloc[::5])
-    else:
-        plt.xticks(x, sorted_data['ProductID'])
-    
-    # Add grid for easier comparison
-    plt.grid(axis='y', linestyle='--', alpha=0.7)
-    
-    # Add some padding to the y-axis
-    plt.ylim(0, max(sorted_data['Stock']) * 1.15)
-    
-    plt.tight_layout()
-    
-    # Save the figure
-    output_file = os.path.join(CONFIG['output_dir'], "stock_levels.png")
-    plt.savefig(output_file, dpi=300, bbox_inches='tight')
-    plt.close()
+def plot_violin(df: pd.DataFrame, col: str) -> str:
+    logging.info(f"plot_violin called on {col}")
+    fig, ax = plt.subplots(figsize=(6,4))
+    ax.violinplot(df[col].dropna())
+    ax.set_title(f"{col} Violin Plot")
+    return save_plot(fig, f"{col}_violin.png")
 
-    return output_file
+def plot_box(df: pd.DataFrame, col: str) -> str:
+    logging.info(f"plot_box called on {col}")
+    fig, ax = plt.subplots(figsize=(6,4))
+    ax.boxplot(df[col].dropna())
+    ax.set_title(f"{col} Box Plot")
+    return save_plot(fig, f"{col}_box.png")
 
-def plot_hazard_distribution(categorical_data):
-    """Plot distribution of items by hazard class."""
-    # Count items in each hazard class
-    hazard_counts = categorical_data['HazardClass'].value_counts().sort_index()
-    
-    plt.figure(figsize=(8, 6))
-    bars = hazard_counts.plot(kind='bar', color=[HAZARD_COLORS.get(cls, 'blue') 
-                                               for cls in hazard_counts.index])
-    
-    # Add count labels on bars
-    for i, count in enumerate(hazard_counts):
-        plt.text(i, count + 0.5, str(count), ha='center', fontweight='bold')
-    
-    plt.xlabel("Hazard Class (A=Highest, D=Lowest)")
-    plt.ylabel("Number of Items")
-    plt.title("Distribution of Items by Hazard Class")
-    
-    return save_plot("hazard_distribution.png")
+def plot_scatter(df: pd.DataFrame, x_col: str, y_col: str) -> str:
+    logging.info(f"plot_scatter called on {x_col} vs {y_col}")
+    fig, ax = plt.subplots(figsize=(6,4))
+    ax.scatter(df[x_col], df[y_col])
+    ax.set_title(f"{y_col} vs {x_col}")
+    ax.set_xlabel(x_col); ax.set_ylabel(y_col)
+    return save_plot(fig, f"{x_col}_{y_col}_scatter.png")
 
-def plot_category_distribution(categorical_data):
-    """Create a pie chart of items by category."""
-    category_counts = categorical_data['Category'].value_counts()
-    
-    plt.figure(figsize=(9, 7))
-    plt.pie(category_counts, labels=category_counts.index, autopct='%1.1f%%',
-            startangle=90, shadow=True)
-    plt.axis('equal')
-    plt.title("Distribution of Items by Category")
-    
-    return save_plot("category_distribution.png")
+def plot_hazard_distribution(df: pd.DataFrame) -> str:
+    logging.info("plot_hazard_distribution called")
+    counts = df['HazardClass'].value_counts().sort_index()
+    fig, ax = plt.subplots(figsize=(6,4))
+    ax.bar(counts.index, counts.values, color=[HAZARD_COLORS[c] for c in counts.index])
+    ax.set_xlabel("HazardClass"); ax.set_ylabel("Count")
+    ax.set_title("Distribution by Hazard Class")
+    for i,v in enumerate(counts.values):
+        ax.text(i, v+0.5, str(v), ha='center')
+    return save_plot(fig, "hazard_distribution.png")
 
-def plot_price_by_hazard(merged_data):
-    """Create a box plot of prices by hazard class."""
-    plt.figure(figsize=(8, 6))
-    
-    # Sort hazard classes
-    hazard_order = sorted(merged_data['HazardClass'].unique())
-    
-    # Create boxplot with colored boxes
-    boxplot = plt.boxplot([merged_data[merged_data['HazardClass'] == cls]['Price'] 
-                         for cls in hazard_order], labels=hazard_order, patch_artist=True)
-    
-    # Color boxes by hazard class
-    for i, box in enumerate(boxplot['boxes']):
-        box.set(facecolor=HAZARD_COLORS.get(hazard_order[i], 'blue'))
-    
-    plt.xlabel("Hazard Class")
-    plt.ylabel("Price ($)")
-    plt.title("Price Distribution by Hazard Class")
-    
-    # Add average price line
-    avg_price = merged_data['Price'].mean()
-    plt.axhline(y=avg_price, color='blue', linestyle='--', alpha=0.7)
-    plt.text(len(hazard_order)-0.5, avg_price*1.1, f'Avg: ${avg_price:.2f}', color='blue')
-    
-    return save_plot("price_by_hazard.png")
+def plot_category_distribution(df: pd.DataFrame) -> str:
+    logging.info("plot_category_distribution called")
+    counts = df['Category'].value_counts()
+    fig, ax = plt.subplots(figsize=(6,6))
+    ax.pie(counts.values, labels=counts.index, autopct='%1.1f%%', startangle=90)
+    ax.set_title("Distribution by Category")
+    return save_plot(fig, "category_distribution.png")
 
-def generate_combined_report(numeric_data, categorical_data):
-    """Generate and display combined analysis of both datasets."""
-    # Merge datasets
-    merged_data = pd.merge(numeric_data, categorical_data, on='ProductID')
-    
-    # Generate visualizations
-    category_plot = plot_category_distribution(categorical_data)
-    price_plot = plot_price_by_hazard(merged_data)
-    
-    # Calculate key metrics
-    below_reorder = len(numeric_data[numeric_data['Stock'] < numeric_data['ReorderLevel']])
-    high_hazard = len(categorical_data[categorical_data['HazardClass'] == 'A'])
-    
-    # Print summary
-    print("\nInventory Summary:")
-    print(f"Total Products: {len(merged_data)}")
-    print(f"Total Stock: {numeric_data['Stock'].sum()}")
-    print(f"Average Price: ${numeric_data['Price'].mean():.2f}")
-    print(f"Items Below Reorder Level: {below_reorder}")
-    print(f"High Hazard Items (Class A): {high_hazard}")
-    
-    # Return summary data
-    return {
-        "visualizations": ["category_distribution.png", "price_by_hazard.png"],
-        "below_reorder": below_reorder,
-        "high_hazard": high_hazard
+def plot_price_by_hazard(merged: pd.DataFrame) -> str:
+    logging.info("plot_price_by_hazard called")
+    hazard = sorted(merged['HazardClass'].unique())
+    data = [merged[merged['HazardClass']==h]['Price'] for h in hazard]
+    fig, ax = plt.subplots(figsize=(6,4))
+    ax.boxplot(data, labels=hazard, patch_artist=True)
+    ax.set_xlabel("HazardClass"); ax.set_ylabel("Price")
+    ax.set_title("Price Distribution by Hazard Class")
+    avg = merged['Price'].mean()
+    ax.axhline(avg, linestyle='--')
+    ax.text(len(hazard)-1, avg*1.05, f"Avg: ${avg:.2f}")
+    return save_plot(fig, "price_by_hazard.png")
+
+def generate_combined_report(num_df: pd.DataFrame, cat_df: pd.DataFrame) -> dict:
+    logging.info("generate_combined_report called")
+    merged = pd.merge(num_df, cat_df, on='ProductID')
+    p1 = plot_category_distribution(cat_df)
+    p2 = plot_price_by_hazard(merged)
+    summary = {
+        "below_reorder": int((num_df['Stock']<num_df['ReorderLevel']).sum()),
+        "high_hazard":  int((cat_df['HazardClass']=='A').sum()),
+        "plots":       [p1, p2]
     }
+    return summary
 
+#%% SELF-RUN
 if __name__ == "__main__":
-    print(f"\"{module_name_gl}\" module begins.")
-   
-    # Create test data
-    numeric_test = pd.DataFrame({
-        'ProductID': [101, 102, 103, 104],
-        'Stock': [50, 20, 70, 35],
-        'Price': [24.99, 124.50, 9.99, 45.00],
-        'ReorderLevel': [40, 30, 50, 30]
-    })
-    
-    categorical_test = pd.DataFrame({
-        'ProductID': [101, 102, 103, 104],
-        'ProductName': ['Product A', 'Product B', 'Product C', 'Product D'],
-        'Category': ['Electronics', 'Furniture', 'Cleaning', 'Electronics'],
-        'HazardClass': ['A', 'B', 'A', 'C'],
-        'Supplier': ['TechWorld Inc.', 'FurniTech', 'CleanAll Ltd.', 'TechWorld Inc.']
-    })
-    
-    # Test visualizations
-    print("Testing all visualizations...")
-    plot_stock_levels(numeric_test)
-    plot_hazard_distribution(categorical_test)
-    generate_combined_report(numeric_test, categorical_test)
-    print("All visualizations created successfully.")
+    logging.basicConfig(level=logging.INFO)
+    import ui
+    # Load data for testing
+    dn = ui.load_data(CONFIG.inventory_numeric_csv, "numeric")
+    dc = ui.load_data(CONFIG.inventory_categorical_csv, "categorical")
+    if dn is not None and dc is not None:
+        generate_combined_report(dn, dc)

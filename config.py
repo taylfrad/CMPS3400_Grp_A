@@ -1,39 +1,35 @@
-#Version: v0.1
-#Date Last Updated: 2025-04-12
-
 #%% MODULE BEGINS
 module_name_gl = 'config'
 
 '''
 Version: v0.1
-
 Description:
-    Contains configuration constants for the Inventory Management System.
-    
+    Configuration constants for Inventory Management System.
 Authors:
     Taylor Fradella, Angel Njoku
-Date Created     :  2025-04-07
-Date Last Updated:  2025-04-12
+Date Created     : 2025-04-07
+Date Last Updated: 2025-05-XX
 
 Doc:
-    This module holds file paths for input, output, and log file settings.
-Notes:
-    All paths are relative to the project root.
+    Paths for input files, output directory, and log file.
 '''
+#%% IMPORTS
+import os
 
-#%% CONSTANTS                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-CONFIG = {
-    "inventory_numeric_csv": "./Input/inventory_numeric.csv",   # Numerical inventory file
-    "inventory_categorical_csv": "./Input/inventory_categorical.csv",   # Categorical inventory file
-    "output_dir": "./Output/",                     # Output folder for reports and logs
-    "doc_dir": "./Doc/",                           # Documentation folder
-    "log_file": "./Output/project.log"             # Log file
-}
+#%% CONSTANTS
+class Config:
+    def __init__(self):
+        project_root = os.path.dirname(os.path.abspath(__file__))
+        self.inventory_numeric_csv = os.path.join(project_root, "Input", "sample_data.csv")
+        self.input_pickle          = os.path.join(project_root, "Input", "sample_data.pkl")
+        self.output_dir            = os.path.join(project_root, "Output")
+        self.doc_dir               = os.path.join(project_root, "Doc")
+        self.log_file              = os.path.join(self.output_dir, "project.log")
 
+CONFIG = Config()
 
-#%% SELF-RUN                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#%% SELF-RUN
 if __name__ == "__main__":
-    print(f"\"{module_name_gl}\" module begins.")
-    print("Configuration Constants:")
-    for key, value in CONFIG.items():
-        print(f"  {key}: {value}")
+    print(f"\"{module_name_gl}\" module begins.", flush=True)
+    for k, v in CONFIG.__dict__.items():
+        print(f"{k}: {v}", flush=True)

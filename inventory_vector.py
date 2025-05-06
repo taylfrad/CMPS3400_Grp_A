@@ -1,86 +1,136 @@
-# inventory_vector.py
+#%% MODULE BEGINS
+module_name_gl = 'inventory_vector'
+
+'''
+Version: v0.4
+Description:
+    Parent/Child classes for vector & probability analytics,
+    plus combos/permutations for categorical attributes.
+Authors:
+    Taylor Fradella, Angel Njoku
+Date Created     : 2025-04-07
+Date Last Updated: 2025-05-06
+
+Doc:
+    InventoryVector: basic stats, joint/conditional, array→DataFrame.
+    InventoryVectorProcessor: dot/unit/projection/angle, combos/perms.
+'''
+#%% IMPORTS
+import logging
 import pandas as pd
 import numpy as np
 import math
 from itertools import combinations, permutations
 
+#%% CLASSES
 class InventoryVector:
-    def __init__(self, data):
-        self.data = data
+    def __init__(self, data: pd.DataFrame):
+        logging.info("InventoryVector.__init__")
+        self._data = data
 
-    def mean(self, col):
-        return self.data[col].mean()
+    def mean(self, col: str) -> float:
+        logging.info(f"mean called on {col}")
+        return float(self._data[col].mean())
 
-    def std(self, col):
-        return self.data[col].std()
+    def median(self, col: str) -> float:
+        logging.info(f"median called on {col}")
+        return float(self._data[col].median())
 
-    def joint_counts(self, col1, col2):
-        return self.data.groupby([col1, col2]).size()
+    def std(self, col: str) -> float:
+        logging.info(f"std called on {col}")
+        return float(self._data[col].std())
 
-    def joint_probabilities(self, col1, col2):
-        return self.joint_counts(col1, col2) / len(self.data)
+    def joint_counts(self, c1: str, c2: str) -> pd.Series:
+        logging.info(f"joint_counts called on {c1}, {c2}")
+        return self._data.groupby([c1, c2]).size()
 
-    def conditional_probability(self, target_col, given_col):
-        cond_prob = self.data.groupby(given_col)[target_col].value_counts(normalize=True)
-        return cond_prob
+    def joint_probabilities(self, c1: str, c2: str) -> pd.Series:
+        logging.info(f"joint_probabilities called on {c1}, {c2}")
+        return self.joint_counts(c1, c2) / len(self._data)
+
+    def conditional_probability(self, target: str, given: str) -> pd.Series:
+        logging.info(f"conditional_probability called: {target}|{given}")
+        return self._data.groupby(given)[target].value_counts(normalize=True)
+
+    @classmethod
+    def from_pickle(cls, path: str):
+        df = pd.read_pickle(path)
+        return cls(df)
+
+    def array_to_df(self, arr: np.ndarray, cols=None) -> pd.DataFrame:
+        logging.info("array_to_df called")
+        return pd.DataFrame(arr, columns=cols)
 
 class InventoryVectorProcessor(InventoryVector):
-    def __init__(self, data):
+    def __init__(self, data: pd.DataFrame):
         super().__init__(data)
+        logging.info("InventoryVectorProcessor.__init__")
 
-    def dot_product(self, vec1, vec2):
-        return np.dot(vec1, vec2)
+    def dot_product(self, v1: np.ndarray, v2: np.ndarray) -> float:
+        logging.info("dot_product called")
+        return float(np.dot(v1, v2))
 
-    def unit_vector(self, vec):
-        norm = np.linalg.norm(vec)
-        if norm != 0:
-            return vec / norm if norm != 0 else vec
-        else:
-            raise ValueError("Zero vector cannot have a unit vector")
+    def unit_vector(self, v: np.ndarray) -> np.ndarray:
+        logging.info("unit_vector called")
+        norm = np.linalg.norm(v)
+        if norm == 0:
+            raise ValueError("Zero vector")
+        return v / norm
 
-    def projection_vector(self, vec1, vec2):
-        # project vec1 onto vec2
-        v2_unit = self.unit_vector(vec2)
-        scalar_proj = np.dot(vec1, v2_unit)
-        return scalar_proj * v2_unit
+    def projection_vector(self, v1: np.ndarray, v2: np.ndarray) -> np.ndarray:
+        logging.info("projection_vector called")
+        uv2 = self.unit_vector(v2)
+        return np.dot(v1, uv2) * uv2
 
-    def angle_between(self, vec1, vec2):
-        try:
-            cos_theta = np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
-            return math.degrees(math.acos(np.clip(cos_theta, -1.0, 1.0)))
-        except ZeroDivisionError:
-            raise ValueError("cannot compute angle between zero vectors")
-        
-    def check_orthogonality(self, vec1, vec2):
-        return np.isclose(self.dot_product(vec1, vec2), 0.0)
+    def angle_between(self, v1: np.ndarray, v2: np.ndarray) -> float:
+        logging.info("angle_between called")
+        dot = np.dot(v1, v2)
+        denom = np.linalg.norm(v1) * np.linalg.norm(v2)
+        if denom == 0:
+            raise ValueError("Zero vector")
+        cosθ = np.clip(dot/denom, -1, 1)
+        return math.degrees(math.acos(cosθ))
 
-    def unique_values(self, col):
-        return self.data[col].unique().tolist()
+    def check_orthogonality(self, v1: np.ndarray, v2: np.ndarray) -> bool:
+        logging.info("check_orthogonality called")
+        return np.isclose(self.dot_product(v1, v2), 0.0)
 
-    def generate_combinations(self, col, r=2):
-        return list(combinations(self.unique_values(col), r))
+    def generate_combinations(self, col: str, r: int = 2) -> list:
+        """
+        Generate all r-length combinations of unique values in `col`.
+        """
+        logging.info(f"generate_combinations called on {col}, r={r}")
+        vals = self._data[col].dropna().unique().tolist()
+        return list(combinations(vals, r))
 
-    def generate_permutations(self, col, r=2):
-        return list(permutations(self.unique_values(col), r))
+    def generate_permutations(self, col: str, r: int = 2) -> list:
+        """
+        Generate all r-length permutations of unique values in `col`.
+        """
+        logging.info(f"generate_permutations called on {col}, r={r}")
+        vals = self._data[col].dropna().unique().tolist()
+        return list(permutations(vals, r))
 
-# Helper function using lambda, *args, **kwargs
-def summarize_column(df, col_func=lambda x: x.mean(), *args, **kwargs):
-    col_name = args[0] if args else None
-    subset = df[col_name] if col_name in df.columns else df
-    return col_func(subset, **kwargs)
-
+#%% SELF-RUN
 if __name__ == "__main__":
-    # Simple test example
-    df = pd.DataFrame({
-        'VectorA': [1, 2, 3],
-        'VectorB': [4, 5, 6],
-        'Category': ['X', 'Y', 'Z']
-    })
-    p = InventoryVectorProcessor(df)
-    print("Dot Product:", p.dot_product(df['VectorA'], df['VectorB']))
-    print("Mean VectorA:", p.mean('VectorA'))
-    print("Angle:", p.angle_between(df['VectorA'], df['VectorB']))
+    logging.basicConfig(level=logging.INFO)
+    from config import CONFIG
+    import ui
 
-    # Test lambda + *args
-    result = summarize_column(df, lambda x: x.sum(), 'VectorA')
-    print("Summarize Column (sum VectorA):", result)
+    # Load pickle for testing
+    vec_parent = InventoryVector.from_pickle(CONFIG.input_pickle)
+    print("Joint counts sample:\n", vec_parent.joint_counts(
+        vec_parent._data.columns[0], vec_parent._data.columns[1]
+    ))
+
+    vec_proc = InventoryVectorProcessor(vec_parent._data)
+    # Test vector ops
+    v1 = vec_parent._data.select_dtypes(include='number').iloc[:, 0].values
+    v2 = vec_parent._data.select_dtypes(include='number').iloc[:, 1].values
+    print("Dot product:", vec_proc.dot_product(v1, v2))
+    print("Combinations:", vec_proc.generate_combinations(
+        vec_parent._data.select_dtypes(include='object').columns[0]
+    ))
+    print("Permutations:", vec_proc.generate_permutations(
+        vec_parent._data.select_dtypes(include='object').columns[0]
+    ))

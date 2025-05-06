@@ -1,196 +1,158 @@
-#Version: v0.1
-#Date Last Updated: 2025-04-12
-
 #%% MODULE BEGINS
 module_name_gl = 'inventory_numeric'
 
 '''
-Version: v0.1
-
+Version: v0.3
 Description:
-    Module for processing numerical inventory data.
-    This module defines a parent class for handling numerical data
-    and a child class that extends it for analysis and reporting.
-    
+    Parent/Child classes for numerical inventory processing,
+    including all required plots and queries.
 Authors:
     Taylor Fradella, Angel Njoku
-Date Created     :  2025-04-07
-Date Last Updated:  2025-04-12
+Date Created     : 2025-04-07
+Date Last Updated: 2025-05-05
 
 Doc:
-    Parent Class: InventoryNumeric - holds inventory numeric attributes and basic operations.
-    Child Class: InventoryNumericProcessor - extends InventoryNumeric for detailed numeric reporting.
-Notes:
-    This module only handles columns such as ProductID, Stock, Price, and ReorderLevel.
-    Integrated with the ui.py module for user interaction.
+    InventoryNumeric: basic stats, histogram, line plot, simple search.
+    InventoryNumericProcessor: adds violin, box, scatter, exports.
 '''
-
-#%% IMPORTS                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#%% IMPORTS
+import logging
+import os
 import pandas as pd
-import ui
+import matplotlib.pyplot as plt
+
 from config import CONFIG
+from visualization import save_plot
 
-
-#%% CLASS DEFINITIONS           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+import ui
+#%% CONSTANTS
+# none
+#%% CLASSES
 class InventoryNumeric:
-    def __init__(self, data):
-        """
-        Initialize the InventoryNumeric class with data.
-        
-        INPUT:
-            data (DataFrame): Must contain columns 'ProductID', 'Stock', 'Price', and 'ReorderLevel'
-        """
-        self.data = data
-        
-        # Validate required columns
-        required_columns = ['ProductID', 'Stock', 'Price', 'ReorderLevel']
-        missing_columns = [col for col in required_columns if col not in self.data.columns]
-        
-        if missing_columns:
-            missing_cols_str = ', '.join(missing_columns)
-            raise ValueError(f"Data is missing required columns: {missing_cols_str}")
-    #
+    def __init__(self, data: pd.DataFrame):
+        logging.info("InventoryNumeric.__init__")
+        self._data = data  # private-like attribute
+        required = ['ProductID','Stock','Price','ReorderLevel']
+        missing = [c for c in required if c not in data.columns]
+        if missing:
+            raise ValueError(f"Missing columns: {missing}")
 
-    def calculate_total_stock(self):
-        """
-        Calculate the sum of all stock quantities.
-        
-        INPUT: None
-        OUTPUT:
-            int: Total stock across all products
-        """
+    def calculate_total_stock(self) -> int:
+        logging.info("calculate_total_stock called")
+        return int(self._data['Stock'].sum())
 
-        try:
-            return self.data['Stock'].sum()
-        except KeyError as e:
-            raise ValueError(f"Missing column: {e}")
-        
-    #
+    def calculate_average_price(self) -> float:
+        logging.info("calculate_average_price called")
+        return float(self._data['Price'].mean())
 
-    def calculate_average_price(self):
-        """
-        Calculate the average price of all products.
-        
-        INPUT: None
-        OUTPUT:
-            float: Average price
-        """
-        try:
-            return self.data['Price'].mean()
-        except KeyError as e:
-            raise ValueError(f"Missing column: {e}")
-    #
-    
     def display_basic_stats(self):
-        """
-        Display basic statistics about the inventory using the UI module.
-        
-        INPUT: None
-        OUTPUT: None
-        """
         stats = {
-            "Total Products": len(self.data),
+            "Total Products": len(self._data),
             "Total Stock": self.calculate_total_stock(),
             "Average Price": f"${self.calculate_average_price():.2f}"
         }
-        
         ui.display_report("BASIC INVENTORY STATISTICS", stats)
-    #
 
+    def plot_histogram(self, col: str) -> str:
+        logging.info(f"plot_histogram called on {col}")
+        fig, ax = plt.subplots(figsize=(6,4))
+        ax.hist(self._data[col], bins=10)
+        ax.set_title(f"{col} Histogram")
+        ax.set_xlabel(col)
+        ax.set_ylabel("Frequency")
+        return save_plot(fig, f"{col}_histogram.png")
+
+    def plot_line(self, x_col: str, y_col: str) -> str:
+        logging.info(f"plot_line called on {x_col} vs {y_col}")
+        fig, ax = plt.subplots(figsize=(6,4))
+        ax.plot(self._data[x_col], self._data[y_col], marker='o')
+        ax.set_title(f"{y_col} vs {x_col}")
+        ax.set_xlabel(x_col)
+        ax.set_ylabel(y_col)
+        return save_plot(fig, f"{x_col}_{y_col}_line.png")
 
 class InventoryNumericProcessor(InventoryNumeric):
-    def __init__(self, data):
-        """
-        Initialize the InventoryNumericProcessor with data.
-        
-        INPUT:
-            data (DataFrame): Must contain columns 'ProductID', 'Stock', 'Price', and 'ReorderLevel'
-        """
+    def __init__(self, data: pd.DataFrame):
         super().__init__(data)
-    #
+        logging.info("InventoryNumericProcessor.__init__")
 
-    def items_below_reorder(self):
-        """
-        Find items where stock is below the reorder level.
-        
-        INPUT: None
-        OUTPUT:
-            DataFrame: Items with stock below reorder level
-        """
-        return self.data[self.data['Stock'] < self.data['ReorderLevel']]
-    #
+    def items_below_reorder(self) -> pd.DataFrame:
+        logging.info("items_below_reorder called")
+        return self._data.query("Stock < ReorderLevel")
 
-    def generate_numeric_report(self):
-        """
-        Generate a report containing total stock, average price, and items below reorder level.
-        
-        INPUT: None
-        OUTPUT:
-            dict: Report with numeric data analysis
-        """
-        report = {
+    def generate_numeric_report(self) -> dict:
+        logging.info("generate_numeric_report called")
+        return {
             "Total Stock": self.calculate_total_stock(),
-            "Average Price": round(self.calculate_average_price(), 2),
+            "Average Price": round(self.calculate_average_price(),2),
             "Items Below Reorder": len(self.items_below_reorder())
         }
-        return report
-    #
-    
+
+    def plot_violin(self, col: str) -> str:
+        logging.info(f"plot_violin called on {col}")
+        fig, ax = plt.subplots(figsize=(6,4))
+        ax.violinplot(self._data[col].dropna())
+        ax.set_title(f"{col} Violin Plot")
+        return save_plot(fig, f"{col}_violin.png")
+
+    def plot_box(self, col: str) -> str:
+        logging.info(f"plot_box called on {col}")
+        fig, ax = plt.subplots(figsize=(6,4))
+        ax.boxplot(self._data[col].dropna())
+        ax.set_title(f"{col} Box Plot")
+        return save_plot(fig, f"{col}_box.png")
+
+    def plot_scatter(self, x_col: str, y_col: str) -> str:
+        logging.info(f"plot_scatter called on {x_col} vs {y_col}")
+        fig, ax = plt.subplots(figsize=(6,4))
+        ax.scatter(self._data[x_col], self._data[y_col])
+        ax.set_title(f"{y_col} vs {x_col} Scatter")
+        ax.set_xlabel(x_col)
+        ax.set_ylabel(y_col)
+        return save_plot(fig, f"{x_col}_{y_col}_scatter.png")
+
     def process_and_display(self):
-        """
-        Process numeric data and display results using the UI module.
-        
-        INPUT: None
-        OUTPUT: None
-        """
-        # Generate report
+        logging.info("process_and_display started")
+        # Basic stats
+        self.display_basic_stats()
         report = self.generate_numeric_report()
-        
-        # Display report using UI module
         ui.display_report("NUMERICAL INVENTORY REPORT", report)
-        
-        # Show items below reorder level
-        items_below = self.items_below_reorder()
-        if len(items_below) > 0:
-            print("\nItems below reorder level:")
-            print(items_below[['ProductID', 'Stock', 'ReorderLevel']])
+
+        # Items below reorder
+        below = self.items_below_reorder()
+        if not below.empty:
+            print("\nItems below reorder level:", flush=True)
+            print(below[['ProductID','Stock','ReorderLevel']], flush=True)
         else:
-            print("\nNo items are below reorder level.")
-        
-        # Ask if user wants to see visualization
+            print("\nNo items below reorder level.", flush=True)
+
+        # Advanced visualizations
         if ui.get_visualization_choice():
             try:
-                from visualization import plot_stock_levels
-                plot_stock_levels(self.data)
-                ui.show_operation_status("Stock level visualization", True)
-                ui.display_output_location()
+                logs = []
+                logs.append(self.plot_histogram('Stock'))
+                logs.append(self.plot_line('ProductID','Stock'))
+                logs.append(self.plot_violin('Stock'))
+                logs.append(self.plot_box('Stock'))
+                logs.append(self.plot_scatter('ProductID','Price'))
+                # export below-reorder as CSV
+                out = os.path.join(CONFIG.output_dir, "below_reorder.csv")
+                below.to_csv(out, index=False)
+                logging.info(f"Exported below_reorder to {out}")
+                ui.show_operation_status("Numeric advanced visualizations", True)
             except Exception as e:
-                print(f"Error generating visualization: {e}")
-                ui.show_operation_status("Stock level visualization", False)
-    #
+                logging.error(f"Numeric viz error: {e}")
+                ui.show_operation_status("Numeric advanced visualizations", False)
 
-#%% SELF-RUN                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        logging.info("process_and_display completed")
+
+#%% SELF-RUN
 if __name__ == "__main__":
-    print(f"\"{module_name_gl}\" module begins.")
-    
-    # For testing purposes, create a synthetic DataFrame or load from file
-    try:
-        # Try to load from file first
-        data = ui.load_data(CONFIG['inventory_numeric_csv'], "numeric")
-        
-        if data is None:
-            # Use test data if file loading fails
-            data = pd.DataFrame({
-                'ProductID': [101, 102, 103],
-                'Stock': [50, 20, 70],
-                'Price': [10.99, 15.49, 8.75],
-                'ReorderLevel': [30, 25, 50]
-            })
-            print("Using test data instead.")
-        
-        # Create processor and test functionality
-        processor = InventoryNumericProcessor(data)
-        processor.process_and_display()
-        
-    except Exception as e:
-        print(f"Error during testing: {e}")
+    logging.basicConfig(level=logging.INFO)
+    df = ui.load_data(CONFIG.inventory_numeric_csv, "numeric")
+    if df is None:
+        df = pd.DataFrame({
+            'ProductID':[1,2,3],'Stock':[10,5,15],
+            'Price':[9.99,19.99,4.99],'ReorderLevel':[8,7,10]
+        })
+    InventoryNumericProcessor(df).process_and_display()

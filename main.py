@@ -1,222 +1,150 @@
-#Version: v0.1
-#Date Last Updated: 2025-04-12
-
 #%% MODULE BEGINS
 module_name_gl = 'main'
 
 '''
-Version: v0.1
-
+Version: v0.3
 Description:
     Main entry point for the Inventory Management System.
-    This program reads numerical and categorical inventory data from CSV files,
-    processes the data using specialized modules, generates reports, and creates visualizations.
-    
 Authors:
     Taylor Fradella, Angel Njoku
-Date Created     :  2025-04-07
-Date Last Updated:  2025-04-12
+Date Created     : 2025-04-07
+Date Last Updated: 2025-05-XX
 
 Doc:
-    This module sets up configuration and logging, reads test input data,
-    calls functions from the inventory numeric and categorical modules to process data,
-    and generates visualizations for stock levels and hazard distribution.
+    Orchestrates reading, processing, reporting, and visualization
+    for numeric and vector inventory data.
 Notes:
-    Ensure that the Input folder contains the files:
-      - inventory_numeric.csv
-      - inventory_categorical.csv
+    Uses CONFIG for all paths; writes outputs to CONFIG.output_dir.
 '''
-
-#%% IMPORTS                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#%% IMPORTS
 import logging
-import pandas as pd
 import os
-import time
+import pandas as pd
+
 from config import CONFIG
 import ui
 from inventory_numeric import InventoryNumericProcessor
-from inventory_categorical import InventoryCategoricalProcessor
-from visualization import plot_stock_levels, plot_hazard_distribution, generate_combined_report
-
-#%% CONFIGURATION               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Ensure output directory exists
-if not os.path.exists(CONFIG['output_dir']):
-    os.makedirs(CONFIG['output_dir'])
-
-# Set up logging
+from inventory_vector import InventoryVector, InventoryVectorProcessor
+#%% CONFIGURATION
+os.makedirs(CONFIG.output_dir, exist_ok=True)
 logging.basicConfig(
-    filename=CONFIG['log_file'], 
-    level=logging.INFO, 
-    format='%(asctime)s %(message)s'
+    filename=CONFIG.log_file,
+    level=logging.INFO,
+    format='%(asctime)s %(levelname)s:%(message)s'
 )
-
-
-#%% FUNCTION DEFINITIONS        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#%% FUNCTIONS
 def process_numeric_data(auto_visualize=False):
-    """
-    Process numerical inventory data.
-    
-    INPUT: 
-        auto_visualize (bool): If True, automatically generate visualizations
-    OUTPUT:
-        tuple: (success, data) where success is a boolean and data is the DataFrame if successful
-    """
-    try:
-        numeric_data = ui.load_data(CONFIG['inventory_numeric_csv'], "numeric")
-        if numeric_data is None:
-            return False, None
-            
-        numeric_processor = InventoryNumericProcessor(numeric_data)
-        numeric_processor.process_and_display()
-        
-        # Handle visualization
-        if auto_visualize or ui.get_visualization_choice():
-            try:
-                plot_stock_levels(numeric_data)
-                ui.show_operation_status("Stock level visualization", True)
-            except Exception as e:
-                logging.error(f"Error generating stock visualization: {e}")
-                ui.show_operation_status("Stock level visualization", False)
-        
-        logging.info("Numeric data processed successfully")
-        return True, numeric_data
-    except Exception as e:
-        logging.error(f"Error processing numeric data: {e}")
-        print(f"Error processing numeric data: {e}")
-        return False, None
-#
+    logging.info("process_numeric_data started")
+    df = ui.load_data(CONFIG.inventory_numeric_csv, "numeric")
+    if df is None:
+        return False
 
-def process_categorical_data(auto_visualize=False):
-    """
-    Process categorical inventory data.
-    
-    INPUT: 
-        auto_visualize (bool): If True, automatically generate visualizations
-    OUTPUT:
-        tuple: (success, data) where success is a boolean and data is the DataFrame if successful
-    """
+    proc = InventoryNumericProcessor(df)
+    proc.process_and_display()
+
+    if auto_visualize or ui.get_visualization_choice():
+        try:
+            proc.plot_histogram('Stock')
+            proc.plot_line('ProductID', 'Stock')
+            proc.plot_violin('Stock')
+            proc.plot_box('Stock')
+            proc.plot_scatter('ProductID', 'Price')
+            ui.show_operation_status("Numeric visualizations", True)
+            logging.info("Numeric visualizations saved")
+        except Exception as e:
+            logging.error(f"Numeric viz error: {e}")
+            ui.show_operation_status("Numeric visualizations", False)
+
+    logging.info("process_numeric_data completed")
+    return True
+
+def process_vector_data():
+    logging.info("process_vector_data started")
     try:
-        categorical_data = ui.load_data(CONFIG['inventory_categorical_csv'], "categorical")
-        if categorical_data is None:
-            return False, None
-            
-        categorical_processor = InventoryCategoricalProcessor(categorical_data)
-        categorical_processor.process_and_display()
-        
-        # Handle visualization
-        if auto_visualize or ui.get_visualization_choice():
-            try:
-                plot_hazard_distribution(categorical_data)
-                ui.show_operation_status("Hazard distribution visualization", True)
-            except Exception as e:
-                logging.error(f"Error generating hazard visualization: {e}")
-                ui.show_operation_status("Hazard distribution visualization", False)
-        
-        logging.info("Categorical data processed successfully")
-        return True, categorical_data
+        parent = InventoryVector.from_pickle(CONFIG.input_pickle)
     except Exception as e:
-        logging.error(f"Error processing categorical data: {e}")
-        print(f"Error processing categorical data: {e}")
-        return False, None
-#
+        logging.error(f"Error loading pickle: {e}")
+        print(f"Error loading pickle: {e}", flush=True)
+        return False
+
+    # Probability analytics
+    cols = parent._data.select_dtypes(include='number').columns
+    if len(cols) >= 2:
+        c1, c2 = cols[:2]
+        counts = parent.joint_counts(c1, c2)
+        probs  = parent.joint_probabilities(c1, c2)
+        ui.display_report("Joint Counts", counts.to_dict())
+        ui.display_report("Joint Probabilities", probs.to_dict())
+    else:
+        print("Not enough numeric columns for joint analytics.", flush=True)
+
+    # Vector operations
+    if len(cols) >= 2:
+        v1 = parent._data[c1].values
+        v2 = parent._data[c2].values
+        proc = InventoryVectorProcessor(parent._data)
+        vec_ops = {
+            "Dot Product": proc.dot_product(v1, v2),
+            "Angle (deg)": proc.angle_between(v1, v2),
+            "Orthogonal?": proc.check_orthogonality(v1, v2)
+        }
+        ui.display_report("Vector Operations", vec_ops)
+
+    # Categorical combos/perms if any string column exists
+    cat_cols = parent._data.select_dtypes(include='object').columns
+    if len(cat_cols) >= 1:
+        cat = cat_cols[0]
+        proc = InventoryVectorProcessor(parent._data)
+        ui.display_report("Combinations", {cat: proc.generate_combinations(cat)})
+        ui.display_report("Permutations", {cat: proc.generate_permutations(cat)})
+    else:
+        print("No categorical column for combos/perms.", flush=True)
+
+    logging.info("process_vector_data completed")
+    return True
 
 def run_all_processes():
-    """
-    Run all data processing, report generation, and visualizations in sequence.
-    
-    INPUT: None
-    OUTPUT: None
-    """
     ui.display_run_all_banner()
-    logging.info("Run All process started")
-    
-    # Process numeric data
-    print("\n[1/3] Processing numerical inventory data...")
-    numeric_success, numeric_data = process_numeric_data(auto_visualize=True)
-    
-    # Process categorical data
-    print("\n[2/3] Processing categorical inventory data...")
-    categorical_success, categorical_data = process_categorical_data(auto_visualize=True)
-    
-    # Generate combined report if both data types are available
-    if numeric_success and categorical_success:
-        print("\n[3/3] Generating additional visualizations and summary...")
-        try:
-            generate_combined_report(numeric_data, categorical_data)
-            ui.show_operation_status("Additional visualizations", True)
-        except Exception as e:
-            logging.error(f"Error generating additional visualizations: {e}")
-            print(f"Error generating additional visualizations: {e}")
-            ui.show_operation_status("Additional visualizations", False)
-    
-    # Show overall status
-    print("\nProcessing Summary:")
-    if numeric_success:
-        ui.show_operation_status("Numerical data processing", True)
-    else:
-        ui.show_operation_status("Numerical data processing", False)
-        
-    if categorical_success:
-        ui.show_operation_status("Categorical data processing", True)
-    else:
-        ui.show_operation_status("Categorical data processing", False)
-    
+    logging.info("run_all_processes started")
+    ok_num = process_numeric_data(auto_visualize=True)
+    ok_vec = process_vector_data()
+    if not ok_num:
+        ui.show_operation_status("Numeric workflow", False)
+    if not ok_vec:
+        ui.show_operation_status("Vector workflow", False)
     ui.display_processing_complete()
-    logging.info("Run All process completed")
-#
+    logging.info("run_all_processes completed")
 
 def main():
-    """
-    Main function that runs the Inventory Management System.
-    
-    INPUT: None
-    OUTPUT: None
-    """
     logging.info("Inventory Management System started")
-    
-    # Display welcome message
     ui.display_welcome_message()
-    
-    # Confirm file paths
     if not ui.confirm_file_paths():
-        print("Program terminated by user.")
-        logging.info("Program terminated by user due to missing files")
+        logging.info("Exited at file confirmation")
         return
-    
-    # Main program loop
-    running = True
-    while running:
-        ui.display_menu()
-        choice = ui.get_user_choice()
-        
+
+    while True:
+        print("\nMAIN MENU:", flush=True)
+        print("1. Process Numeric Data", flush=True)
+        print("2. Process Vector Data", flush=True)
+        print("3. Run All", flush=True)
+        print("4. Exit", flush=True)
+        try:
+            choice = int(input("Enter choice (1-4): "))
+        except ValueError:
+            continue
+
         if choice == 1:
-            # Process numerical data
             process_numeric_data()
         elif choice == 2:
-            # Process categorical data
-            process_categorical_data()
+            process_vector_data()
         elif choice == 3:
-            # Process both types of data
-            print("\nProcessing both numerical and categorical data:")
-            numeric_success, _ = process_numeric_data()
-            categorical_success, _ = process_categorical_data()
-            
-            # Show overall status
-            print("\nProcessing Summary:")
-            ui.show_operation_status("Numerical data processing", numeric_success)
-            ui.show_operation_status("Categorical data processing", categorical_success)
-        elif choice == 4:
-            # Run All option
             run_all_processes()
-        elif choice == 5:
-            # Exit program
-            print("\nExiting Inventory Management System. Goodbye!")
-            running = False
-    
-    logging.info("Inventory Management System completed successfully")
-#
+        elif choice == 4:
+            print("Exiting. Goodbye!", flush=True)
+            logging.info("Inventory Management System exited by user")
+            break
 
-#%% SELF-RUN                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#%% SELF-RUN
 if __name__ == "__main__":
-    print(f"\"{module_name_gl}\" module begins.")
+    print(f"\"{module_name_gl}\" module begins.", flush=True)
     main()

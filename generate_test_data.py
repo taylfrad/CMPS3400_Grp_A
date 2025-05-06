@@ -1,144 +1,132 @@
-#Version: v0.1
-#Date Last Updated: 2025-04-12
+# CMPS3400_Grp_A Project Skeleton
+# ==================================
+# Directory Structure:
+# CMPS3400_Grp_A/
+# ├── Doc/
+# │   ├── Report.pdf           # Final report converted from PPT
+# │   ├── TaskProgressReport.xlsx
+# │   └── Check_List.xlsx
+# ├── Input/
+# │   ├── sample_data.csv      # CSV for Parent-Child Numeric workflow
+# │   └── sample_data.pkl      # Pickle for Parent-Child Vector workflow
+# ├── Output/
+# │   ├── *.csv                 # Exported result files (e.g., below_reorder.csv, combined_summary.csv)
+# │   ├── *.png                 # Plot images (histograms, line, violin, box, scatter, hazard, etc.)
+# │   └── project.log           # Log file
+# ├── module_tmp.py            # Template for all modules (imports, constants, sections)
+# ├── config.py                # Configuration constants and paths
+# ├── main.py                  # Orchestrator script (numeric & vector workflows)
+# ├── generate_test_data.py    # Utility to create sample CSV and pickle
+# ├── inventory_numeric.py     # Parent1 & Child1.1: numeric data stats and plots
+# ├── inventory_vector.py      # Parent2 & Child2.1: vector & probability analytics
+# ├── ui.py                    # CLI interface (menus, prompts, report formatting)
+# └── visualization.py         # Shared plotting functions and helpers
 
-'''
-Version: v0.1
+# Example module_tmp.py
+#%% MODULE BEGINS
+module_name_gl = 'module_tmp'
 
+"""
+Version: v0.x
 Description:
-    Generates comprehensive test data for the Inventory Management System.
-    Two CSV files are generated:
-      - inventory_numeric.csv: Contains numerical columns (ProductID, Stock, Price, ReorderLevel).
-      - inventory_categorical.csv: Contains categorical columns (ProductID, ProductName, Category, HazardClass, Supplier).
-      
-    The HazardClass column is introduced for hazard classification (values A, B, C, D).
-    
+    Generic module template for CMPS3400 final project.
 Authors:
-   Taylor Fradella, Angel Njoku
-Date Created     :  2025-04-07
-Date Last Updated:  2025-04-12
+    Taylor Fradella
+Date Created     : YYYY-MM-DD
+Date Last Updated: YYYY-MM-DD
 
 Doc:
-    Run this script to generate sample CSV data in the './Input' folder.
-Notes:
-    Make sure the Input folder exists or let the script create it.
-'''
+    Contains standard sections for imports, constants, config, classes/functions, and main.
+"""
+#%% IMPORTS
+import logging
+# other imports...
 
+#%% CONSTANTS
+# MODULE-specific constants
+
+#%% CONFIG
+# load CONFIG if needed
+
+#%% CLASSES / FUNCTIONS
+# define classes and functions here
+
+#%% MAIN
+if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO)
+    # test code
+
+
+# generate_test_data.py
+#%% MODULE BEGINS
+module_name_gl = 'generate_test_data'
+
+"""
+Version: v0.1
+Description:
+    Utility to create sample input files for the project.
+Authors:
+    Taylor Fradella
+Date Created     : YYYY-MM-DD
+Date Last Updated: YYYY-MM-DD
+
+Doc:
+    Generates 'sample_data.csv' and 'sample_data.pkl' in the Input/ directory with realistic test data.
+"""
+#%% IMPORTS
 import pandas as pd
 import numpy as np
 import os
-import random
+from config import CONFIG
 
-# Ensure the Input folder exists
-input_folder = "./Input"
-if not os.path.exists(input_folder):
-    os.makedirs(input_folder)
+#%% FUNCTIONS
+def create_sample_csv(path):
+    df = pd.DataFrame({
+        'ProductID': np.arange(101, 111),
+        'Stock': np.random.randint(0, 100, size=10),
+        'Price': np.round(np.random.uniform(5, 50, size=10), 2),
+        'ReorderLevel': np.random.randint(10, 50, size=10)
+    })
+    df.to_csv(path, index=False)
+    print(f"Created sample CSV at {path}", flush=True)
+    return df
 
-# Define product categories and suppliers
-categories = ["Electronics", "Chemicals", "Office Supplies", "Laboratory", "Furniture", "Cleaning", "Safety Equipment"]
-suppliers = ["TechWorld Inc.", "ChemSupply Co.", "OfficeMax", "LabSource", "FurniTech", "CleanAll Ltd."]
 
-# Define product names by category
-product_names = {
-    "Electronics": ["Desktop Computer", "Laptop", "Tablet", "Monitor", "Keyboard", "Mouse", "Printer", "Scanner", "UPS", "External Hard Drive"],
-    "Chemicals": ["Hydrochloric Acid", "Sodium Hydroxide", "Ethanol", "Methanol", "Acetone", "Chloroform", "Formaldehyde", "Benzene", "Toluene", "Xylene"],
-    "Office Supplies": ["Paper A4", "Paper A3", "Stapler", "Staples Box", "Pen Set", "Marker Set", "Scissors", "Tape Dispenser", "Binder Clips", "File Folders"],
-    "Laboratory": ["Microscope", "Test Tubes", "Petri Dishes", "Pipettes", "Beakers", "Flask Set", "Bunsen Burner", "Centrifuge", "pH Meter", "Analytical Balance"],
-    "Furniture": ["Office Desk", "Office Chair", "Bookshelf", "Filing Cabinet", "Conference Table", "Whiteboard", "Cork Board", "Standing Desk", "Sofa", "Coffee Table"],
-    "Cleaning": ["All-Purpose Cleaner", "Glass Cleaner", "Floor Cleaner", "Disinfectant", "Hand Sanitizer", "Paper Towels", "Toilet Paper", "Trash Bags", "Dust Mop", "Wet Mop"],
-    "Safety Equipment": ["First Aid Kit", "Fire Extinguisher", "Safety Goggles", "Face Shield", "Respirator", "Chemical Gloves", "Lab Coat", "Safety Helmet", "Ear Protection", "Emergency Eyewash"]
-}
+def create_sample_pickle(path):
+    df = pd.DataFrame({
+        'A': np.random.randint(0, 10, size=10),
+        'B': np.random.randint(0, 10, size=10),
+        'Category': np.random.choice(['X','Y','Z'], size=10)
+    })
+    # Ensure previous file is closed/unlocked
+    try:
+        if os.path.exists(path):
+            os.remove(path)
+    except Exception:
+        pass
+    # Attempt to write pickle, fallback if PermissionError
+    try:
+        df.to_pickle(path)
+    except PermissionError:
+        import pickle
+        with open(path, 'wb') as f:
+            pickle.dump(df, f)
+    print(f"Created sample pickle at {path}", flush=True)
+    return df
 
-# Set hazard classes with appropriate associations
-# A is highest hazard, D is lowest
-hazard_class_by_category = {
-    "Electronics": ["B", "C", "D"],        
-    "Chemicals": ["A", "B"],                 
-    "Office Supplies": ["C", "D"],           
-    "Laboratory": ["A", "B", "C"],          
-    "Furniture": ["C", "D"],                
-    "Cleaning": ["B", "C"],                  
-    "Safety Equipment": ["D"]                
-}
+#%% MAIN
+def main():
+    # Ensure the Input directory exists
+    input_dir = os.path.dirname(CONFIG.inventory_numeric_csv)
+    os.makedirs(input_dir, exist_ok=True)
 
-# Generate data
-num_products = 50
-product_ids = list(range(101, 101 + num_products))
+    # Generate sample paths
+    csv_path = os.path.join(input_dir, 'sample_data.csv')
+    pkl_path = CONFIG.input_pickle
 
-# Lists to store data
-product_names_list = []
-categories_list = []
-hazard_classes_list = []
-suppliers_list = []
-stock_list = []
-price_list = []
-reorder_level_list = []
+    # Create sample data files
+    create_sample_csv(csv_path)
+    create_sample_pickle(pkl_path)
 
-# Generate data for each product
-for product_id in product_ids:
-    # Select a random category
-    category = random.choice(categories)
-    categories_list.append(category)
-    
-    # Select a random product name from that category
-    product_name = random.choice(product_names[category])
-    product_names_list.append(product_name)
-    
-    # Assign an appropriate hazard class for this category
-    hazard_class = random.choice(hazard_class_by_category[category])
-    hazard_classes_list.append(hazard_class)
-    
-    # Select a random supplier
-    supplier = random.choice(suppliers)
-    suppliers_list.append(supplier)
-    
-    # Generate numeric data with realistic patterns
-    # Higher hazard items tend to have lower stock and higher prices
-    if hazard_class == 'A':
-        stock = random.randint(5, 30)
-        price = round(random.uniform(50, 300), 2)
-        reorder_level = random.randint(10, 25)
-    elif hazard_class == 'B':
-        stock = random.randint(10, 50)
-        price = round(random.uniform(30, 150), 2)
-        reorder_level = random.randint(15, 35)
-    elif hazard_class == 'C':
-        stock = random.randint(20, 80)
-        price = round(random.uniform(15, 100), 2)
-        reorder_level = random.randint(20, 40)
-    else:  # hazard_class == 'D'
-        stock = random.randint(30, 100)
-        price = round(random.uniform(5, 80), 2)
-        reorder_level = random.randint(25, 50)
-    
-    # Ensure some items are below reorder level
-    if random.random() < 0.15:  # 15% chance of being below reorder level
-        stock = max(1, int(reorder_level * 0.8))
-    
-    stock_list.append(stock)
-    price_list.append(price)
-    reorder_level_list.append(reorder_level)
-
-# Create the two DataFrames
-numeric_data = pd.DataFrame({
-    'ProductID': product_ids,
-    'Stock': stock_list,
-    'Price': price_list,
-    'ReorderLevel': reorder_level_list
-})
-
-categorical_data = pd.DataFrame({
-    'ProductID': product_ids,
-    'ProductName': product_names_list,
-    'Category': categories_list,
-    'HazardClass': hazard_classes_list,
-    'Supplier': suppliers_list
-})
-
-# Save to CSV files
-numeric_data.to_csv(os.path.join(input_folder, "inventory_numeric.csv"), index=False)
-categorical_data.to_csv(os.path.join(input_folder, "inventory_categorical.csv"), index=False)
-
-print(f"Test data generated and saved to the '{input_folder}' folder.")
-print(f"Generated {num_products} products across {len(categories)} categories.")
-print(f"Hazard class distribution: {pd.Series(hazard_classes_list).value_counts().to_dict()}")
-print(f"Items below reorder level: {sum(numeric_data['Stock'] < numeric_data['ReorderLevel'])}")
+if __name__ == '__main__':
+    main()
