@@ -2,7 +2,7 @@
 module_name_gl = 'main'
 
 '''
-Version: v0.3
+Version: v0.4
 Description:
     Main entry point for the Inventory Management System.
 Authors:
@@ -20,6 +20,8 @@ Notes:
 import logging
 import os
 import pandas as pd
+import numpy as np
+from functools import partial
 
 from config import CONFIG
 import ui
@@ -30,6 +32,7 @@ from inventory_vector import InventoryVector, InventoryVectorProcessor
 
 def flexible_stats(operation, *values, round_digits=2, **options):
     """
+    Demonstrates use of *args and **kwargs
     operation: 'sum', 'mean', or 'max'
     *values: any number of numeric inputs
     round_digits: how many decimals to round the result
@@ -37,21 +40,26 @@ def flexible_stats(operation, *values, round_digits=2, **options):
     """
     if not values:
         raise ValueError("At least one value is required")
-    if operation == 'sum':
-        result = sum(values)
-    elif operation == 'mean':
-        result = sum(values) / len(values)
-    elif operation == 'max':
-        result = max(values)
-    else:
+    
+    # Using lambda for operation mapping
+    operations = {
+        'sum': lambda x: sum(x),
+        'mean': lambda x: sum(x) / len(x),
+        'max': lambda x: max(x)
+    }
+    
+    if operation not in operations:
         raise ValueError(f"Unsupported operation: {operation!r}")
+    
+    result = operations[operation](values)
+    
     if options.get('verbose'):
         print(f"[flexible_stats] {operation}({values}) → {result}")
     return round(result, round_digits)
 
-
 def run_formula(formula_str, **vars):
     """
+    Demonstrates use of eval() and **kwargs
     formula_str: e.g. "a * b + c/2"
     **vars: named variables to inject into the formula
     """
@@ -60,6 +68,19 @@ def run_formula(formula_str, **vars):
         return eval(formula_str, safe_globals, vars)
     except Exception as e:
         raise ValueError(f"Error evaluating {formula_str!r}: {e}")
+
+def process_with_nonlocal():
+    """
+    Demonstrates use of nonlocal variables
+    """
+    counter = 0
+    
+    def increment():
+        nonlocal counter
+        counter += 1
+        return counter
+    
+    return increment
 
 #%% CONFIGURATION
 os.makedirs(CONFIG.output_dir, exist_ok=True)
@@ -80,13 +101,19 @@ def process_numeric_data(auto_visualize=False):
     proc = InventoryNumericProcessor(df)
     proc.process_and_display()
 
+    # Using lambda for visualization mapping
+    viz_functions = {
+        'histogram': lambda: proc.plot_histogram('Stock'),
+        'line': lambda: proc.plot_line('ProductID', 'Stock'),
+        'violin': lambda: proc.plot_violin('Stock'),
+        'box': lambda: proc.plot_box('Stock'),
+        'scatter': lambda: proc.plot_scatter('ProductID', 'Price')
+    }
+
     if auto_visualize or ui.get_visualization_choice():
         try:
-            proc.plot_histogram('Stock')
-            proc.plot_line('ProductID', 'Stock')
-            proc.plot_violin('Stock')
-            proc.plot_box('Stock')
-            proc.plot_scatter('ProductID', 'Price')
+            for viz_name, viz_func in viz_functions.items():
+                viz_func()
             ui.show_operation_status("Numeric visualizations", True)
             logging.info("Numeric visualizations saved")
         except Exception as e:
@@ -96,7 +123,6 @@ def process_numeric_data(auto_visualize=False):
     logging.info("process_numeric_data completed")
     return True
 
-
 def process_vector_data():
     logging.info("process_vector_data started")
     try:
@@ -105,6 +131,13 @@ def process_vector_data():
         logging.error(f"Error loading pickle: {e}")
         print(f"Error loading pickle: {e}", flush=True)
         return False
+
+    # Using lambda for vector operations
+    vector_ops = {
+        'dot': lambda v1, v2: np.dot(v1, v2),
+        'angle': lambda v1, v2: np.arccos(np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))),
+        'orthogonal': lambda v1, v2: np.isclose(np.dot(v1, v2), 0)
+    }
 
     # Probability analytics
     cols = parent._data.select_dtypes(include='number').columns
@@ -123,9 +156,9 @@ def process_vector_data():
         v2 = parent._data[c2].values
         proc = InventoryVectorProcessor(parent._data)
         vec_ops = {
-            "Dot Product": proc.dot_product(v1, v2),
-            "Angle (deg)": proc.angle_between(v1, v2),
-            "Orthogonal?": proc.check_orthogonality(v1, v2)
+            "Dot Product": vector_ops['dot'](v1, v2),
+            "Angle (deg)": np.degrees(vector_ops['angle'](v1, v2)),
+            "Orthogonal?": vector_ops['orthogonal'](v1, v2)
         }
         ui.display_report("Vector Operations", vec_ops)
 
@@ -142,7 +175,6 @@ def process_vector_data():
     logging.info("process_vector_data completed")
     return True
 
-
 def run_all_processes():
     ui.display_run_all_banner()
     logging.info("run_all_processes started")
@@ -155,19 +187,31 @@ def run_all_processes():
     ui.display_processing_complete()
     logging.info("run_all_processes completed")
 
-
 def main():
     logging.info("Inventory Management System started")
     ui.display_welcome_message()
 
     # ── Advanced Python demos ────────────────────────────
     try:
-        print("→ flexible_stats demo:", flexible_stats('sum', 1, 2, 3), flush=True)
+        # Demo of *args and **kwargs
+        print("→ flexible_stats demo:", flexible_stats('sum', 1, 2, 3, verbose=True), flush=True)
+        
+        # Demo of eval()
         print(
             "→ run_formula demo:",
             run_formula("a*b + c/2", a=4, b=3, c=10),
             flush=True
         )
+        
+        # Demo of nonlocal
+        counter = process_with_nonlocal()
+        print(f"→ nonlocal demo: {counter()}", flush=True)
+        
+        # Demo of lambda
+        numbers = [1, 2, 3, 4, 5]
+        squared = list(map(lambda x: x**2, numbers))
+        print(f"→ lambda demo: {squared}", flush=True)
+        
     except Exception as e:
         print(f"Advanced demo error: {e}", flush=True)
         logging.error(f"Advanced demo error: {e}")
