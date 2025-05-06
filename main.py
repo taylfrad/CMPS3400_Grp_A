@@ -25,6 +25,42 @@ from config import CONFIG
 import ui
 from inventory_numeric import InventoryNumericProcessor
 from inventory_vector import InventoryVector, InventoryVectorProcessor
+
+#%% ADVANCED PYTHON DEMOS
+
+def flexible_stats(operation, *values, round_digits=2, **options):
+    """
+    operation: 'sum', 'mean', or 'max'
+    *values: any number of numeric inputs
+    round_digits: how many decimals to round the result
+    **options: e.g. verbose=True
+    """
+    if not values:
+        raise ValueError("At least one value is required")
+    if operation == 'sum':
+        result = sum(values)
+    elif operation == 'mean':
+        result = sum(values) / len(values)
+    elif operation == 'max':
+        result = max(values)
+    else:
+        raise ValueError(f"Unsupported operation: {operation!r}")
+    if options.get('verbose'):
+        print(f"[flexible_stats] {operation}({values}) → {result}")
+    return round(result, round_digits)
+
+
+def run_formula(formula_str, **vars):
+    """
+    formula_str: e.g. "a * b + c/2"
+    **vars: named variables to inject into the formula
+    """
+    safe_globals = {}
+    try:
+        return eval(formula_str, safe_globals, vars)
+    except Exception as e:
+        raise ValueError(f"Error evaluating {formula_str!r}: {e}")
+
 #%% CONFIGURATION
 os.makedirs(CONFIG.output_dir, exist_ok=True)
 logging.basicConfig(
@@ -32,7 +68,9 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s %(levelname)s:%(message)s'
 )
+
 #%% FUNCTIONS
+
 def process_numeric_data(auto_visualize=False):
     logging.info("process_numeric_data started")
     df = ui.load_data(CONFIG.inventory_numeric_csv, "numeric")
@@ -58,6 +96,7 @@ def process_numeric_data(auto_visualize=False):
     logging.info("process_numeric_data completed")
     return True
 
+
 def process_vector_data():
     logging.info("process_vector_data started")
     try:
@@ -72,7 +111,7 @@ def process_vector_data():
     if len(cols) >= 2:
         c1, c2 = cols[:2]
         counts = parent.joint_counts(c1, c2)
-        probs  = parent.joint_probabilities(c1, c2)
+        probs = parent.joint_probabilities(c1, c2)
         ui.display_report("Joint Counts", counts.to_dict())
         ui.display_report("Joint Probabilities", probs.to_dict())
     else:
@@ -103,6 +142,7 @@ def process_vector_data():
     logging.info("process_vector_data completed")
     return True
 
+
 def run_all_processes():
     ui.display_run_all_banner()
     logging.info("run_all_processes started")
@@ -115,9 +155,24 @@ def run_all_processes():
     ui.display_processing_complete()
     logging.info("run_all_processes completed")
 
+
 def main():
     logging.info("Inventory Management System started")
     ui.display_welcome_message()
+
+    # ── Advanced Python demos ────────────────────────────
+    try:
+        print("→ flexible_stats demo:", flexible_stats('sum', 1, 2, 3), flush=True)
+        print(
+            "→ run_formula demo:",
+            run_formula("a*b + c/2", a=4, b=3, c=10),
+            flush=True
+        )
+    except Exception as e:
+        print(f"Advanced demo error: {e}", flush=True)
+        logging.error(f"Advanced demo error: {e}")
+    # ──────────────────────────────────────────────────────
+
     if not ui.confirm_file_paths():
         logging.info("Exited at file confirmation")
         return

@@ -110,6 +110,18 @@ class InventoryVectorProcessor(InventoryVector):
         logging.info(f"generate_permutations called on {col}, r={r}")
         vals = self._data[col].dropna().unique().tolist()
         return list(permutations(vals, r))
+    
+    def sorted_joint_counts(self):
+        """
+        Return joint_counts dict items sorted DESC by count.
+        Demonstrates a lambda used as the sort key.
+        """
+        # self.joint_counts is a dict {(i,j): count}
+        return sorted(
+            self.joint_counts.items(),
+            key=lambda pair: pair[1],  # lambda!!!!
+            reverse=True
+        )
 
 #%% SELF-RUN
 if __name__ == "__main__":

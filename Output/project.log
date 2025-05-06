@@ -52,3 +52,58 @@
 2025-05-05 19:26:35,810 INFO:generate_permutations called on Category, r=2
 2025-05-05 19:26:35,811 INFO:process_vector_data completed
 2025-05-05 19:26:35,811 INFO:run_all_processes completed
+2025-05-05 20:00:32,908 INFO:Inventory Management System started
+2025-05-05 20:00:36,447 INFO:run_all_processes started
+2025-05-05 20:00:36,447 INFO:process_numeric_data started
+2025-05-05 20:00:36,452 INFO:InventoryNumeric.__init__
+2025-05-05 20:00:36,452 INFO:InventoryNumericProcessor.__init__
+2025-05-05 20:00:36,452 INFO:process_and_display started
+2025-05-05 20:00:36,452 INFO:calculate_total_stock called
+2025-05-05 20:00:36,452 INFO:calculate_average_price called
+2025-05-05 20:00:36,453 INFO:generate_numeric_report called
+2025-05-05 20:00:36,453 INFO:calculate_total_stock called
+2025-05-05 20:00:36,453 INFO:calculate_average_price called
+2025-05-05 20:00:36,453 INFO:items_below_reorder called
+2025-05-05 20:00:36,456 INFO:items_below_reorder called
+2025-05-05 20:00:37,907 INFO:plot_histogram called on Stock
+2025-05-05 20:00:38,069 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
+2025-05-05 20:00:38,069 INFO:plot_line called on ProductID vs Stock
+2025-05-05 20:00:38,150 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
+2025-05-05 20:00:38,150 INFO:plot_violin called on Stock
+2025-05-05 20:00:38,227 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_violin.png
+2025-05-05 20:00:38,227 INFO:plot_box called on Stock
+2025-05-05 20:00:38,288 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_box.png
+2025-05-05 20:00:38,288 INFO:plot_scatter called on ProductID vs Price
+2025-05-05 20:00:38,365 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Price_scatter.png
+2025-05-05 20:00:38,366 INFO:Exported below_reorder to c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\below_reorder.csv
+2025-05-05 20:00:38,367 INFO:process_and_display completed
+2025-05-05 20:00:38,367 INFO:plot_histogram called on Stock
+2025-05-05 20:00:38,468 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
+2025-05-05 20:00:38,468 INFO:plot_line called on ProductID vs Stock
+2025-05-05 20:00:38,550 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
+2025-05-05 20:00:38,550 INFO:plot_violin called on Stock
+2025-05-05 20:00:38,630 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_violin.png
+2025-05-05 20:00:38,630 INFO:plot_box called on Stock
+2025-05-05 20:00:38,691 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_box.png
+2025-05-05 20:00:38,691 INFO:plot_scatter called on ProductID vs Price
+2025-05-05 20:00:38,777 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Price_scatter.png
+2025-05-05 20:00:38,777 INFO:Numeric visualizations saved
+2025-05-05 20:00:38,777 INFO:process_numeric_data completed
+2025-05-05 20:00:38,777 INFO:process_vector_data started
+2025-05-05 20:00:38,778 INFO:InventoryVector.__init__
+2025-05-05 20:00:38,778 INFO:joint_counts called on A, B
+2025-05-05 20:00:38,778 INFO:joint_probabilities called on A, B
+2025-05-05 20:00:38,778 INFO:joint_counts called on A, B
+2025-05-05 20:00:38,781 INFO:InventoryVector.__init__
+2025-05-05 20:00:38,781 INFO:InventoryVectorProcessor.__init__
+2025-05-05 20:00:38,781 INFO:dot_product called
+2025-05-05 20:00:38,781 INFO:angle_between called
+2025-05-05 20:00:38,781 INFO:check_orthogonality called
+2025-05-05 20:00:38,781 INFO:dot_product called
+2025-05-05 20:00:38,781 INFO:InventoryVector.__init__
+2025-05-05 20:00:38,782 INFO:InventoryVectorProcessor.__init__
+2025-05-05 20:00:38,782 INFO:generate_combinations called on Category, r=2
+2025-05-05 20:00:38,782 INFO:generate_permutations called on Category, r=2
+2025-05-05 20:00:38,782 INFO:process_vector_data completed
+2025-05-05 20:00:38,783 INFO:run_all_processes completed
+2025-05-05 20:00:41,558 INFO:Inventory Management System exited by user
