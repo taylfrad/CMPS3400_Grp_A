@@ -1,195 +1,153 @@
-2025-05-05 19:26:25,386 INFO:Inventory Management System started
-2025-05-05 19:26:33,642 INFO:run_all_processes started
-2025-05-05 19:26:33,642 INFO:process_numeric_data started
-2025-05-05 19:26:33,645 INFO:InventoryNumeric.__init__
-2025-05-05 19:26:33,645 INFO:InventoryNumericProcessor.__init__
-2025-05-05 19:26:33,645 INFO:process_and_display started
-2025-05-05 19:26:33,645 INFO:calculate_total_stock called
-2025-05-05 19:26:33,645 INFO:calculate_average_price called
-2025-05-05 19:26:33,646 INFO:generate_numeric_report called
-2025-05-05 19:26:33,646 INFO:calculate_total_stock called
-2025-05-05 19:26:33,646 INFO:calculate_average_price called
-2025-05-05 19:26:33,646 INFO:items_below_reorder called
-2025-05-05 19:26:33,648 INFO:items_below_reorder called
-2025-05-05 19:26:34,929 INFO:plot_histogram called on Stock
-2025-05-05 19:26:35,090 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
-2025-05-05 19:26:35,090 INFO:plot_line called on ProductID vs Stock
-2025-05-05 19:26:35,174 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
-2025-05-05 19:26:35,174 INFO:plot_violin called on Stock
-2025-05-05 19:26:35,256 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_violin.png
-2025-05-05 19:26:35,256 INFO:plot_box called on Stock
-2025-05-05 19:26:35,317 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_box.png
-2025-05-05 19:26:35,317 INFO:plot_scatter called on ProductID vs Price
-2025-05-05 19:26:35,395 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Price_scatter.png
-2025-05-05 19:26:35,397 INFO:Exported below_reorder to c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\below_reorder.csv
-2025-05-05 19:26:35,397 INFO:process_and_display completed
-2025-05-05 19:26:35,397 INFO:plot_histogram called on Stock
-2025-05-05 19:26:35,503 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
-2025-05-05 19:26:35,503 INFO:plot_line called on ProductID vs Stock
-2025-05-05 19:26:35,585 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
-2025-05-05 19:26:35,585 INFO:plot_violin called on Stock
-2025-05-05 19:26:35,668 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_violin.png
-2025-05-05 19:26:35,668 INFO:plot_box called on Stock
-2025-05-05 19:26:35,728 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_box.png
-2025-05-05 19:26:35,728 INFO:plot_scatter called on ProductID vs Price
-2025-05-05 19:26:35,806 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Price_scatter.png
-2025-05-05 19:26:35,806 INFO:Numeric visualizations saved
-2025-05-05 19:26:35,806 INFO:process_numeric_data completed
-2025-05-05 19:26:35,806 INFO:process_vector_data started
-2025-05-05 19:26:35,806 INFO:InventoryVector.__init__
-2025-05-05 19:26:35,806 INFO:joint_counts called on A, B
-2025-05-05 19:26:35,807 INFO:joint_probabilities called on A, B
-2025-05-05 19:26:35,807 INFO:joint_counts called on A, B
-2025-05-05 19:26:35,809 INFO:InventoryVector.__init__
-2025-05-05 19:26:35,809 INFO:InventoryVectorProcessor.__init__
-2025-05-05 19:26:35,809 INFO:dot_product called
-2025-05-05 19:26:35,809 INFO:angle_between called
-2025-05-05 19:26:35,809 INFO:check_orthogonality called
-2025-05-05 19:26:35,809 INFO:dot_product called
-2025-05-05 19:26:35,810 INFO:InventoryVector.__init__
-2025-05-05 19:26:35,810 INFO:InventoryVectorProcessor.__init__
-2025-05-05 19:26:35,810 INFO:generate_combinations called on Category, r=2
-2025-05-05 19:26:35,810 INFO:generate_permutations called on Category, r=2
-2025-05-05 19:26:35,811 INFO:process_vector_data completed
-2025-05-05 19:26:35,811 INFO:run_all_processes completed
-2025-05-05 20:00:32,908 INFO:Inventory Management System started
-2025-05-05 20:00:36,447 INFO:run_all_processes started
-2025-05-05 20:00:36,447 INFO:process_numeric_data started
-2025-05-05 20:00:36,452 INFO:InventoryNumeric.__init__
-2025-05-05 20:00:36,452 INFO:InventoryNumericProcessor.__init__
-2025-05-05 20:00:36,452 INFO:process_and_display started
-2025-05-05 20:00:36,452 INFO:calculate_total_stock called
-2025-05-05 20:00:36,452 INFO:calculate_average_price called
-2025-05-05 20:00:36,453 INFO:generate_numeric_report called
-2025-05-05 20:00:36,453 INFO:calculate_total_stock called
-2025-05-05 20:00:36,453 INFO:calculate_average_price called
-2025-05-05 20:00:36,453 INFO:items_below_reorder called
-2025-05-05 20:00:36,456 INFO:items_below_reorder called
-2025-05-05 20:00:37,907 INFO:plot_histogram called on Stock
-2025-05-05 20:00:38,069 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
-2025-05-05 20:00:38,069 INFO:plot_line called on ProductID vs Stock
-2025-05-05 20:00:38,150 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
-2025-05-05 20:00:38,150 INFO:plot_violin called on Stock
-2025-05-05 20:00:38,227 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_violin.png
-2025-05-05 20:00:38,227 INFO:plot_box called on Stock
-2025-05-05 20:00:38,288 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_box.png
-2025-05-05 20:00:38,288 INFO:plot_scatter called on ProductID vs Price
-2025-05-05 20:00:38,365 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Price_scatter.png
-2025-05-05 20:00:38,366 INFO:Exported below_reorder to c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\below_reorder.csv
-2025-05-05 20:00:38,367 INFO:process_and_display completed
-2025-05-05 20:00:38,367 INFO:plot_histogram called on Stock
-2025-05-05 20:00:38,468 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
-2025-05-05 20:00:38,468 INFO:plot_line called on ProductID vs Stock
-2025-05-05 20:00:38,550 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
-2025-05-05 20:00:38,550 INFO:plot_violin called on Stock
-2025-05-05 20:00:38,630 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_violin.png
-2025-05-05 20:00:38,630 INFO:plot_box called on Stock
-2025-05-05 20:00:38,691 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_box.png
-2025-05-05 20:00:38,691 INFO:plot_scatter called on ProductID vs Price
-2025-05-05 20:00:38,777 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Price_scatter.png
-2025-05-05 20:00:38,777 INFO:Numeric visualizations saved
-2025-05-05 20:00:38,777 INFO:process_numeric_data completed
-2025-05-05 20:00:38,777 INFO:process_vector_data started
-2025-05-05 20:00:38,778 INFO:InventoryVector.__init__
-2025-05-05 20:00:38,778 INFO:joint_counts called on A, B
-2025-05-05 20:00:38,778 INFO:joint_probabilities called on A, B
-2025-05-05 20:00:38,778 INFO:joint_counts called on A, B
-2025-05-05 20:00:38,781 INFO:InventoryVector.__init__
-2025-05-05 20:00:38,781 INFO:InventoryVectorProcessor.__init__
-2025-05-05 20:00:38,781 INFO:dot_product called
-2025-05-05 20:00:38,781 INFO:angle_between called
-2025-05-05 20:00:38,781 INFO:check_orthogonality called
-2025-05-05 20:00:38,781 INFO:dot_product called
-2025-05-05 20:00:38,781 INFO:InventoryVector.__init__
-2025-05-05 20:00:38,782 INFO:InventoryVectorProcessor.__init__
-2025-05-05 20:00:38,782 INFO:generate_combinations called on Category, r=2
-2025-05-05 20:00:38,782 INFO:generate_permutations called on Category, r=2
-2025-05-05 20:00:38,782 INFO:process_vector_data completed
-2025-05-05 20:00:38,783 INFO:run_all_processes completed
-2025-05-05 20:00:41,558 INFO:Inventory Management System exited by user
-2025-05-05 20:12:24,232 INFO:Inventory Management System started
-2025-05-05 20:12:26,862 INFO:run_all_processes started
-2025-05-05 20:12:26,862 INFO:process_numeric_data started
-2025-05-05 20:12:26,867 INFO:InventoryNumeric.__init__
-2025-05-05 20:14:00,235 INFO:Inventory Management System started
-2025-05-05 20:14:02,397 INFO:run_all_processes started
-2025-05-05 20:14:02,397 INFO:process_numeric_data started
-2025-05-05 20:14:02,400 INFO:InventoryNumeric.__init__
-2025-05-05 20:15:09,579 INFO:Inventory Management System started
-2025-05-05 20:15:12,838 INFO:run_all_processes started
-2025-05-05 20:15:12,838 INFO:process_numeric_data started
-2025-05-05 20:15:12,843 INFO:InventoryNumeric.__init__
-2025-05-05 20:15:12,843 INFO:InventoryNumericProcessor.__init__
-2025-05-05 20:15:12,843 INFO:process_and_display started
-2025-05-05 20:15:12,843 INFO:calculate_total_stock called
-2025-05-05 20:15:12,844 INFO:calculate_average_price called
-2025-05-05 20:15:12,844 INFO:calculate_median_price called
-2025-05-05 20:15:12,844 INFO:calculate_std_price called
-2025-05-05 20:15:12,845 INFO:generate_numeric_report called
-2025-05-05 20:15:12,845 INFO:calculate_total_stock called
-2025-05-05 20:15:12,845 INFO:calculate_average_price called
-2025-05-05 20:15:12,845 INFO:items_below_reorder called
-2025-05-05 20:15:12,847 INFO:items_below_reorder called
-2025-05-05 20:15:21,081 INFO:plot_histogram called on Stock
-2025-05-05 20:15:21,245 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
-2025-05-05 20:15:21,245 INFO:plot_line called on ProductID vs Stock
-2025-05-05 20:15:21,326 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
-2025-05-05 20:15:21,326 INFO:plot_histogram called on Price
-2025-05-05 20:15:21,409 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Price_histogram.png
-2025-05-05 20:15:21,409 INFO:plot_line called on ProductID vs Price
-2025-05-05 20:15:21,493 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Price_line.png
-2025-05-05 20:15:21,495 INFO:Exported below_reorder to c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\below_reorder.csv
-2025-05-05 20:15:21,495 INFO:process_and_display completed
-2025-05-05 20:15:21,495 INFO:plot_histogram called on Stock
-2025-05-05 20:15:21,582 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
-2025-05-05 20:15:21,582 INFO:plot_line called on ProductID vs Stock
-2025-05-05 20:15:21,678 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
-2025-05-05 20:15:21,678 ERROR:Numeric viz error: 'InventoryNumericProcessor' object has no attribute 'plot_violin'
-2025-05-05 20:15:21,679 INFO:process_numeric_data completed
-2025-05-05 20:15:21,679 INFO:process_vector_data started
-2025-05-05 20:15:21,679 INFO:InventoryVector.__init__
-2025-05-05 20:15:21,682 INFO:InventoryVector.__init__
-2025-05-05 20:15:21,682 INFO:InventoryVectorProcessor.__init__
-2025-05-05 20:15:21,682 INFO:InventoryVector.__init__
-2025-05-05 20:15:21,682 INFO:InventoryVectorProcessor.__init__
-2025-05-05 20:15:21,683 INFO:process_vector_data completed
-2025-05-05 20:15:21,683 INFO:run_all_processes completed
-2025-05-05 20:57:10,745 INFO:Inventory Management System started
-2025-05-05 20:57:14,143 INFO:run_all_processes started
-2025-05-05 20:57:14,143 INFO:process_numeric_data started
-2025-05-05 20:57:14,148 INFO:InventoryNumeric.__init__
-2025-05-05 20:57:14,148 INFO:InventoryNumericProcessor.__init__
-2025-05-05 20:57:14,148 INFO:process_and_display started
-2025-05-05 20:57:14,148 INFO:calculate_total_stock called
-2025-05-05 20:57:14,148 INFO:calculate_average_price called
-2025-05-05 20:57:14,148 INFO:calculate_median_price called
-2025-05-05 20:57:14,148 INFO:calculate_std_price called
-2025-05-05 20:57:14,149 INFO:generate_numeric_report called
-2025-05-05 20:57:14,149 INFO:calculate_total_stock called
-2025-05-05 20:57:14,150 INFO:calculate_average_price called
-2025-05-05 20:57:14,150 INFO:items_below_reorder called
-2025-05-05 20:57:14,152 INFO:items_below_reorder called
-2025-05-05 20:57:16,167 INFO:plot_histogram called on Stock
-2025-05-05 20:57:16,336 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
-2025-05-05 20:57:16,336 INFO:plot_line called on ProductID vs Stock
-2025-05-05 20:57:16,418 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
-2025-05-05 20:57:16,418 INFO:plot_histogram called on Price
-2025-05-05 20:57:16,498 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Price_histogram.png
-2025-05-05 20:57:16,498 INFO:plot_line called on ProductID vs Price
-2025-05-05 20:57:16,580 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Price_line.png
-2025-05-05 20:57:16,582 INFO:Exported below_reorder to c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\below_reorder.csv
-2025-05-05 20:57:16,582 INFO:process_and_display completed
-2025-05-05 20:57:16,582 INFO:plot_histogram called on Stock
-2025-05-05 20:57:16,666 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
-2025-05-05 20:57:16,666 INFO:plot_line called on ProductID vs Stock
-2025-05-05 20:57:16,762 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
-2025-05-05 20:57:16,762 ERROR:Numeric viz error: 'InventoryNumericProcessor' object has no attribute 'plot_violin'
-2025-05-05 20:57:16,762 INFO:process_numeric_data completed
-2025-05-05 20:57:16,762 INFO:process_vector_data started
-2025-05-05 20:57:16,763 INFO:InventoryVector.__init__
-2025-05-05 20:57:16,766 INFO:InventoryVector.__init__
-2025-05-05 20:57:16,766 INFO:InventoryVectorProcessor.__init__
-2025-05-05 20:57:16,767 INFO:InventoryVector.__init__
-2025-05-05 20:57:16,767 INFO:InventoryVectorProcessor.__init__
-2025-05-05 20:57:16,768 INFO:process_vector_data completed
-2025-05-05 20:57:16,768 INFO:run_all_processes completed
+2025-05-07 14:20:01,250 INFO:Inventory Management System started
+2025-05-07 14:20:06,922 INFO:run_all_processes started
+2025-05-07 14:20:06,922 INFO:process_numeric_data started
+2025-05-07 14:20:06,935 INFO:InventoryNumeric.__init__
+2025-05-07 14:20:06,935 INFO:InventoryNumericProcessor.__init__
+2025-05-07 14:20:06,935 INFO:process_and_display started
+2025-05-07 14:20:06,935 INFO:calculate_total_stock called
+2025-05-07 14:20:06,935 INFO:calculate_average_price called
+2025-05-07 14:20:06,935 INFO:calculate_median_price called
+2025-05-07 14:20:06,935 INFO:calculate_std_price called
+2025-05-07 14:20:06,936 INFO:generate_numeric_report called
+2025-05-07 14:20:06,936 INFO:calculate_total_stock called
+2025-05-07 14:20:06,937 INFO:calculate_average_price called
+2025-05-07 14:20:06,938 INFO:items_below_reorder called
+2025-05-07 14:20:06,941 INFO:items_below_reorder called
+2025-05-07 14:20:15,473 INFO:plot_histogram called on Stock
+2025-05-07 14:20:15,637 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
+2025-05-07 14:20:15,637 INFO:plot_line called on ProductID vs Stock
+2025-05-07 14:20:16,030 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
+2025-05-07 14:20:16,030 INFO:plot_histogram called on Price
+2025-05-07 14:20:16,109 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Price_histogram.png
+2025-05-07 14:20:16,109 INFO:plot_line called on ProductID vs Price
+2025-05-07 14:20:16,398 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Price_line.png
+2025-05-07 14:20:16,403 INFO:Exported below_reorder to c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\below_reorder.csv
+2025-05-07 14:20:16,403 INFO:process_and_display completed
+2025-05-07 14:20:16,403 INFO:plot_histogram called on Stock
+2025-05-07 14:20:16,488 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
+2025-05-07 14:20:16,488 INFO:plot_line called on ProductID vs Stock
+2025-05-07 14:20:16,913 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
+2025-05-07 14:20:16,913 ERROR:Numeric viz error: 'InventoryNumericProcessor' object has no attribute 'plot_violin'
+2025-05-07 14:20:16,914 INFO:process_numeric_data completed
+2025-05-07 14:20:16,914 INFO:process_vector_data started
+2025-05-07 14:20:16,915 INFO:InventoryVector.__init__
+2025-05-07 14:20:17,971 INFO:InventoryVector.__init__
+2025-05-07 14:20:17,971 INFO:InventoryVectorProcessor.__init__
+2025-05-07 14:20:17,972 INFO:InventoryVector.__init__
+2025-05-07 14:20:17,972 INFO:InventoryVectorProcessor.__init__
+2025-05-07 14:20:17,976 INFO:process_vector_data completed
+2025-05-07 14:20:17,977 INFO:run_all_processes completed
+2025-05-07 14:23:39,403 INFO:run_all_processes started
+2025-05-07 14:23:39,403 INFO:process_numeric_data started
+2025-05-07 14:23:39,417 INFO:InventoryNumeric.__init__
+2025-05-07 14:23:39,417 INFO:InventoryNumericProcessor.__init__
+2025-05-07 14:23:39,417 INFO:process_and_display started
+2025-05-07 14:23:39,417 INFO:calculate_total_stock called
+2025-05-07 14:23:39,417 INFO:calculate_average_price called
+2025-05-07 14:23:39,418 INFO:calculate_median_price called
+2025-05-07 14:23:39,418 INFO:calculate_std_price called
+2025-05-07 14:23:39,418 INFO:generate_numeric_report called
+2025-05-07 14:23:39,418 INFO:calculate_total_stock called
+2025-05-07 14:23:39,418 INFO:calculate_average_price called
+2025-05-07 14:23:39,418 INFO:items_below_reorder called
+2025-05-07 14:23:39,421 INFO:items_below_reorder called
+2025-05-07 14:23:41,942 INFO:plot_histogram called on Stock
+2025-05-07 14:23:42,034 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
+2025-05-07 14:23:42,034 INFO:plot_line called on ProductID vs Stock
+2025-05-07 14:23:42,426 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
+2025-05-07 14:23:42,426 INFO:plot_histogram called on Price
+2025-05-07 14:23:42,513 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Price_histogram.png
+2025-05-07 14:23:42,513 INFO:plot_line called on ProductID vs Price
+2025-05-07 14:23:42,796 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Price_line.png
+2025-05-07 14:23:42,801 INFO:Exported below_reorder to c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\below_reorder.csv
+2025-05-07 14:23:42,801 INFO:process_and_display completed
+2025-05-07 14:23:42,801 INFO:plot_histogram called on Stock
+2025-05-07 14:23:42,894 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
+2025-05-07 14:23:42,894 INFO:plot_line called on ProductID vs Stock
+2025-05-07 14:23:43,288 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
+2025-05-07 14:23:43,288 ERROR:Numeric viz error: 'InventoryNumericProcessor' object has no attribute 'plot_violin'
+2025-05-07 14:23:43,288 INFO:process_numeric_data completed
+2025-05-07 14:23:43,288 INFO:process_vector_data started
+2025-05-07 14:23:43,296 INFO:InventoryVector.__init__
+2025-05-07 14:23:44,380 INFO:InventoryVector.__init__
+2025-05-07 14:23:44,380 INFO:InventoryVectorProcessor.__init__
+2025-05-07 14:23:44,381 INFO:InventoryVector.__init__
+2025-05-07 14:23:44,381 INFO:InventoryVectorProcessor.__init__
+2025-05-07 14:23:44,393 INFO:process_vector_data completed
+2025-05-07 14:23:44,394 INFO:run_all_processes completed
+2025-05-07 14:26:15,663 INFO:run_all_processes started
+2025-05-07 14:26:15,663 INFO:process_numeric_data started
+2025-05-07 14:26:15,673 INFO:InventoryNumeric.__init__
+2025-05-07 14:26:15,673 INFO:InventoryNumericProcessor.__init__
+2025-05-07 14:26:15,673 INFO:process_and_display started
+2025-05-07 14:26:15,673 INFO:calculate_total_stock called
+2025-05-07 14:26:15,673 INFO:calculate_average_price called
+2025-05-07 14:26:15,673 INFO:calculate_median_price called
+2025-05-07 14:26:15,673 INFO:calculate_std_price called
+2025-05-07 14:26:15,674 INFO:generate_numeric_report called
+2025-05-07 14:26:15,674 INFO:calculate_total_stock called
+2025-05-07 14:26:15,674 INFO:calculate_average_price called
+2025-05-07 14:26:15,674 INFO:items_below_reorder called
+2025-05-07 14:26:15,676 INFO:items_below_reorder called
+2025-05-07 14:26:20,833 INFO:plot_histogram called on Stock
+2025-05-07 14:26:20,925 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
+2025-05-07 14:26:20,925 INFO:plot_line called on ProductID vs Stock
+2025-05-07 14:26:21,319 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
+2025-05-07 14:26:21,319 INFO:plot_histogram called on Price
+2025-05-07 14:26:21,400 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Price_histogram.png
+2025-05-07 14:26:21,400 INFO:plot_line called on ProductID vs Price
+2025-05-07 14:26:21,682 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Price_line.png
+2025-05-07 14:26:21,686 INFO:Exported below_reorder to c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\below_reorder.csv
+2025-05-07 14:26:21,687 INFO:process_and_display completed
+2025-05-07 14:26:21,687 INFO:plot_histogram called on Stock
+2025-05-07 14:26:21,773 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
+2025-05-07 14:26:21,773 INFO:plot_line called on ProductID vs Stock
+2025-05-07 14:26:22,178 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
+2025-05-07 14:26:22,178 ERROR:Numeric viz error: 'InventoryNumericProcessor' object has no attribute 'plot_violin'
+2025-05-07 14:26:22,178 INFO:process_numeric_data completed
+2025-05-07 14:26:22,178 INFO:process_vector_data started
+2025-05-07 14:26:22,179 INFO:InventoryVector.__init__
+2025-05-07 14:26:23,313 INFO:InventoryVector.__init__
+2025-05-07 14:26:23,313 INFO:InventoryVectorProcessor.__init__
+2025-05-07 14:26:23,314 INFO:InventoryVector.__init__
+2025-05-07 14:26:23,315 INFO:InventoryVectorProcessor.__init__
+2025-05-07 14:26:23,319 INFO:process_vector_data completed
+2025-05-07 14:26:23,319 INFO:run_all_processes completed
+2025-05-07 14:28:19,015 INFO:run_all_processes started
+2025-05-07 14:28:19,015 INFO:process_numeric_data started
+2025-05-07 14:28:19,024 INFO:InventoryNumeric.__init__
+2025-05-07 14:28:19,024 INFO:InventoryNumericProcessor.__init__
+2025-05-07 14:28:19,024 INFO:process_and_display started
+2025-05-07 14:28:19,024 INFO:calculate_total_stock called
+2025-05-07 14:28:19,024 INFO:calculate_average_price called
+2025-05-07 14:28:19,025 INFO:calculate_median_price called
+2025-05-07 14:28:19,025 INFO:calculate_std_price called
+2025-05-07 14:28:19,026 INFO:generate_numeric_report called
+2025-05-07 14:28:19,026 INFO:calculate_total_stock called
+2025-05-07 14:28:19,026 INFO:calculate_average_price called
+2025-05-07 14:28:19,026 INFO:items_below_reorder called
+2025-05-07 14:28:19,028 INFO:items_below_reorder called
+2025-05-07 14:28:21,339 INFO:plot_histogram called on Stock
+2025-05-07 14:28:21,434 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
+2025-05-07 14:28:21,434 INFO:plot_line called on ProductID vs Stock
+2025-05-07 14:28:21,824 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
+2025-05-07 14:28:21,824 INFO:plot_histogram called on Price
+2025-05-07 14:28:21,913 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Price_histogram.png
+2025-05-07 14:28:21,913 INFO:plot_line called on ProductID vs Price
+2025-05-07 14:28:22,207 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Price_line.png
+2025-05-07 14:28:22,212 INFO:Exported below_reorder to c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\below_reorder.csv
+2025-05-07 14:28:22,212 INFO:process_and_display completed
+2025-05-07 14:28:22,212 INFO:plot_histogram called on Stock
+2025-05-07 14:28:22,311 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\Stock_histogram.png
+2025-05-07 14:28:22,311 INFO:plot_line called on ProductID vs Stock
+2025-05-07 14:28:22,736 INFO:Plot saved: c:\Users\taylo\source\repos\cmps3400_Grp_A\CMPS3400_Grp_A\Output\ProductID_Stock_line.png
+2025-05-07 14:28:22,736 ERROR:Numeric viz error: 'InventoryNumericProcessor' object has no attribute 'plot_violin'
+2025-05-07 14:28:22,736 INFO:process_numeric_data completed
+2025-05-07 14:28:22,736 INFO:process_vector_data started
+2025-05-07 14:28:22,737 INFO:InventoryVector.__init__
+2025-05-07 14:28:23,858 INFO:InventoryVector.__init__
+2025-05-07 14:28:23,858 INFO:InventoryVectorProcessor.__init__
+2025-05-07 14:28:23,860 INFO:InventoryVector.__init__
+2025-05-07 14:28:23,860 INFO:InventoryVectorProcessor.__init__
+2025-05-07 14:28:23,866 INFO:process_vector_data completed
+2025-05-07 14:28:23,867 INFO:run_all_processes completed

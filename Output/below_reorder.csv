@@ -1,7 +1,3491 @@
-ProductID,Stock,Price,ReorderLevel
-101,32,41.94,49
-104,17,25.57,19
-107,3,5.76,13
-108,24,25.75,45
-109,3,35.59,18
-110,25,17.33,32
+ProductID,ProductName,Category,HazardClass,Supplier,Stock,Price,ReorderLevel
+101,Xylene,Chemicals,A,ChemSupply Co.,11,276.64,17
+102,Methanol,Chemicals,B,FurniTech,13,62.58,32
+103,Formaldehyde,Chemicals,B,LabSource,28,32.08,35
+106,Petri Dishes,Laboratory,B,FurniTech,25,118.76,33
+108,Methanol,Chemicals,A,ChemSupply Co.,16,102.03,17
+109,Office Desk,Furniture,D,CleanAll Ltd.,28,8.62,36
+110,All-Purpose Cleaner,Cleaning,B,CleanAll Ltd.,14,115.56,20
+114,Acetone,Chemicals,B,OfficeMax,15,94.67,27
+116,Chemical Gloves,Safety Equipment,D,ChemSupply Co.,30,30.32,38
+119,Ear Protection,Safety Equipment,D,FurniTech,36,15.76,45
+122,Wet Mop,Cleaning,B,OfficeMax,17,85.93,29
+127,Trash Bags,Cleaning,B,OfficeMax,23,79.29,29
+135,Test Tubes,Laboratory,B,OfficeMax,28,78.41,29
+138,Standing Desk,Furniture,C,FurniTech,20,88.48,32
+141,Bunsen Burner,Laboratory,A,FurniTech,5,206.25,10
+142,Emergency Eyewash,Safety Equipment,D,FurniTech,36,43.49,45
+145,Glass Cleaner,Cleaning,B,OfficeMax,19,81.13,24
+148,All-Purpose Cleaner,Cleaning,B,ChemSupply Co.,16,105.56,22
+149,Toilet Paper,Cleaning,C,TechWorld Inc.,29,37.76,37
+150,Respirator,Safety Equipment,D,LabSource,42,5.07,45
+156,Hydrochloric Acid,Chemicals,A,LabSource,8,181.5,10
+157,Pipettes,Laboratory,A,LabSource,9,268.47,16
+161,Face Shield,Safety Equipment,D,ChemSupply Co.,33,60.73,42
+162,Microscope,Laboratory,B,TechWorld Inc.,16,80.35,21
+165,Filing Cabinet,Furniture,D,LabSource,36,55.55,43
+168,Staples Box,Office Supplies,D,TechWorld Inc.,37,72.18,39
+169,Trash Bags,Cleaning,B,OfficeMax,30,148.17,32
+174,Centrifuge,Laboratory,C,CleanAll Ltd.,22,96.07,26
+175,Standing Desk,Furniture,D,TechWorld Inc.,37,14.92,47
+180,Centrifuge,Laboratory,C,CleanAll Ltd.,24,26.22,31
+182,Microscope,Laboratory,C,FurniTech,21,61.42,27
+184,Methanol,Chemicals,B,FurniTech,20,42.07,26
+185,Pipettes,Laboratory,C,OfficeMax,18,18.89,23
+187,Paper A3,Office Supplies,D,LabSource,35,21.61,44
+193,Floor Cleaner,Cleaning,C,LabSource,20,83.99,37
+194,Ear Protection,Safety Equipment,D,ChemSupply Co.,29,38.16,37
+196,Toilet Paper,Cleaning,B,TechWorld Inc.,22,147.98,28
+197,Beakers,Laboratory,A,FurniTech,15,156.42,19
+201,Test Tubes,Laboratory,A,TechWorld Inc.,11,183.11,14
+202,Xylene,Chemicals,A,ChemSupply Co.,7,166.93,12
+207,Sofa,Furniture,C,FurniTech,25,36.0,32
+212,Chloroform,Chemicals,A,ChemSupply Co.,16,188.09,21
+214,Filing Cabinet,Furniture,C,LabSource,23,72.71,36
+220,Office Chair,Furniture,D,TechWorld Inc.,32,63.9,43
+226,Formaldehyde,Chemicals,B,FurniTech,31,30.57,33
+235,Xylene,Chemicals,B,ChemSupply Co.,19,134.72,24
+237,Paper Towels,Cleaning,B,OfficeMax,26,69.82,33
+243,Scissors,Office Supplies,D,FurniTech,38,48.88,46
+244,Tape Dispenser,Office Supplies,D,TechWorld Inc.,28,34.05,35
+246,Beakers,Laboratory,A,TechWorld Inc.,5,92.19,19
+247,Bookshelf,Furniture,D,FurniTech,36,59.38,41
+248,Sodium Hydroxide,Chemicals,A,ChemSupply Co.,9,298.13,15
+251,External Hard Drive,Electronics,D,LabSource,26,36.7,33
+257,UPS,Electronics,B,ChemSupply Co.,13,122.27,30
+261,Tablet,Electronics,B,LabSource,15,96.76,33
+262,Flask Set,Laboratory,A,ChemSupply Co.,20,236.76,23
+263,Benzene,Chemicals,A,CleanAll Ltd.,19,77.05,24
+269,Face Shield,Safety Equipment,D,OfficeMax,27,44.41,34
+270,Benzene,Chemicals,B,OfficeMax,17,96.8,22
+271,Methanol,Chemicals,B,OfficeMax,28,54.77,31
+276,Trash Bags,Cleaning,C,CleanAll Ltd.,30,69.16,35
+277,Centrifuge,Laboratory,A,FurniTech,12,260.76,16
+280,Pipettes,Laboratory,A,CleanAll Ltd.,6,249.21,24
+284,External Hard Drive,Electronics,B,LabSource,11,106.99,16
+289,Methanol,Chemicals,A,FurniTech,20,215.17,25
+290,Fire Extinguisher,Safety Equipment,D,FurniTech,20,11.62,25
+291,Benzene,Chemicals,B,ChemSupply Co.,19,81.76,24
+299,Monitor,Electronics,C,ChemSupply Co.,35,48.35,37
+312,Chloroform,Chemicals,B,FurniTech,22,121.87,28
+314,Acetone,Chemicals,B,LabSource,23,134.34,24
+319,Methanol,Chemicals,B,TechWorld Inc.,30,57.35,33
+324,Chloroform,Chemicals,B,OfficeMax,10,129.99,31
+327,UPS,Electronics,B,LabSource,18,143.7,23
+332,First Aid Kit,Safety Equipment,D,TechWorld Inc.,23,50.6,29
+333,Sodium Hydroxide,Chemicals,B,CleanAll Ltd.,11,126.79,26
+339,All-Purpose Cleaner,Cleaning,C,TechWorld Inc.,17,50.82,22
+341,External Hard Drive,Electronics,B,OfficeMax,19,115.43,35
+342,Coffee Table,Furniture,C,OfficeMax,29,16.36,37
+343,Xylene,Chemicals,B,ChemSupply Co.,20,118.64,25
+348,Dust Mop,Cleaning,C,OfficeMax,24,16.9,33
+350,Glass Cleaner,Cleaning,B,FurniTech,14,111.8,33
+351,Laptop,Electronics,B,ChemSupply Co.,22,105.75,28
+352,Keyboard,Electronics,B,ChemSupply Co.,11,70.48,27
+354,Scissors,Office Supplies,C,CleanAll Ltd.,24,53.82,30
+362,Sofa,Furniture,D,OfficeMax,35,9.68,44
+363,Dust Mop,Cleaning,B,ChemSupply Co.,19,31.9,29
+370,Monitor,Electronics,B,ChemSupply Co.,15,57.01,19
+371,Stapler,Office Supplies,D,LabSource,20,19.83,25
+373,Respirator,Safety Equipment,D,LabSource,40,19.01,47
+378,Xylene,Chemicals,A,LabSource,9,204.13,16
+382,Xylene,Chemicals,A,LabSource,21,130.84,22
+383,Microscope,Laboratory,C,TechWorld Inc.,29,98.92,37
+387,Scanner,Electronics,D,CleanAll Ltd.,28,42.36,36
+391,Xylene,Chemicals,B,FurniTech,24,90.54,33
+394,Conference Table,Furniture,C,TechWorld Inc.,20,78.62,25
+402,Printer,Electronics,B,ChemSupply Co.,11,45.38,33
+404,Flask Set,Laboratory,A,FurniTech,10,78.49,13
+406,Safety Helmet,Safety Equipment,D,ChemSupply Co.,35,66.59,44
+407,pH Meter,Laboratory,A,CleanAll Ltd.,16,87.16,21
+409,Sodium Hydroxide,Chemicals,A,OfficeMax,8,239.22,13
+411,Formaldehyde,Chemicals,A,OfficeMax,14,75.46,19
+414,Paper A3,Office Supplies,C,TechWorld Inc.,31,64.88,39
+420,Tape Dispenser,Office Supplies,D,OfficeMax,36,67.22,43
+421,Xylene,Chemicals,B,ChemSupply Co.,31,111.36,33
+428,Laptop,Electronics,B,ChemSupply Co.,22,67.77,31
+430,Sofa,Furniture,D,OfficeMax,30,7.31,38
+431,Xylene,Chemicals,A,LabSource,7,82.98,13
+433,Hydrochloric Acid,Chemicals,A,CleanAll Ltd.,7,280.66,23
+434,Paper A3,Office Supplies,C,CleanAll Ltd.,25,87.95,27
+435,Wet Mop,Cleaning,B,OfficeMax,20,65.95,30
+437,Sodium Hydroxide,Chemicals,A,ChemSupply Co.,11,71.86,14
+440,Dust Mop,Cleaning,C,CleanAll Ltd.,35,22.55,36
+442,Bookshelf,Furniture,C,ChemSupply Co.,36,87.95,38
+444,Dust Mop,Cleaning,B,CleanAll Ltd.,18,33.05,25
+445,Binder Clips,Office Supplies,D,CleanAll Ltd.,21,78.78,27
+450,Test Tubes,Laboratory,B,TechWorld Inc.,19,120.31,21
+463,Trash Bags,Cleaning,C,OfficeMax,24,45.68,31
+468,All-Purpose Cleaner,Cleaning,B,ChemSupply Co.,14,30.1,18
+471,UPS,Electronics,B,OfficeMax,14,110.73,21
+472,Pipettes,Laboratory,A,OfficeMax,6,182.86,17
+474,Sodium Hydroxide,Chemicals,B,LabSource,32,79.04,35
+475,Coffee Table,Furniture,D,CleanAll Ltd.,30,73.52,34
+477,Hydrochloric Acid,Chemicals,A,FurniTech,13,132.55,17
+478,Methanol,Chemicals,A,TechWorld Inc.,19,99.12,21
+480,Xylene,Chemicals,A,ChemSupply Co.,12,144.6,16
+481,Chloroform,Chemicals,B,CleanAll Ltd.,11,145.69,16
+482,Stapler,Office Supplies,D,OfficeMax,24,45.19,31
+483,Keyboard,Electronics,C,FurniTech,20,33.78,25
+485,Microscope,Laboratory,A,FurniTech,13,169.16,14
+491,Benzene,Chemicals,A,ChemSupply Co.,5,160.81,22
+492,All-Purpose Cleaner,Cleaning,C,CleanAll Ltd.,27,80.98,34
+495,Flask Set,Laboratory,A,ChemSupply Co.,18,172.96,20
+496,Sodium Hydroxide,Chemicals,A,OfficeMax,7,113.58,18
+497,Hydrochloric Acid,Chemicals,A,CleanAll Ltd.,6,238.83,25
+498,Safety Goggles,Safety Equipment,D,CleanAll Ltd.,34,57.66,43
+503,Laptop,Electronics,C,FurniTech,33,48.23,34
+505,Sofa,Furniture,C,TechWorld Inc.,28,58.42,35
+513,Scanner,Electronics,B,ChemSupply Co.,19,142.11,25
+515,Ethanol,Chemicals,A,FurniTech,11,78.48,25
+522,Analytical Balance,Laboratory,A,LabSource,11,87.43,18
+525,Sofa,Furniture,C,FurniTech,20,21.67,26
+526,Centrifuge,Laboratory,A,OfficeMax,12,184.98,23
+527,Marker Set,Office Supplies,C,OfficeMax,24,32.41,29
+528,Respirator,Safety Equipment,D,LabSource,24,49.94,30
+538,Chloroform,Chemicals,A,FurniTech,9,173.87,13
+539,Paper A3,Office Supplies,C,ChemSupply Co.,23,58.68,29
+541,Bunsen Burner,Laboratory,B,TechWorld Inc.,18,55.91,34
+545,Binder Clips,Office Supplies,D,CleanAll Ltd.,39,28.89,44
+554,Formaldehyde,Chemicals,B,FurniTech,34,101.67,35
+566,Ear Protection,Safety Equipment,D,LabSource,32,54.85,37
+570,Cork Board,Furniture,D,FurniTech,20,17.33,25
+580,Petri Dishes,Laboratory,C,TechWorld Inc.,34,67.04,37
+584,Laptop,Electronics,C,LabSource,30,20.06,38
+589,Methanol,Chemicals,A,LabSource,20,185.09,25
+591,Mouse,Electronics,B,CleanAll Ltd.,16,105.77,20
+592,File Folders,Office Supplies,C,TechWorld Inc.,27,94.45,34
+594,Paper A3,Office Supplies,D,ChemSupply Co.,41,53.65,49
+595,Centrifuge,Laboratory,A,LabSource,18,181.42,23
+596,Formaldehyde,Chemicals,B,ChemSupply Co.,10,43.17,16
+597,Microscope,Laboratory,B,TechWorld Inc.,13,69.58,17
+606,Marker Set,Office Supplies,D,FurniTech,20,35.41,26
+614,Cork Board,Furniture,C,ChemSupply Co.,27,93.69,33
+615,Emergency Eyewash,Safety Equipment,D,CleanAll Ltd.,35,48.15,44
+620,Benzene,Chemicals,A,TechWorld Inc.,11,285.29,14
+623,Test Tubes,Laboratory,C,FurniTech,26,73.21,30
+625,Petri Dishes,Laboratory,A,OfficeMax,12,219.69,16
+631,Ear Protection,Safety Equipment,D,TechWorld Inc.,32,57.71,44
+633,Centrifuge,Laboratory,C,CleanAll Ltd.,22,66.96,36
+634,Hydrochloric Acid,Chemicals,B,FurniTech,15,135.94,19
+635,pH Meter,Laboratory,B,TechWorld Inc.,15,139.59,25
+638,Pipettes,Laboratory,C,CleanAll Ltd.,28,78.84,36
+641,Pipettes,Laboratory,A,CleanAll Ltd.,5,217.75,12
+643,Trash Bags,Cleaning,C,ChemSupply Co.,35,98.03,36
+644,Cork Board,Furniture,C,CleanAll Ltd.,22,17.72,38
+645,Ethanol,Chemicals,A,TechWorld Inc.,18,165.86,19
+646,Disinfectant,Cleaning,B,CleanAll Ltd.,24,114.43,31
+649,Bunsen Burner,Laboratory,B,LabSource,14,78.8,22
+654,Staples Box,Office Supplies,C,ChemSupply Co.,29,28.92,40
+657,Hand Sanitizer,Cleaning,B,TechWorld Inc.,12,145.64,24
+659,UPS,Electronics,C,OfficeMax,33,22.23,37
+663,Xylene,Chemicals,A,ChemSupply Co.,8,51.62,10
+664,Lab Coat,Safety Equipment,D,ChemSupply Co.,26,60.73,33
+665,Glass Cleaner,Cleaning,C,FurniTech,32,46.39,34
+667,Ethanol,Chemicals,B,ChemSupply Co.,18,70.53,23
+673,Dust Mop,Cleaning,B,ChemSupply Co.,20,141.28,29
+675,Tablet,Electronics,B,FurniTech,15,51.16,20
+679,Wet Mop,Cleaning,B,LabSource,26,131.94,33
+684,Sodium Hydroxide,Chemicals,B,OfficeMax,21,64.85,26
+686,Trash Bags,Cleaning,C,ChemSupply Co.,22,89.05,29
+692,Scanner,Electronics,C,TechWorld Inc.,30,96.55,38
+694,pH Meter,Laboratory,B,OfficeMax,19,93.51,28
+696,Coffee Table,Furniture,C,FurniTech,24,20.12,38
+697,Whiteboard,Furniture,D,TechWorld Inc.,41,69.84,44
+698,Test Tubes,Laboratory,B,TechWorld Inc.,11,101.2,27
+700,Xylene,Chemicals,B,ChemSupply Co.,26,126.37,32
+701,Beakers,Laboratory,C,TechWorld Inc.,18,66.42,23
+707,Tape Dispenser,Office Supplies,D,CleanAll Ltd.,30,52.66,38
+708,Chemical Gloves,Safety Equipment,D,FurniTech,34,17.89,43
+719,UPS,Electronics,D,CleanAll Ltd.,29,18.21,37
+723,Conference Table,Furniture,C,TechWorld Inc.,28,83.56,35
+728,Bunsen Burner,Laboratory,C,TechWorld Inc.,23,77.91,27
+729,Formaldehyde,Chemicals,A,TechWorld Inc.,5,102.77,21
+730,Marker Set,Office Supplies,C,ChemSupply Co.,23,68.68,29
+740,Petri Dishes,Laboratory,A,LabSource,5,201.04,25
+745,Binder Clips,Office Supplies,C,CleanAll Ltd.,27,38.22,34
+751,Laptop,Electronics,D,CleanAll Ltd.,41,60.37,50
+753,Fire Extinguisher,Safety Equipment,D,OfficeMax,31,63.64,39
+759,UPS,Electronics,B,CleanAll Ltd.,22,55.22,28
+761,Chloroform,Chemicals,A,OfficeMax,12,259.28,14
+764,Office Desk,Furniture,C,LabSource,20,68.51,25
+767,Centrifuge,Laboratory,A,ChemSupply Co.,16,122.06,23
+768,Respirator,Safety Equipment,D,FurniTech,30,74.07,38
+769,Ethanol,Chemicals,B,ChemSupply Co.,33,46.39,35
+771,Chloroform,Chemicals,A,LabSource,8,82.66,21
+773,Hand Sanitizer,Cleaning,C,OfficeMax,20,39.01,26
+778,Glass Cleaner,Cleaning,C,CleanAll Ltd.,20,71.87,40
+781,Staples Box,Office Supplies,C,ChemSupply Co.,32,38.64,40
+782,Staples Box,Office Supplies,C,ChemSupply Co.,18,66.79,23
+784,Standing Desk,Furniture,C,FurniTech,20,96.54,28
+785,First Aid Kit,Safety Equipment,D,ChemSupply Co.,28,74.1,35
+788,pH Meter,Laboratory,A,TechWorld Inc.,20,218.33,23
+792,Formaldehyde,Chemicals,B,FurniTech,17,149.03,24
+795,Tablet,Electronics,B,FurniTech,18,56.5,24
+800,Sodium Hydroxide,Chemicals,A,OfficeMax,19,135.98,22
+801,Sodium Hydroxide,Chemicals,A,OfficeMax,11,277.64,14
+806,Analytical Balance,Laboratory,B,ChemSupply Co.,16,33.15,25
+807,Pen Set,Office Supplies,C,ChemSupply Co.,20,19.43,25
+809,Petri Dishes,Laboratory,C,OfficeMax,26,66.49,37
+818,Conference Table,Furniture,C,TechWorld Inc.,31,21.44,38
+820,Laptop,Electronics,B,LabSource,20,117.88,26
+822,First Aid Kit,Safety Equipment,D,ChemSupply Co.,37,57.84,47
+823,Respirator,Safety Equipment,D,CleanAll Ltd.,24,52.46,30
+825,Flask Set,Laboratory,A,OfficeMax,6,227.61,12
+826,Ethanol,Chemicals,A,LabSource,10,210.63,22
+828,Printer,Electronics,C,ChemSupply Co.,31,55.0,34
+832,Dust Mop,Cleaning,B,ChemSupply Co.,26,49.3,30
+838,Keyboard,Electronics,C,TechWorld Inc.,26,82.81,28
+845,Toilet Paper,Cleaning,B,CleanAll Ltd.,20,89.1,25
+846,Standing Desk,Furniture,D,LabSource,36,36.16,49
+848,Stapler,Office Supplies,C,LabSource,32,30.66,40
+849,pH Meter,Laboratory,C,TechWorld Inc.,18,97.57,23
+851,Sofa,Furniture,D,ChemSupply Co.,23,47.21,29
+853,Keyboard,Electronics,B,TechWorld Inc.,26,117.22,28
+854,Beakers,Laboratory,A,FurniTech,12,119.2,25
+857,Centrifuge,Laboratory,A,FurniTech,11,290.14,22
+862,Scanner,Electronics,B,FurniTech,12,146.3,20
+865,Chloroform,Chemicals,A,OfficeMax,16,160.02,21
+868,Keyboard,Electronics,C,TechWorld Inc.,32,70.19,40
+869,Filing Cabinet,Furniture,D,ChemSupply Co.,44,40.25,49
+873,Microscope,Laboratory,A,ChemSupply Co.,5,140.58,12
+874,Beakers,Laboratory,C,CleanAll Ltd.,21,39.32,27
+875,Ear Protection,Safety Equipment,D,CleanAll Ltd.,34,29.67,40
+883,Desktop Computer,Electronics,C,FurniTech,30,35.66,34
+885,Hydrochloric Acid,Chemicals,B,FurniTech,28,118.09,35
+887,Hydrochloric Acid,Chemicals,A,CleanAll Ltd.,8,76.79,10
+891,pH Meter,Laboratory,C,LabSource,17,23.66,22
+892,Hydrochloric Acid,Chemicals,A,LabSource,12,177.01,23
+894,Analytical Balance,Laboratory,B,OfficeMax,14,135.84,35
+895,Tablet,Electronics,C,TechWorld Inc.,21,25.29,37
+897,Floor Cleaner,Cleaning,B,OfficeMax,26,59.07,33
+900,Chemical Gloves,Safety Equipment,D,TechWorld Inc.,36,64.36,43
+906,Sofa,Furniture,C,OfficeMax,21,48.41,32
+907,Formaldehyde,Chemicals,B,TechWorld Inc.,12,122.7,16
+909,Pipettes,Laboratory,B,TechWorld Inc.,31,91.18,33
+913,Bunsen Burner,Laboratory,B,FurniTech,15,131.96,28
+914,Floor Cleaner,Cleaning,B,CleanAll Ltd.,28,143.79,35
+916,Toilet Paper,Cleaning,B,OfficeMax,20,134.68,29
+919,Analytical Balance,Laboratory,B,OfficeMax,19,69.75,24
+922,Xylene,Chemicals,A,CleanAll Ltd.,10,291.71,13
+927,Mouse,Electronics,B,CleanAll Ltd.,26,92.72,33
+928,Laptop,Electronics,C,TechWorld Inc.,32,29.61,33
+929,Whiteboard,Furniture,C,LabSource,20,95.81,26
+931,Bunsen Burner,Laboratory,C,FurniTech,16,29.81,20
+932,Sodium Hydroxide,Chemicals,A,CleanAll Ltd.,20,198.48,21
+938,Dust Mop,Cleaning,B,TechWorld Inc.,19,85.77,25
+942,Office Desk,Furniture,C,TechWorld Inc.,30,30.69,37
+943,Beakers,Laboratory,A,LabSource,16,141.21,21
+945,Toluene,Chemicals,B,OfficeMax,18,145.0,20
+950,Laptop,Electronics,B,CleanAll Ltd.,12,73.39,30
+951,Paper Towels,Cleaning,B,FurniTech,14,132.93,18
+958,Hydrochloric Acid,Chemicals,B,LabSource,12,133.79,19
+960,Bunsen Burner,Laboratory,A,FurniTech,6,116.04,15
+965,Chloroform,Chemicals,A,FurniTech,18,199.23,23
+968,Respirator,Safety Equipment,D,LabSource,33,79.62,42
+969,Methanol,Chemicals,A,ChemSupply Co.,7,212.55,24
+972,Safety Goggles,Safety Equipment,D,LabSource,38,41.51,42
+973,Stapler,Office Supplies,C,TechWorld Inc.,25,33.21,35
+974,Analytical Balance,Laboratory,B,TechWorld Inc.,16,45.77,21
+981,Marker Set,Office Supplies,D,LabSource,31,10.4,39
+1001,Scissors,Office Supplies,C,CleanAll Ltd.,16,72.16,20
+1002,Desktop Computer,Electronics,C,TechWorld Inc.,22,19.85,28
+1005,Acetone,Chemicals,A,FurniTech,13,197.44,17
+1006,Pipettes,Laboratory,B,TechWorld Inc.,13,30.75,17
+1009,Formaldehyde,Chemicals,A,OfficeMax,15,104.94,19
+1010,Hydrochloric Acid,Chemicals,A,LabSource,11,124.3,23
+1011,Scissors,Office Supplies,D,ChemSupply Co.,21,62.64,27
+1013,Hand Sanitizer,Cleaning,C,OfficeMax,35,26.51,38
+1015,Methanol,Chemicals,B,FurniTech,16,116.23,33
+1016,Ethanol,Chemicals,A,LabSource,8,255.82,18
+1018,Paper Towels,Cleaning,B,CleanAll Ltd.,26,73.2,35
+1019,Bookshelf,Furniture,C,TechWorld Inc.,23,83.14,29
+1020,Paper A4,Office Supplies,D,OfficeMax,32,63.87,49
+1021,Xylene,Chemicals,B,ChemSupply Co.,19,131.56,31
+1023,All-Purpose Cleaner,Cleaning,C,TechWorld Inc.,24,59.65,31
+1024,Scanner,Electronics,D,TechWorld Inc.,27,17.63,34
+1026,Formaldehyde,Chemicals,B,LabSource,12,34.22,15
+1028,Methanol,Chemicals,B,ChemSupply Co.,15,93.89,22
+1031,Microscope,Laboratory,A,ChemSupply Co.,11,146.01,16
+1034,Desktop Computer,Electronics,D,FurniTech,34,57.5,48
+1037,External Hard Drive,Electronics,D,CleanAll Ltd.,36,21.52,46
+1038,Analytical Balance,Laboratory,A,FurniTech,19,169.31,24
+1044,Toilet Paper,Cleaning,B,LabSource,30,69.34,32
+1046,Conference Table,Furniture,C,ChemSupply Co.,29,79.8,37
+1047,Centrifuge,Laboratory,C,ChemSupply Co.,28,25.78,36
+1051,Chemical Gloves,Safety Equipment,D,TechWorld Inc.,34,25.78,45
+1053,Bunsen Burner,Laboratory,A,TechWorld Inc.,6,250.08,13
+1057,Disinfectant,Cleaning,B,FurniTech,15,134.0,19
+1061,Hand Sanitizer,Cleaning,B,FurniTech,12,107.87,16
+1062,Petri Dishes,Laboratory,B,CleanAll Ltd.,18,113.78,31
+1063,Staples Box,Office Supplies,D,CleanAll Ltd.,33,69.19,42
+1064,Dust Mop,Cleaning,B,FurniTech,24,49.35,29
+1067,Desktop Computer,Electronics,C,TechWorld Inc.,34,69.61,38
+1068,Hydrochloric Acid,Chemicals,A,TechWorld Inc.,17,126.51,19
+1069,Standing Desk,Furniture,C,OfficeMax,26,26.98,33
+1074,Trash Bags,Cleaning,B,TechWorld Inc.,19,100.08,24
+1076,Coffee Table,Furniture,D,TechWorld Inc.,22,11.58,28
+1080,Tape Dispenser,Office Supplies,D,CleanAll Ltd.,28,62.46,35
+1086,Scissors,Office Supplies,C,ChemSupply Co.,21,79.7,28
+1089,UPS,Electronics,B,CleanAll Ltd.,21,52.78,22
+1092,Trash Bags,Cleaning,C,TechWorld Inc.,27,65.24,28
+1094,Tablet,Electronics,D,OfficeMax,20,79.04,25
+1097,Methanol,Chemicals,A,OfficeMax,16,63.51,20
+1105,Flask Set,Laboratory,A,ChemSupply Co.,15,295.8,21
+1106,Wet Mop,Cleaning,B,OfficeMax,17,49.61,35
+1109,Whiteboard,Furniture,C,LabSource,26,79.75,33
+1110,Ear Protection,Safety Equipment,D,ChemSupply Co.,32,75.38,41
+1113,Office Desk,Furniture,D,CleanAll Ltd.,37,63.42,47
+1120,Disinfectant,Cleaning,B,OfficeMax,10,109.15,25
+1125,Ethanol,Chemicals,A,TechWorld Inc.,14,188.07,21
+1131,Formaldehyde,Chemicals,B,CleanAll Ltd.,19,53.3,29
+1134,Hand Sanitizer,Cleaning,C,ChemSupply Co.,24,95.24,30
+1138,Binder Clips,Office Supplies,D,ChemSupply Co.,34,13.71,38
+1142,Lab Coat,Safety Equipment,D,LabSource,28,72.22,36
+1143,Office Desk,Furniture,D,OfficeMax,27,53.17,34
+1146,Acetone,Chemicals,A,OfficeMax,6,137.61,17
+1149,Safety Goggles,Safety Equipment,D,OfficeMax,26,59.15,33
+1150,Face Shield,Safety Equipment,D,LabSource,36,76.58,37
+1151,Paper Towels,Cleaning,C,CleanAll Ltd.,33,27.08,34
+1153,Ethanol,Chemicals,A,LabSource,14,94.56,18
+1159,Glass Cleaner,Cleaning,C,CleanAll Ltd.,24,99.19,31
+1160,Toilet Paper,Cleaning,C,FurniTech,17,77.37,22
+1163,Sodium Hydroxide,Chemicals,A,LabSource,19,94.74,21
+1164,All-Purpose Cleaner,Cleaning,B,OfficeMax,24,144.72,31
+1165,UPS,Electronics,C,OfficeMax,26,31.66,28
+1166,Floor Cleaner,Cleaning,B,FurniTech,22,51.92,28
+1167,Hydrochloric Acid,Chemicals,A,TechWorld Inc.,11,99.61,23
+1168,Printer,Electronics,B,LabSource,16,59.63,23
+1171,Trash Bags,Cleaning,B,LabSource,10,119.4,22
+1173,Fire Extinguisher,Safety Equipment,D,ChemSupply Co.,24,31.32,30
+1176,Desktop Computer,Electronics,C,ChemSupply Co.,28,90.43,29
+1181,Staples Box,Office Supplies,D,TechWorld Inc.,26,36.57,33
+1182,Conference Table,Furniture,D,FurniTech,28,19.08,35
+1184,Office Desk,Furniture,D,CleanAll Ltd.,29,19.68,37
+1188,Filing Cabinet,Furniture,C,OfficeMax,29,66.67,39
+1190,Laptop,Electronics,B,CleanAll Ltd.,11,79.75,33
+1192,Centrifuge,Laboratory,A,LabSource,11,184.24,15
+1194,External Hard Drive,Electronics,B,ChemSupply Co.,16,128.28,33
+1197,Wet Mop,Cleaning,C,FurniTech,21,93.71,25
+1198,Hydrochloric Acid,Chemicals,B,TechWorld Inc.,10,42.8,22
+1199,Stapler,Office Supplies,D,OfficeMax,28,17.93,36
+1200,Fire Extinguisher,Safety Equipment,D,CleanAll Ltd.,32,45.58,40
+1203,Staples Box,Office Supplies,C,FurniTech,32,95.66,35
+1205,Bunsen Burner,Laboratory,B,FurniTech,22,30.77,30
+1206,Paper Towels,Cleaning,B,CleanAll Ltd.,17,40.4,22
+1208,Disinfectant,Cleaning,B,FurniTech,23,80.18,24
+1213,Analytical Balance,Laboratory,B,CleanAll Ltd.,27,61.23,28
+1215,Xylene,Chemicals,A,LabSource,11,252.52,19
+1219,Toilet Paper,Cleaning,B,FurniTech,12,82.79,33
+1222,Benzene,Chemicals,A,FurniTech,12,242.93,24
+1224,Trash Bags,Cleaning,C,CleanAll Ltd.,23,97.28,39
+1225,Mouse,Electronics,B,OfficeMax,27,115.59,34
+1226,Toluene,Chemicals,B,FurniTech,29,56.56,30
+1227,Ethanol,Chemicals,A,ChemSupply Co.,16,275.92,25
+1229,Chloroform,Chemicals,A,TechWorld Inc.,23,220.11,25
+1231,Analytical Balance,Laboratory,A,ChemSupply Co.,14,175.24,18
+1232,Pipettes,Laboratory,A,OfficeMax,22,160.94,24
+1233,Petri Dishes,Laboratory,A,TechWorld Inc.,10,69.67,16
+1236,Scanner,Electronics,C,CleanAll Ltd.,23,97.16,36
+1238,Stapler,Office Supplies,C,ChemSupply Co.,30,69.47,38
+1239,Desktop Computer,Electronics,B,ChemSupply Co.,21,128.31,31
+1241,Benzene,Chemicals,A,ChemSupply Co.,5,121.52,12
+1247,Filing Cabinet,Furniture,D,ChemSupply Co.,38,63.49,50
+1254,Office Chair,Furniture,C,CleanAll Ltd.,24,81.67,30
+1256,Whiteboard,Furniture,C,OfficeMax,24,88.16,40
+1257,Microscope,Laboratory,C,OfficeMax,23,98.58,34
+1258,Safety Goggles,Safety Equipment,D,ChemSupply Co.,32,20.3,40
+1261,Formaldehyde,Chemicals,B,LabSource,10,75.05,27
+1262,Paper A3,Office Supplies,D,TechWorld Inc.,36,29.8,46
+1264,Formaldehyde,Chemicals,B,ChemSupply Co.,12,124.6,21
+1268,Disinfectant,Cleaning,C,FurniTech,29,98.16,39
+1271,Hydrochloric Acid,Chemicals,B,CleanAll Ltd.,13,121.29,17
+1272,Acetone,Chemicals,A,LabSource,9,80.06,18
+1273,Fire Extinguisher,Safety Equipment,D,ChemSupply Co.,32,58.18,40
+1274,Methanol,Chemicals,B,OfficeMax,23,131.95,29
+1279,Trash Bags,Cleaning,B,ChemSupply Co.,24,123.96,26
+1283,Analytical Balance,Laboratory,B,CleanAll Ltd.,26,35.73,33
+1285,Office Desk,Furniture,C,ChemSupply Co.,28,59.18,36
+1288,Laptop,Electronics,C,LabSource,32,20.73,36
+1293,Petri Dishes,Laboratory,B,LabSource,27,96.53,34
+1294,Bunsen Burner,Laboratory,A,ChemSupply Co.,14,187.71,18
+1295,Chloroform,Chemicals,A,LabSource,20,140.62,25
+1299,Glass Cleaner,Cleaning,C,OfficeMax,29,64.27,37
+1300,Scissors,Office Supplies,C,ChemSupply Co.,18,79.35,23
+1301,Chloroform,Chemicals,A,CleanAll Ltd.,13,279.03,24
+1303,Conference Table,Furniture,D,ChemSupply Co.,33,49.37,42
+1305,Paper Towels,Cleaning,B,OfficeMax,19,123.02,30
+1306,Trash Bags,Cleaning,B,ChemSupply Co.,15,118.65,35
+1315,Benzene,Chemicals,B,CleanAll Ltd.,18,32.86,23
+1319,Formaldehyde,Chemicals,B,FurniTech,14,105.0,18
+1320,Centrifuge,Laboratory,A,TechWorld Inc.,10,117.17,22
+1321,Toluene,Chemicals,B,OfficeMax,20,58.44,26
+1322,Standing Desk,Furniture,D,ChemSupply Co.,32,73.38,36
+1324,Pen Set,Office Supplies,C,TechWorld Inc.,20,52.83,37
+1331,Toilet Paper,Cleaning,C,ChemSupply Co.,29,81.15,37
+1332,Bookshelf,Furniture,C,FurniTech,27,91.22,39
+1338,Formaldehyde,Chemicals,A,TechWorld Inc.,16,72.7,21
+1344,Cork Board,Furniture,D,OfficeMax,35,41.25,44
+1345,Ear Protection,Safety Equipment,D,LabSource,38,51.17,43
+1348,Pen Set,Office Supplies,C,ChemSupply Co.,33,63.39,38
+1351,External Hard Drive,Electronics,B,ChemSupply Co.,19,68.8,24
+1354,Ethanol,Chemicals,A,LabSource,6,56.04,23
+1357,Flask Set,Laboratory,C,CleanAll Ltd.,20,83.68,26
+1360,Benzene,Chemicals,B,ChemSupply Co.,15,66.35,19
+1361,Safety Helmet,Safety Equipment,D,LabSource,42,65.3,45
+1362,External Hard Drive,Electronics,C,FurniTech,23,48.08,32
+1364,Flask Set,Laboratory,A,TechWorld Inc.,15,223.92,19
+1365,Flask Set,Laboratory,B,FurniTech,24,93.56,31
+1372,Paper A4,Office Supplies,D,OfficeMax,31,60.39,36
+1373,Mouse,Electronics,B,ChemSupply Co.,19,32.29,32
+1374,Floor Cleaner,Cleaning,B,FurniTech,24,112.79,26
+1379,Paper A4,Office Supplies,D,CleanAll Ltd.,24,6.36,31
+1384,Sodium Hydroxide,Chemicals,A,ChemSupply Co.,8,170.46,18
+1386,Microscope,Laboratory,B,OfficeMax,20,135.23,26
+1387,Filing Cabinet,Furniture,D,LabSource,20,71.53,26
+1388,Whiteboard,Furniture,D,OfficeMax,30,30.42,48
+1390,Disinfectant,Cleaning,B,FurniTech,15,142.5,34
+1394,Paper A3,Office Supplies,D,CleanAll Ltd.,36,35.68,45
+1395,Paper A3,Office Supplies,C,ChemSupply Co.,28,18.1,39
+1398,Paper Towels,Cleaning,B,TechWorld Inc.,11,149.76,25
+1402,Sofa,Furniture,C,LabSource,31,34.55,39
+1403,Coffee Table,Furniture,D,LabSource,31,55.11,39
+1405,Fire Extinguisher,Safety Equipment,D,OfficeMax,30,43.76,41
+1408,File Folders,Office Supplies,C,ChemSupply Co.,23,53.27,37
+1409,Petri Dishes,Laboratory,C,OfficeMax,34,95.12,36
+1412,Binder Clips,Office Supplies,C,ChemSupply Co.,29,15.08,36
+1413,Paper Towels,Cleaning,C,FurniTech,16,62.68,21
+1414,Bunsen Burner,Laboratory,B,LabSource,28,134.39,35
+1415,Xylene,Chemicals,B,FurniTech,12,120.83,27
+1416,Floor Cleaner,Cleaning,B,OfficeMax,25,63.56,32
+1418,Cork Board,Furniture,D,LabSource,31,55.04,32
+1421,Wet Mop,Cleaning,B,ChemSupply Co.,29,36.29,31
+1423,Mouse,Electronics,C,OfficeMax,24,58.66,31
+1426,Filing Cabinet,Furniture,C,CleanAll Ltd.,20,21.39,25
+1428,Sodium Hydroxide,Chemicals,A,TechWorld Inc.,17,180.99,22
+1430,Floor Cleaner,Cleaning,B,OfficeMax,20,43.38,21
+1431,Test Tubes,Laboratory,A,FurniTech,16,210.13,20
+1433,Face Shield,Safety Equipment,D,TechWorld Inc.,32,71.56,40
+1435,Office Chair,Furniture,C,FurniTech,21,93.84,27
+1436,Ear Protection,Safety Equipment,D,CleanAll Ltd.,32,78.53,38
+1438,Beakers,Laboratory,A,CleanAll Ltd.,6,168.74,11
+1440,Lab Coat,Safety Equipment,D,ChemSupply Co.,34,14.24,48
+1442,Keyboard,Electronics,C,ChemSupply Co.,27,95.24,34
+1443,Petri Dishes,Laboratory,A,LabSource,20,236.43,25
+1444,Methanol,Chemicals,B,CleanAll Ltd.,20,132.99,23
+1455,Mouse,Electronics,B,TechWorld Inc.,14,91.65,21
+1457,pH Meter,Laboratory,C,LabSource,28,70.16,36
+1459,Methanol,Chemicals,A,ChemSupply Co.,9,273.81,18
+1460,Safety Goggles,Safety Equipment,D,ChemSupply Co.,39,69.33,44
+1465,Methanol,Chemicals,A,FurniTech,9,161.76,17
+1466,Paper A4,Office Supplies,C,OfficeMax,21,21.97,37
+1467,Wet Mop,Cleaning,C,LabSource,26,60.86,27
+1470,Marker Set,Office Supplies,C,TechWorld Inc.,36,19.49,38
+1471,Flask Set,Laboratory,C,TechWorld Inc.,29,39.95,37
+1472,Standing Desk,Furniture,D,FurniTech,28,15.58,36
+1473,External Hard Drive,Electronics,D,LabSource,22,26.39,28
+1480,Test Tubes,Laboratory,A,FurniTech,17,243.37,21
+1481,Wet Mop,Cleaning,C,CleanAll Ltd.,20,71.25,26
+1483,Office Chair,Furniture,D,TechWorld Inc.,29,48.94,37
+1484,Disinfectant,Cleaning,C,FurniTech,23,18.85,39
+1486,Desktop Computer,Electronics,B,LabSource,14,133.14,24
+1490,Flask Set,Laboratory,B,LabSource,18,69.87,23
+1496,Floor Cleaner,Cleaning,C,TechWorld Inc.,26,24.22,35
+1501,Acetone,Chemicals,B,FurniTech,12,41.48,16
+1510,Scissors,Office Supplies,D,FurniTech,35,44.56,44
+1511,Wet Mop,Cleaning,B,OfficeMax,14,130.47,23
+1514,Floor Cleaner,Cleaning,B,LabSource,14,90.21,16
+1516,Acetone,Chemicals,A,TechWorld Inc.,14,159.2,17
+1519,Trash Bags,Cleaning,B,ChemSupply Co.,17,90.03,27
+1524,Benzene,Chemicals,A,LabSource,11,71.48,19
+1529,Monitor,Electronics,B,LabSource,14,39.09,22
+1531,Xylene,Chemicals,B,OfficeMax,16,116.51,21
+1532,Chloroform,Chemicals,A,TechWorld Inc.,19,157.65,25
+1536,Tape Dispenser,Office Supplies,C,FurniTech,28,82.47,36
+1537,Safety Helmet,Safety Equipment,D,LabSource,23,35.49,29
+1543,Monitor,Electronics,B,LabSource,22,73.12,28
+1544,pH Meter,Laboratory,A,FurniTech,15,123.8,19
+1552,UPS,Electronics,B,TechWorld Inc.,22,50.01,28
+1554,Coffee Table,Furniture,C,OfficeMax,30,91.75,38
+1557,External Hard Drive,Electronics,B,OfficeMax,10,89.23,21
+1559,Acetone,Chemicals,A,CleanAll Ltd.,12,226.09,19
+1560,Hydrochloric Acid,Chemicals,A,LabSource,11,195.0,25
+1565,Sodium Hydroxide,Chemicals,A,CleanAll Ltd.,15,271.28,19
+1567,Beakers,Laboratory,B,TechWorld Inc.,19,80.46,24
+1569,Benzene,Chemicals,A,LabSource,10,272.63,13
+1571,Hand Sanitizer,Cleaning,C,CleanAll Ltd.,31,62.29,40
+1578,Laptop,Electronics,D,LabSource,32,31.47,41
+1584,Printer,Electronics,B,FurniTech,12,144.9,16
+1588,Stapler,Office Supplies,D,FurniTech,22,16.41,28
+1591,Tape Dispenser,Office Supplies,D,ChemSupply Co.,28,55.48,35
+1598,Office Chair,Furniture,C,LabSource,16,70.25,20
+1603,Chloroform,Chemicals,B,LabSource,19,102.39,24
+1604,Cork Board,Furniture,C,FurniTech,25,25.73,30
+1605,Keyboard,Electronics,B,CleanAll Ltd.,24,147.46,30
+1608,Methanol,Chemicals,B,CleanAll Ltd.,16,115.5,21
+1610,Scanner,Electronics,B,LabSource,22,140.32,28
+1616,Tablet,Electronics,C,CleanAll Ltd.,21,60.65,27
+1621,Paper Towels,Cleaning,B,OfficeMax,23,139.5,24
+1623,Marker Set,Office Supplies,D,CleanAll Ltd.,20,53.83,25
+1633,Wet Mop,Cleaning,C,LabSource,30,73.03,38
+1634,Sofa,Furniture,D,LabSource,34,9.24,43
+1636,Stapler,Office Supplies,C,TechWorld Inc.,20,46.53,25
+1651,Hydrochloric Acid,Chemicals,A,FurniTech,16,286.85,19
+1653,Face Shield,Safety Equipment,D,CleanAll Ltd.,38,68.53,48
+1654,Flask Set,Laboratory,A,FurniTech,17,179.12,23
+1662,Test Tubes,Laboratory,A,TechWorld Inc.,19,260.8,20
+1666,Beakers,Laboratory,B,FurniTech,12,125.92,16
+1669,Chloroform,Chemicals,A,OfficeMax,9,216.89,21
+1675,Toluene,Chemicals,B,CleanAll Ltd.,14,64.1,21
+1684,Formaldehyde,Chemicals,B,LabSource,12,48.81,15
+1685,Dust Mop,Cleaning,B,ChemSupply Co.,21,84.48,27
+1687,Paper Towels,Cleaning,C,OfficeMax,23,67.3,37
+1690,Dust Mop,Cleaning,C,ChemSupply Co.,21,25.17,27
+1693,Trash Bags,Cleaning,C,LabSource,24,28.44,31
+1695,Beakers,Laboratory,A,LabSource,6,137.59,22
+1697,Keyboard,Electronics,B,TechWorld Inc.,16,89.5,19
+1699,Bookshelf,Furniture,D,LabSource,23,76.7,29
+1700,Binder Clips,Office Supplies,C,ChemSupply Co.,25,57.09,32
+1704,Face Shield,Safety Equipment,D,TechWorld Inc.,32,22.59,41
+1708,Toilet Paper,Cleaning,C,TechWorld Inc.,16,49.0,21
+1709,pH Meter,Laboratory,A,FurniTech,10,212.15,14
+1710,Chloroform,Chemicals,A,OfficeMax,5,182.27,11
+1714,All-Purpose Cleaner,Cleaning,C,OfficeMax,28,44.03,35
+1718,Pen Set,Office Supplies,C,CleanAll Ltd.,25,61.29,32
+1720,Dust Mop,Cleaning,B,LabSource,16,129.21,20
+1723,Lab Coat,Safety Equipment,D,ChemSupply Co.,26,54.82,33
+1725,Dust Mop,Cleaning,B,FurniTech,12,149.05,30
+1726,Pen Set,Office Supplies,C,FurniTech,16,42.35,20
+1727,Chloroform,Chemicals,B,FurniTech,16,65.88,20
+1731,Xylene,Chemicals,A,TechWorld Inc.,13,271.93,18
+1732,Wet Mop,Cleaning,B,TechWorld Inc.,14,69.67,19
+1733,Emergency Eyewash,Safety Equipment,D,ChemSupply Co.,30,78.37,38
+1737,External Hard Drive,Electronics,C,CleanAll Ltd.,23,97.09,39
+1740,Toluene,Chemicals,B,CleanAll Ltd.,15,66.0,24
+1742,Test Tubes,Laboratory,B,FurniTech,17,57.29,24
+1743,Benzene,Chemicals,A,LabSource,19,175.67,24
+1746,Stapler,Office Supplies,C,CleanAll Ltd.,16,33.6,20
+1749,Centrifuge,Laboratory,A,TechWorld Inc.,15,175.53,19
+1751,Glass Cleaner,Cleaning,C,TechWorld Inc.,27,16.18,37
+1752,Stapler,Office Supplies,D,ChemSupply Co.,39,51.3,41
+1754,External Hard Drive,Electronics,B,FurniTech,16,30.32,30
+1756,Floor Cleaner,Cleaning,B,ChemSupply Co.,18,53.34,23
+1759,Toluene,Chemicals,A,OfficeMax,11,120.09,24
+1769,Benzene,Chemicals,A,FurniTech,5,155.69,22
+1779,Bookshelf,Furniture,C,OfficeMax,30,73.44,38
+1782,Hand Sanitizer,Cleaning,C,CleanAll Ltd.,23,83.78,29
+1789,Beakers,Laboratory,C,LabSource,23,71.24,25
+1794,Scanner,Electronics,B,ChemSupply Co.,24,49.44,30
+1796,Conference Table,Furniture,C,ChemSupply Co.,24,46.72,38
+1800,Face Shield,Safety Equipment,D,TechWorld Inc.,35,54.71,50
+1802,Staples Box,Office Supplies,D,TechWorld Inc.,35,52.53,37
+1804,Tablet,Electronics,C,ChemSupply Co.,34,47.92,35
+1805,Tape Dispenser,Office Supplies,D,FurniTech,23,27.67,29
+1807,Face Shield,Safety Equipment,D,LabSource,42,19.03,48
+1811,pH Meter,Laboratory,B,LabSource,12,118.82,31
+1813,Hydrochloric Acid,Chemicals,B,TechWorld Inc.,28,80.94,35
+1817,Flask Set,Laboratory,B,TechWorld Inc.,11,92.33,22
+1822,Floor Cleaner,Cleaning,B,CleanAll Ltd.,23,43.21,29
+1824,Safety Helmet,Safety Equipment,D,OfficeMax,37,69.39,41
+1825,File Folders,Office Supplies,D,ChemSupply Co.,27,55.44,34
+1829,All-Purpose Cleaner,Cleaning,B,OfficeMax,16,72.04,21
+1830,Paper A4,Office Supplies,C,ChemSupply Co.,18,32.95,23
+1831,Scissors,Office Supplies,C,FurniTech,23,71.56,39
+1838,External Hard Drive,Electronics,C,TechWorld Inc.,26,72.02,40
+1839,Glass Cleaner,Cleaning,B,LabSource,21,74.78,27
+1840,Coffee Table,Furniture,D,LabSource,27,59.47,34
+1841,Ethanol,Chemicals,A,OfficeMax,11,78.66,14
+1842,Methanol,Chemicals,A,LabSource,13,278.09,17
+1847,Analytical Balance,Laboratory,B,OfficeMax,31,129.68,34
+1857,Printer,Electronics,C,LabSource,20,30.23,26
+1862,Centrifuge,Laboratory,A,TechWorld Inc.,12,188.02,14
+1867,Analytical Balance,Laboratory,B,OfficeMax,30,50.44,32
+1868,Sodium Hydroxide,Chemicals,B,LabSource,16,139.38,31
+1869,Hand Sanitizer,Cleaning,B,FurniTech,24,69.74,31
+1871,Hand Sanitizer,Cleaning,B,ChemSupply Co.,20,116.66,27
+1874,Emergency Eyewash,Safety Equipment,D,TechWorld Inc.,45,79.44,50
+1878,Pipettes,Laboratory,A,OfficeMax,18,150.4,23
+1879,Office Desk,Furniture,C,ChemSupply Co.,24,86.43,31
+1880,Coffee Table,Furniture,C,TechWorld Inc.,25,80.99,38
+1889,UPS,Electronics,B,LabSource,11,70.17,24
+1895,Test Tubes,Laboratory,B,LabSource,33,133.85,35
+1898,All-Purpose Cleaner,Cleaning,C,CleanAll Ltd.,23,57.88,29
+1900,Wet Mop,Cleaning,C,CleanAll Ltd.,21,75.46,24
+1901,Formaldehyde,Chemicals,B,LabSource,24,131.92,31
+1902,Glass Cleaner,Cleaning,B,OfficeMax,18,45.75,21
+1907,Safety Helmet,Safety Equipment,D,LabSource,33,50.37,48
+1909,Lab Coat,Safety Equipment,D,CleanAll Ltd.,31,41.89,39
+1916,Lab Coat,Safety Equipment,D,TechWorld Inc.,20,76.3,26
+1920,Scissors,Office Supplies,D,OfficeMax,29,62.89,37
+1921,Glass Cleaner,Cleaning,C,OfficeMax,24,79.77,40
+1930,Microscope,Laboratory,A,CleanAll Ltd.,10,66.25,25
+1931,Test Tubes,Laboratory,A,TechWorld Inc.,5,86.72,12
+1932,Desktop Computer,Electronics,D,LabSource,48,76.07,50
+1934,Chemical Gloves,Safety Equipment,D,FurniTech,30,21.73,38
+1935,Desktop Computer,Electronics,D,FurniTech,28,61.31,36
+1936,Disinfectant,Cleaning,B,OfficeMax,14,40.43,18
+1939,Lab Coat,Safety Equipment,D,ChemSupply Co.,34,34.1,43
+1940,Sodium Hydroxide,Chemicals,A,CleanAll Ltd.,11,239.49,14
+1941,Paper A3,Office Supplies,C,LabSource,17,25.09,22
+1944,pH Meter,Laboratory,A,CleanAll Ltd.,11,199.52,18
+1945,Flask Set,Laboratory,A,LabSource,16,243.7,25
+1946,Conference Table,Furniture,C,LabSource,24,90.07,30
+1949,Bunsen Burner,Laboratory,A,TechWorld Inc.,8,102.34,25
+1952,Disinfectant,Cleaning,B,FurniTech,14,149.46,18
+1954,Pipettes,Laboratory,A,TechWorld Inc.,16,58.59,22
+1964,Standing Desk,Furniture,D,TechWorld Inc.,43,68.34,49
+1966,External Hard Drive,Electronics,B,TechWorld Inc.,24,134.85,30
+1967,Safety Helmet,Safety Equipment,D,ChemSupply Co.,30,70.09,38
+1969,Tablet,Electronics,B,LabSource,20,72.89,29
+1972,Scanner,Electronics,B,OfficeMax,28,47.7,33
+1975,Desktop Computer,Electronics,B,FurniTech,23,45.84,31
+1976,Fire Extinguisher,Safety Equipment,D,CleanAll Ltd.,33,22.88,44
+1977,Test Tubes,Laboratory,C,OfficeMax,21,24.79,27
+1978,Pen Set,Office Supplies,D,LabSource,22,7.11,28
+1979,All-Purpose Cleaner,Cleaning,C,CleanAll Ltd.,31,31.03,39
+1989,Disinfectant,Cleaning,B,TechWorld Inc.,33,67.18,34
+1995,Wet Mop,Cleaning,B,OfficeMax,27,46.98,33
+1996,Flask Set,Laboratory,A,OfficeMax,5,176.95,25
+1998,Chloroform,Chemicals,A,ChemSupply Co.,6,203.6,10
+2001,Test Tubes,Laboratory,B,CleanAll Ltd.,18,134.43,23
+2006,File Folders,Office Supplies,C,TechWorld Inc.,34,59.08,39
+2016,Respirator,Safety Equipment,D,TechWorld Inc.,31,55.2,39
+2017,pH Meter,Laboratory,B,LabSource,30,63.35,32
+2018,Flask Set,Laboratory,B,TechWorld Inc.,22,125.48,29
+2019,Analytical Balance,Laboratory,B,LabSource,27,64.87,34
+2026,Sofa,Furniture,C,CleanAll Ltd.,27,96.01,34
+2031,pH Meter,Laboratory,A,OfficeMax,15,80.61,21
+2034,Safety Goggles,Safety Equipment,D,OfficeMax,34,35.62,43
+2042,Office Desk,Furniture,D,TechWorld Inc.,30,65.7,38
+2043,Paper A4,Office Supplies,C,TechWorld Inc.,27,77.59,40
+2051,Paper Towels,Cleaning,C,CleanAll Ltd.,20,71.48,26
+2055,Sodium Hydroxide,Chemicals,B,LabSource,20,119.45,25
+2058,Acetone,Chemicals,A,TechWorld Inc.,13,85.85,17
+2060,Dust Mop,Cleaning,B,OfficeMax,17,99.21,24
+2064,Chloroform,Chemicals,A,OfficeMax,14,257.78,20
+2066,Scanner,Electronics,B,OfficeMax,14,85.65,30
+2067,Disinfectant,Cleaning,B,OfficeMax,19,144.74,24
+2070,Acetone,Chemicals,B,CleanAll Ltd.,17,147.55,34
+2072,Pipettes,Laboratory,C,OfficeMax,26,17.11,33
+2074,Paper A4,Office Supplies,D,CleanAll Ltd.,36,65.62,44
+2075,Chloroform,Chemicals,A,TechWorld Inc.,7,243.21,20
+2077,Printer,Electronics,D,LabSource,36,39.45,45
+2078,Benzene,Chemicals,A,FurniTech,20,244.54,25
+2088,Hydrochloric Acid,Chemicals,A,FurniTech,10,123.08,12
+2091,Pipettes,Laboratory,B,TechWorld Inc.,11,78.92,18
+2092,Microscope,Laboratory,A,CleanAll Ltd.,10,274.6,13
+2097,Safety Goggles,Safety Equipment,D,ChemSupply Co.,35,75.51,37
+2100,Sodium Hydroxide,Chemicals,B,LabSource,18,130.06,35
+2102,Microscope,Laboratory,A,ChemSupply Co.,12,179.73,22
+2104,Disinfectant,Cleaning,C,LabSource,28,36.55,35
+2109,Office Desk,Furniture,C,TechWorld Inc.,21,96.05,36
+2110,Chloroform,Chemicals,A,ChemSupply Co.,11,89.85,20
+2115,Sodium Hydroxide,Chemicals,A,ChemSupply Co.,12,155.99,15
+2118,Dust Mop,Cleaning,B,FurniTech,15,77.79,19
+2119,Dust Mop,Cleaning,C,CleanAll Ltd.,25,69.48,32
+2120,Beakers,Laboratory,A,ChemSupply Co.,19,120.81,25
+2121,Glass Cleaner,Cleaning,B,CleanAll Ltd.,16,52.31,20
+2123,Safety Goggles,Safety Equipment,D,CleanAll Ltd.,37,31.25,41
+2127,Fire Extinguisher,Safety Equipment,D,FurniTech,29,44.05,37
+2134,UPS,Electronics,B,CleanAll Ltd.,14,139.88,16
+2136,Glass Cleaner,Cleaning,B,TechWorld Inc.,14,89.02,15
+2139,Toluene,Chemicals,A,LabSource,8,294.01,15
+2146,Formaldehyde,Chemicals,A,LabSource,19,198.21,24
+2149,Xylene,Chemicals,B,CleanAll Ltd.,17,100.12,22
+2151,Desktop Computer,Electronics,D,LabSource,40,47.54,45
+2153,Office Chair,Furniture,C,TechWorld Inc.,32,21.89,40
+2154,Office Chair,Furniture,D,CleanAll Ltd.,35,30.58,44
+2155,Safety Helmet,Safety Equipment,D,ChemSupply Co.,31,37.38,36
+2156,Flask Set,Laboratory,A,TechWorld Inc.,7,245.01,23
+2157,pH Meter,Laboratory,A,ChemSupply Co.,8,58.78,10
+2161,Printer,Electronics,B,TechWorld Inc.,21,113.1,24
+2162,Lab Coat,Safety Equipment,D,OfficeMax,32,16.92,40
+2166,Centrifuge,Laboratory,C,LabSource,21,40.73,27
+2169,Sodium Hydroxide,Chemicals,B,TechWorld Inc.,13,95.53,18
+2171,Bunsen Burner,Laboratory,B,CleanAll Ltd.,15,82.41,24
+2174,Sofa,Furniture,C,LabSource,21,25.35,27
+2175,Centrifuge,Laboratory,C,TechWorld Inc.,17,39.78,22
+2177,Mouse,Electronics,B,OfficeMax,14,78.78,25
+2179,Microscope,Laboratory,A,TechWorld Inc.,18,203.78,20
+2181,Flask Set,Laboratory,A,ChemSupply Co.,16,247.98,21
+2184,Stapler,Office Supplies,D,ChemSupply Co.,32,25.24,41
+2194,Office Chair,Furniture,D,LabSource,21,18.2,27
+2197,Desktop Computer,Electronics,B,OfficeMax,18,30.83,32
+2199,Desktop Computer,Electronics,C,TechWorld Inc.,16,74.16,20
+2201,Desktop Computer,Electronics,C,CleanAll Ltd.,20,86.26,26
+2202,Safety Helmet,Safety Equipment,D,OfficeMax,36,9.36,47
+2203,Emergency Eyewash,Safety Equipment,D,TechWorld Inc.,37,22.87,40
+2206,Conference Table,Furniture,D,ChemSupply Co.,35,42.83,44
+2207,Toilet Paper,Cleaning,B,TechWorld Inc.,23,66.47,31
+2208,Toluene,Chemicals,A,TechWorld Inc.,12,178.79,16
+2210,Acetone,Chemicals,B,LabSource,23,56.26,24
+2211,Centrifuge,Laboratory,C,TechWorld Inc.,21,67.78,33
+2215,Ethanol,Chemicals,B,FurniTech,18,84.73,23
+2216,Ethanol,Chemicals,A,TechWorld Inc.,9,250.07,10
+2218,Pipettes,Laboratory,C,CleanAll Ltd.,30,87.96,33
+2220,Tablet,Electronics,B,LabSource,13,85.69,25
+2225,Acetone,Chemicals,A,LabSource,13,165.24,24
+2227,Centrifuge,Laboratory,B,TechWorld Inc.,20,131.34,25
+2228,Methanol,Chemicals,B,LabSource,20,142.82,27
+2229,Keyboard,Electronics,C,LabSource,27,55.43,34
+2231,Acetone,Chemicals,A,TechWorld Inc.,17,112.29,19
+2234,Hand Sanitizer,Cleaning,B,TechWorld Inc.,24,118.34,30
+2237,Test Tubes,Laboratory,C,OfficeMax,25,45.53,32
+2249,External Hard Drive,Electronics,B,OfficeMax,23,47.25,26
+2257,Formaldehyde,Chemicals,A,OfficeMax,20,222.0,25
+2262,Acetone,Chemicals,B,OfficeMax,19,84.37,24
+2264,Tablet,Electronics,B,TechWorld Inc.,16,88.64,21
+2273,Toluene,Chemicals,B,TechWorld Inc.,17,109.13,22
+2278,Wet Mop,Cleaning,B,ChemSupply Co.,19,102.99,25
+2281,Xylene,Chemicals,A,CleanAll Ltd.,6,156.97,20
+2283,Test Tubes,Laboratory,C,TechWorld Inc.,28,17.27,32
+2284,Formaldehyde,Chemicals,A,FurniTech,21,163.66,25
+2286,Chemical Gloves,Safety Equipment,D,FurniTech,28,24.41,35
+2288,Emergency Eyewash,Safety Equipment,D,CleanAll Ltd.,40,10.18,50
+2289,All-Purpose Cleaner,Cleaning,B,TechWorld Inc.,12,40.02,16
+2290,Formaldehyde,Chemicals,B,ChemSupply Co.,18,65.64,22
+2298,Bookshelf,Furniture,C,ChemSupply Co.,31,37.79,39
+2299,Safety Goggles,Safety Equipment,D,CleanAll Ltd.,36,39.32,46
+2300,Office Desk,Furniture,C,CleanAll Ltd.,29,19.53,37
+2303,Ethanol,Chemicals,A,OfficeMax,7,277.13,19
+2308,Analytical Balance,Laboratory,A,ChemSupply Co.,10,55.76,21
+2310,Tablet,Electronics,D,TechWorld Inc.,20,8.54,26
+2312,Flask Set,Laboratory,B,OfficeMax,30,107.12,31
+2314,Pipettes,Laboratory,B,LabSource,11,85.35,31
+2320,Wet Mop,Cleaning,C,ChemSupply Co.,19,80.72,24
+2321,Wet Mop,Cleaning,C,FurniTech,23,93.76,24
+2322,Acetone,Chemicals,B,FurniTech,23,72.89,32
+2323,Safety Goggles,Safety Equipment,D,TechWorld Inc.,26,35.95,33
+2326,Sodium Hydroxide,Chemicals,B,ChemSupply Co.,15,66.02,19
+2329,Monitor,Electronics,D,OfficeMax,35,21.34,39
+2331,Wet Mop,Cleaning,B,FurniTech,18,38.99,23
+2333,Face Shield,Safety Equipment,D,ChemSupply Co.,41,38.82,48
+2335,Acetone,Chemicals,B,CleanAll Ltd.,22,143.45,32
+2339,First Aid Kit,Safety Equipment,D,LabSource,33,63.62,38
+2343,Hydrochloric Acid,Chemicals,A,ChemSupply Co.,21,285.65,24
+2345,Tablet,Electronics,C,CleanAll Ltd.,20,73.61,36
+2347,Analytical Balance,Laboratory,C,LabSource,28,21.18,35
+2351,Monitor,Electronics,B,CleanAll Ltd.,18,77.54,26
+2356,pH Meter,Laboratory,B,TechWorld Inc.,25,38.69,32
+2371,Glass Cleaner,Cleaning,B,ChemSupply Co.,10,85.85,15
+2375,Desktop Computer,Electronics,B,LabSource,28,59.81,33
+2381,Analytical Balance,Laboratory,A,TechWorld Inc.,16,94.74,20
+2382,Coffee Table,Furniture,D,OfficeMax,36,72.28,40
+2384,Pen Set,Office Supplies,D,OfficeMax,47,52.6,48
+2387,Microscope,Laboratory,C,ChemSupply Co.,36,21.16,38
+2391,Fire Extinguisher,Safety Equipment,D,FurniTech,35,59.9,39
+2393,Stapler,Office Supplies,D,FurniTech,40,50.21,50
+2394,Bookshelf,Furniture,C,OfficeMax,20,50.5,26
+2395,pH Meter,Laboratory,A,CleanAll Ltd.,18,81.26,23
+2398,Pen Set,Office Supplies,C,CleanAll Ltd.,16,96.18,20
+2403,Xylene,Chemicals,A,CleanAll Ltd.,14,97.62,16
+2405,Conference Table,Furniture,D,TechWorld Inc.,39,5.57,49
+2406,Paper A4,Office Supplies,D,ChemSupply Co.,30,20.99,38
+2407,Sodium Hydroxide,Chemicals,B,FurniTech,12,66.03,15
+2409,Filing Cabinet,Furniture,D,FurniTech,33,61.8,35
+2410,Centrifuge,Laboratory,A,CleanAll Ltd.,7,112.1,19
+2412,Binder Clips,Office Supplies,C,CleanAll Ltd.,34,94.1,40
+2413,Dust Mop,Cleaning,B,LabSource,15,111.14,24
+2414,Pen Set,Office Supplies,C,CleanAll Ltd.,20,16.88,26
+2417,Safety Goggles,Safety Equipment,D,LabSource,24,79.9,31
+2418,Paper A4,Office Supplies,D,CleanAll Ltd.,36,49.28,39
+2419,First Aid Kit,Safety Equipment,D,CleanAll Ltd.,45,20.67,49
+2421,Benzene,Chemicals,B,CleanAll Ltd.,13,48.34,21
+2422,Test Tubes,Laboratory,B,LabSource,24,108.06,29
+2423,Floor Cleaner,Cleaning,C,TechWorld Inc.,27,96.92,30
+2424,Sofa,Furniture,C,CleanAll Ltd.,24,21.88,27
+2428,Standing Desk,Furniture,C,OfficeMax,32,59.11,33
+2433,Trash Bags,Cleaning,C,CleanAll Ltd.,32,73.36,40
+2435,Glass Cleaner,Cleaning,C,CleanAll Ltd.,22,70.37,28
+2437,Safety Helmet,Safety Equipment,D,CleanAll Ltd.,45,17.87,47
+2439,Analytical Balance,Laboratory,B,CleanAll Ltd.,13,128.69,19
+2442,Conference Table,Furniture,C,CleanAll Ltd.,24,56.04,30
+2448,Monitor,Electronics,D,FurniTech,26,44.22,33
+2451,External Hard Drive,Electronics,C,OfficeMax,19,71.17,24
+2453,Pipettes,Laboratory,C,TechWorld Inc.,24,76.69,31
+2455,Floor Cleaner,Cleaning,B,OfficeMax,25,135.45,32
+2458,External Hard Drive,Electronics,B,ChemSupply Co.,27,100.63,34
+2459,Floor Cleaner,Cleaning,B,OfficeMax,15,83.32,17
+2461,Sodium Hydroxide,Chemicals,B,OfficeMax,10,33.22,24
+2463,Petri Dishes,Laboratory,B,FurniTech,21,36.17,27
+2464,Desktop Computer,Electronics,B,LabSource,22,108.77,33
+2467,Xylene,Chemicals,B,LabSource,17,50.87,25
+2469,Fire Extinguisher,Safety Equipment,D,FurniTech,34,64.48,43
+2471,Binder Clips,Office Supplies,C,CleanAll Ltd.,25,82.7,32
+2473,Chemical Gloves,Safety Equipment,D,OfficeMax,37,40.49,41
+2474,Standing Desk,Furniture,D,ChemSupply Co.,34,66.47,43
+2479,Paper A4,Office Supplies,D,TechWorld Inc.,32,29.61,40
+2481,Bunsen Burner,Laboratory,B,CleanAll Ltd.,14,69.18,18
+2483,Bookshelf,Furniture,C,TechWorld Inc.,31,79.2,39
+2485,Chloroform,Chemicals,A,CleanAll Ltd.,12,177.4,22
+2487,Staples Box,Office Supplies,C,TechWorld Inc.,24,28.23,30
+2488,Paper Towels,Cleaning,C,CleanAll Ltd.,24,23.47,30
+2490,Office Desk,Furniture,D,LabSource,32,9.78,41
+2495,Marker Set,Office Supplies,D,OfficeMax,34,70.78,36
+2499,Pen Set,Office Supplies,D,TechWorld Inc.,25,51.4,32
+2501,Laptop,Electronics,C,OfficeMax,24,43.57,34
+2505,Flask Set,Laboratory,A,ChemSupply Co.,20,68.96,23
+2506,Petri Dishes,Laboratory,C,ChemSupply Co.,32,64.43,40
+2514,Xylene,Chemicals,A,FurniTech,20,287.59,25
+2515,Formaldehyde,Chemicals,A,CleanAll Ltd.,11,165.21,18
+2516,Sofa,Furniture,C,FurniTech,20,69.38,40
+2518,Hydrochloric Acid,Chemicals,A,CleanAll Ltd.,9,236.11,10
+2521,Centrifuge,Laboratory,A,CleanAll Ltd.,8,107.16,25
+2524,Trash Bags,Cleaning,B,CleanAll Ltd.,11,138.84,20
+2526,Respirator,Safety Equipment,D,CleanAll Ltd.,32,38.15,41
+2528,Disinfectant,Cleaning,B,FurniTech,20,47.51,25
+2530,Fire Extinguisher,Safety Equipment,D,OfficeMax,30,68.07,50
+2532,Hand Sanitizer,Cleaning,B,FurniTech,10,81.11,21
+2533,UPS,Electronics,C,LabSource,32,25.29,40
+2534,Dust Mop,Cleaning,B,ChemSupply Co.,13,113.39,21
+2537,Fire Extinguisher,Safety Equipment,D,OfficeMax,21,32.43,27
+2540,Sofa,Furniture,C,TechWorld Inc.,20,54.7,35
+2542,Pen Set,Office Supplies,C,LabSource,24,76.11,26
+2543,Centrifuge,Laboratory,C,CleanAll Ltd.,16,86.02,20
+2545,Cork Board,Furniture,D,FurniTech,34,65.38,46
+2550,Dust Mop,Cleaning,B,ChemSupply Co.,20,149.03,32
+2552,Chloroform,Chemicals,B,LabSource,10,90.69,27
+2555,Centrifuge,Laboratory,A,ChemSupply Co.,19,101.99,23
+2556,Keyboard,Electronics,C,OfficeMax,24,29.11,31
+2558,Glass Cleaner,Cleaning,C,LabSource,16,44.63,21
+2560,Chloroform,Chemicals,B,CleanAll Ltd.,23,89.24,27
+2561,Monitor,Electronics,C,ChemSupply Co.,26,25.44,32
+2564,Tape Dispenser,Office Supplies,C,FurniTech,25,96.8,32
+2567,Safety Goggles,Safety Equipment,D,ChemSupply Co.,39,52.26,49
+2571,Pipettes,Laboratory,B,CleanAll Ltd.,18,74.52,26
+2574,Xylene,Chemicals,A,TechWorld Inc.,10,258.23,12
+2583,Paper Towels,Cleaning,C,OfficeMax,30,60.16,38
+2585,Toilet Paper,Cleaning,B,ChemSupply Co.,31,84.57,34
+2588,Test Tubes,Laboratory,A,LabSource,6,118.06,20
+2591,Analytical Balance,Laboratory,A,ChemSupply Co.,6,58.92,24
+2594,Test Tubes,Laboratory,A,CleanAll Ltd.,12,208.07,24
+2600,Laptop,Electronics,C,LabSource,21,50.73,27
+2605,Floor Cleaner,Cleaning,B,OfficeMax,16,106.32,26
+2607,Emergency Eyewash,Safety Equipment,D,OfficeMax,31,55.3,39
+2613,Desktop Computer,Electronics,C,LabSource,36,86.07,39
+2616,Flask Set,Laboratory,A,TechWorld Inc.,19,259.06,21
+2619,Mouse,Electronics,B,TechWorld Inc.,20,94.04,27
+2620,Chemical Gloves,Safety Equipment,D,LabSource,40,60.54,50
+2624,Chloroform,Chemicals,B,TechWorld Inc.,30,147.41,33
+2625,Laptop,Electronics,C,FurniTech,28,41.02,37
+2629,Disinfectant,Cleaning,C,TechWorld Inc.,29,85.33,37
+2630,Formaldehyde,Chemicals,A,FurniTech,9,191.68,12
+2632,Conference Table,Furniture,C,TechWorld Inc.,21,50.68,23
+2633,Desktop Computer,Electronics,C,LabSource,20,18.15,24
+2634,Ethanol,Chemicals,A,LabSource,20,134.83,25
+2635,Petri Dishes,Laboratory,A,ChemSupply Co.,20,250.46,25
+2641,Floor Cleaner,Cleaning,B,OfficeMax,24,70.39,32
+2645,Bookshelf,Furniture,D,OfficeMax,29,37.26,37
+2647,All-Purpose Cleaner,Cleaning,B,OfficeMax,16,124.36,20
+2648,Formaldehyde,Chemicals,A,CleanAll Ltd.,15,58.4,19
+2651,Mouse,Electronics,B,TechWorld Inc.,12,54.54,15
+2654,Microscope,Laboratory,A,FurniTech,19,131.34,24
+2659,Face Shield,Safety Equipment,D,TechWorld Inc.,20,46.09,26
+2660,Microscope,Laboratory,A,ChemSupply Co.,19,253.32,24
+2664,UPS,Electronics,C,CleanAll Ltd.,17,17.57,22
+2671,Dust Mop,Cleaning,C,FurniTech,24,47.99,30
+2672,External Hard Drive,Electronics,B,TechWorld Inc.,20,128.1,26
+2679,Pen Set,Office Supplies,C,CleanAll Ltd.,24,27.67,31
+2683,Floor Cleaner,Cleaning,C,LabSource,37,29.02,38
+2691,Centrifuge,Laboratory,A,LabSource,7,183.87,12
+2693,Methanol,Chemicals,A,ChemSupply Co.,24,151.52,25
+2694,Laptop,Electronics,D,ChemSupply Co.,39,12.81,49
+2701,Xylene,Chemicals,A,CleanAll Ltd.,11,292.12,14
+2704,Face Shield,Safety Equipment,D,TechWorld Inc.,32,58.84,41
+2708,Xylene,Chemicals,B,FurniTech,20,141.26,25
+2711,Toluene,Chemicals,A,CleanAll Ltd.,11,255.1,17
+2715,Bookshelf,Furniture,C,LabSource,20,21.43,25
+2716,External Hard Drive,Electronics,B,CleanAll Ltd.,18,55.24,23
+2717,Office Desk,Furniture,C,TechWorld Inc.,34,28.77,36
+2718,Laptop,Electronics,D,CleanAll Ltd.,32,17.37,40
+2728,Wet Mop,Cleaning,B,LabSource,15,40.84,23
+2730,Analytical Balance,Laboratory,B,OfficeMax,27,136.79,34
+2731,Desktop Computer,Electronics,C,CleanAll Ltd.,22,95.56,28
+2733,Acetone,Chemicals,A,FurniTech,6,95.68,22
+2735,Tape Dispenser,Office Supplies,D,LabSource,38,60.32,46
+2738,Mouse,Electronics,D,FurniTech,36,6.19,45
+2739,Beakers,Laboratory,C,LabSource,28,93.3,36
+2740,Pipettes,Laboratory,A,LabSource,6,217.11,13
+2744,First Aid Kit,Safety Equipment,D,OfficeMax,33,34.37,47
+2745,Flask Set,Laboratory,B,ChemSupply Co.,18,31.74,27
+2747,Fire Extinguisher,Safety Equipment,D,ChemSupply Co.,33,44.14,42
+2749,Xylene,Chemicals,A,CleanAll Ltd.,10,232.31,20
+2750,Coffee Table,Furniture,D,TechWorld Inc.,47,14.89,48
+2751,Office Desk,Furniture,C,TechWorld Inc.,21,63.55,28
+2753,Hand Sanitizer,Cleaning,C,FurniTech,20,80.23,25
+2755,Microscope,Laboratory,A,CleanAll Ltd.,7,232.97,18
+2757,File Folders,Office Supplies,D,FurniTech,35,76.59,47
+2768,Mouse,Electronics,C,TechWorld Inc.,28,43.31,38
+2769,Methanol,Chemicals,A,FurniTech,12,148.43,16
+2775,Analytical Balance,Laboratory,B,OfficeMax,17,36.26,20
+2778,Benzene,Chemicals,B,LabSource,28,104.01,35
+2779,Microscope,Laboratory,B,FurniTech,23,92.57,35
+2781,File Folders,Office Supplies,C,FurniTech,26,67.63,33
+2782,Office Desk,Furniture,D,LabSource,36,38.64,40
+2784,Toilet Paper,Cleaning,B,LabSource,17,148.36,22
+2785,Trash Bags,Cleaning,B,TechWorld Inc.,17,108.02,18
+2787,Glass Cleaner,Cleaning,B,LabSource,10,38.94,17
+2788,Trash Bags,Cleaning,B,TechWorld Inc.,17,135.95,35
+2791,pH Meter,Laboratory,C,OfficeMax,24,60.32,31
+2794,Scissors,Office Supplies,C,FurniTech,31,25.35,39
+2804,Sofa,Furniture,C,FurniTech,33,16.21,38
+2808,Glass Cleaner,Cleaning,B,TechWorld Inc.,23,39.29,29
+2809,Office Desk,Furniture,C,ChemSupply Co.,22,24.03,29
+2810,Standing Desk,Furniture,D,OfficeMax,36,67.81,46
+2815,Office Chair,Furniture,C,LabSource,25,17.77,32
+2817,Safety Goggles,Safety Equipment,D,LabSource,24,31.56,31
+2821,Cork Board,Furniture,D,OfficeMax,44,74.23,46
+2822,Xylene,Chemicals,A,TechWorld Inc.,20,286.29,24
+2827,Analytical Balance,Laboratory,B,TechWorld Inc.,11,138.98,19
+2829,Ethanol,Chemicals,B,TechWorld Inc.,23,121.02,29
+2831,Flask Set,Laboratory,C,LabSource,30,63.84,32
+2834,Monitor,Electronics,B,LabSource,19,34.42,25
+2835,Bunsen Burner,Laboratory,A,LabSource,13,123.38,17
+2838,Dust Mop,Cleaning,B,TechWorld Inc.,22,49.36,23
+2840,Xylene,Chemicals,A,CleanAll Ltd.,14,133.22,18
+2844,Paper A3,Office Supplies,C,ChemSupply Co.,17,50.53,22
+2845,External Hard Drive,Electronics,B,CleanAll Ltd.,25,141.38,28
+2846,pH Meter,Laboratory,B,OfficeMax,15,53.92,29
+2847,First Aid Kit,Safety Equipment,D,TechWorld Inc.,30,32.39,38
+2848,Monitor,Electronics,B,LabSource,19,109.35,26
+2851,Microscope,Laboratory,C,OfficeMax,26,41.12,35
+2852,Stapler,Office Supplies,D,FurniTech,37,34.21,47
+2855,Paper A4,Office Supplies,C,ChemSupply Co.,30,99.59,33
+2858,Acetone,Chemicals,A,OfficeMax,12,130.98,16
+2859,Paper Towels,Cleaning,B,ChemSupply Co.,11,116.19,27
+2862,Conference Table,Furniture,C,LabSource,29,79.23,31
+2865,Keyboard,Electronics,C,LabSource,25,52.69,33
+2866,Wet Mop,Cleaning,B,CleanAll Ltd.,25,84.53,32
+2872,External Hard Drive,Electronics,B,FurniTech,18,71.42,29
+2875,Xylene,Chemicals,A,CleanAll Ltd.,10,90.32,25
+2878,Hand Sanitizer,Cleaning,C,LabSource,31,65.15,40
+2879,Flask Set,Laboratory,B,ChemSupply Co.,23,133.66,28
+2886,Office Chair,Furniture,C,LabSource,27,91.36,34
+2891,Wet Mop,Cleaning,B,CleanAll Ltd.,19,101.27,27
+2893,Microscope,Laboratory,B,LabSource,12,73.44,27
+2894,Desktop Computer,Electronics,C,OfficeMax,21,57.56,27
+2895,Chemical Gloves,Safety Equipment,D,CleanAll Ltd.,37,78.87,47
+2900,Floor Cleaner,Cleaning,B,CleanAll Ltd.,18,90.13,23
+2903,Mouse,Electronics,B,CleanAll Ltd.,22,46.47,32
+2907,Keyboard,Electronics,C,OfficeMax,29,53.22,37
+2911,Desktop Computer,Electronics,B,TechWorld Inc.,13,118.62,17
+2912,Safety Goggles,Safety Equipment,D,LabSource,33,22.93,42
+2914,Standing Desk,Furniture,D,FurniTech,31,7.67,43
+2918,First Aid Kit,Safety Equipment,D,TechWorld Inc.,23,68.08,29
+2921,Test Tubes,Laboratory,B,OfficeMax,12,110.38,16
+2922,Methanol,Chemicals,A,ChemSupply Co.,12,154.5,16
+2924,Laptop,Electronics,D,LabSource,41,64.04,43
+2925,Petri Dishes,Laboratory,A,LabSource,10,139.76,11
+2927,Centrifuge,Laboratory,B,TechWorld Inc.,12,132.85,16
+2929,Emergency Eyewash,Safety Equipment,D,CleanAll Ltd.,33,75.02,35
+2930,Monitor,Electronics,C,FurniTech,32,52.09,40
+2935,Tape Dispenser,Office Supplies,D,LabSource,26,19.62,33
+2936,Office Chair,Furniture,C,OfficeMax,24,65.01,30
+2937,Emergency Eyewash,Safety Equipment,D,CleanAll Ltd.,31,73.86,46
+2942,Paper A3,Office Supplies,C,LabSource,19,53.46,24
+2943,Keyboard,Electronics,B,TechWorld Inc.,20,76.01,26
+2944,Filing Cabinet,Furniture,C,TechWorld Inc.,23,82.07,29
+2946,Bunsen Burner,Laboratory,A,ChemSupply Co.,13,79.6,15
+2954,Pipettes,Laboratory,B,LabSource,16,70.8,21
+2955,File Folders,Office Supplies,C,LabSource,23,49.82,30
+2964,Sodium Hydroxide,Chemicals,A,FurniTech,20,261.47,25
+2965,First Aid Kit,Safety Equipment,D,CleanAll Ltd.,36,49.99,46
+2968,Methanol,Chemicals,A,OfficeMax,6,244.89,23
+2970,Beakers,Laboratory,B,CleanAll Ltd.,12,103.55,28
+2971,Hand Sanitizer,Cleaning,B,OfficeMax,17,149.16,22
+2972,Chemical Gloves,Safety Equipment,D,CleanAll Ltd.,20,12.05,26
+2973,Formaldehyde,Chemicals,A,OfficeMax,14,198.26,25
+2975,Acetone,Chemicals,B,LabSource,28,40.25,35
+2976,Monitor,Electronics,D,TechWorld Inc.,20,40.08,26
+2979,Microscope,Laboratory,B,TechWorld Inc.,24,54.54,33
+2982,Pipettes,Laboratory,B,OfficeMax,12,58.57,15
+2991,Binder Clips,Office Supplies,D,CleanAll Ltd.,28,25.2,35
+2994,Glass Cleaner,Cleaning,C,TechWorld Inc.,23,50.03,29
+2996,Analytical Balance,Laboratory,B,TechWorld Inc.,12,46.35,31
+3015,Sofa,Furniture,D,FurniTech,21,68.88,27
+3017,Bookshelf,Furniture,C,ChemSupply Co.,26,99.41,39
+3020,Toluene,Chemicals,A,FurniTech,13,99.33,21
+3022,Glass Cleaner,Cleaning,B,LabSource,29,139.22,33
+3027,Keyboard,Electronics,B,OfficeMax,23,111.87,28
+3031,Disinfectant,Cleaning,B,TechWorld Inc.,26,83.41,33
+3034,Bunsen Burner,Laboratory,A,FurniTech,11,249.24,24
+3035,Laptop,Electronics,B,OfficeMax,19,110.87,26
+3037,Pipettes,Laboratory,A,FurniTech,5,252.41,10
+3042,Whiteboard,Furniture,D,ChemSupply Co.,35,78.78,48
+3046,Dust Mop,Cleaning,B,LabSource,17,31.77,22
+3047,Floor Cleaner,Cleaning,C,OfficeMax,22,36.61,23
+3049,Methanol,Chemicals,A,ChemSupply Co.,13,219.22,16
+3055,Safety Goggles,Safety Equipment,D,OfficeMax,33,69.1,42
+3064,Pipettes,Laboratory,A,FurniTech,10,256.0,13
+3065,Ethanol,Chemicals,B,CleanAll Ltd.,14,137.07,31
+3072,Fire Extinguisher,Safety Equipment,D,CleanAll Ltd.,38,62.95,48
+3074,Formaldehyde,Chemicals,B,CleanAll Ltd.,27,113.25,34
+3076,Toilet Paper,Cleaning,C,CleanAll Ltd.,30,23.87,38
+3080,Ethanol,Chemicals,A,CleanAll Ltd.,5,166.9,25
+3083,Hydrochloric Acid,Chemicals,B,FurniTech,14,100.89,30
+3088,External Hard Drive,Electronics,B,OfficeMax,22,46.28,24
+3089,Stapler,Office Supplies,D,CleanAll Ltd.,24,48.38,31
+3090,Printer,Electronics,B,FurniTech,16,90.24,20
+3095,Paper A3,Office Supplies,D,ChemSupply Co.,37,13.28,41
+3097,Toilet Paper,Cleaning,B,OfficeMax,16,54.26,20
+3100,Face Shield,Safety Equipment,D,ChemSupply Co.,43,12.88,44
+3102,Floor Cleaner,Cleaning,C,ChemSupply Co.,33,51.9,35
+3106,Beakers,Laboratory,B,FurniTech,21,86.81,22
+3107,Lab Coat,Safety Equipment,D,OfficeMax,30,57.66,38
+3108,Toluene,Chemicals,A,CleanAll Ltd.,12,206.37,16
+3109,File Folders,Office Supplies,D,TechWorld Inc.,32,35.1,40
+3114,Hand Sanitizer,Cleaning,C,TechWorld Inc.,24,75.83,30
+3115,Pipettes,Laboratory,B,OfficeMax,13,140.35,29
+3122,Methanol,Chemicals,A,LabSource,9,230.58,12
+3124,Desktop Computer,Electronics,C,TechWorld Inc.,24,31.28,40
+3127,Safety Goggles,Safety Equipment,D,FurniTech,27,34.85,34
+3130,Xylene,Chemicals,A,ChemSupply Co.,9,265.61,13
+3136,Hydrochloric Acid,Chemicals,A,TechWorld Inc.,13,238.16,17
+3137,Petri Dishes,Laboratory,C,OfficeMax,20,74.93,30
+3140,Desktop Computer,Electronics,C,OfficeMax,26,45.09,37
+3142,Benzene,Chemicals,A,OfficeMax,12,136.45,25
+3145,Cork Board,Furniture,C,LabSource,19,38.12,24
+3147,Acetone,Chemicals,B,TechWorld Inc.,23,93.52,29
+3149,Binder Clips,Office Supplies,C,FurniTech,33,63.15,37
+3151,Toluene,Chemicals,A,OfficeMax,9,287.82,21
+3157,Printer,Electronics,D,LabSource,35,32.95,44
+3158,Xylene,Chemicals,B,TechWorld Inc.,30,54.51,33
+3161,Sofa,Furniture,D,ChemSupply Co.,27,58.65,34
+3167,Acetone,Chemicals,A,CleanAll Ltd.,12,283.63,24
+3168,Stapler,Office Supplies,C,CleanAll Ltd.,36,26.24,37
+3175,Printer,Electronics,C,ChemSupply Co.,22,83.45,28
+3179,Safety Goggles,Safety Equipment,D,OfficeMax,33,35.05,42
+3181,Bunsen Burner,Laboratory,A,ChemSupply Co.,13,298.44,19
+3184,pH Meter,Laboratory,C,LabSource,26,53.79,37
+3188,Printer,Electronics,B,TechWorld Inc.,16,147.59,20
+3189,Analytical Balance,Laboratory,B,LabSource,14,109.93,18
+3194,Acetone,Chemicals,A,OfficeMax,8,67.05,13
+3196,Whiteboard,Furniture,D,ChemSupply Co.,34,78.98,40
+3198,Dust Mop,Cleaning,B,LabSource,16,66.7,21
+3199,Emergency Eyewash,Safety Equipment,D,OfficeMax,33,10.16,42
+3200,Hydrochloric Acid,Chemicals,B,ChemSupply Co.,25,117.31,27
+3202,Office Chair,Furniture,D,ChemSupply Co.,39,25.36,45
+3208,Face Shield,Safety Equipment,D,OfficeMax,30,72.99,38
+3209,Hand Sanitizer,Cleaning,B,LabSource,24,47.22,33
+3216,Staples Box,Office Supplies,C,OfficeMax,20,19.84,33
+3227,Cork Board,Furniture,C,CleanAll Ltd.,28,62.0,31
+3230,Staples Box,Office Supplies,C,CleanAll Ltd.,18,34.2,23
+3238,Sodium Hydroxide,Chemicals,A,ChemSupply Co.,20,105.75,25
+3240,Hand Sanitizer,Cleaning,C,OfficeMax,26,23.4,33
+3243,Lab Coat,Safety Equipment,D,CleanAll Ltd.,28,53.19,36
+3251,Petri Dishes,Laboratory,C,CleanAll Ltd.,28,27.47,36
+3254,Analytical Balance,Laboratory,C,TechWorld Inc.,20,89.88,30
+3260,Test Tubes,Laboratory,A,CleanAll Ltd.,16,289.24,21
+3261,Paper Towels,Cleaning,C,OfficeMax,23,50.6,32
+3263,Marker Set,Office Supplies,D,CleanAll Ltd.,24,6.77,30
+3265,Toluene,Chemicals,B,OfficeMax,17,95.5,29
+3271,Benzene,Chemicals,A,OfficeMax,19,204.76,24
+3272,Floor Cleaner,Cleaning,C,OfficeMax,23,52.37,32
+3273,Printer,Electronics,B,ChemSupply Co.,10,111.67,26
+3275,Benzene,Chemicals,A,TechWorld Inc.,14,257.0,18
+3278,Office Chair,Furniture,C,LabSource,26,64.89,33
+3282,Lab Coat,Safety Equipment,D,LabSource,40,60.24,50
+3285,Office Chair,Furniture,D,FurniTech,32,67.46,41
+3286,External Hard Drive,Electronics,C,TechWorld Inc.,17,68.63,22
+3289,Coffee Table,Furniture,D,LabSource,28,73.45,36
+3291,Trash Bags,Cleaning,B,ChemSupply Co.,20,125.87,26
+3293,Pipettes,Laboratory,B,CleanAll Ltd.,27,50.28,34
+3294,Toluene,Chemicals,A,CleanAll Ltd.,19,286.59,25
+3295,Tape Dispenser,Office Supplies,C,LabSource,37,43.46,38
+3296,Laptop,Electronics,B,LabSource,15,53.79,25
+3299,Desktop Computer,Electronics,D,FurniTech,34,62.14,43
+3301,Pen Set,Office Supplies,C,CleanAll Ltd.,27,56.71,40
+3303,Methanol,Chemicals,B,CleanAll Ltd.,24,44.62,31
+3306,Benzene,Chemicals,A,OfficeMax,13,252.32,20
+3309,UPS,Electronics,B,LabSource,12,95.22,31
+3311,pH Meter,Laboratory,A,LabSource,16,299.59,24
+3313,Binder Clips,Office Supplies,D,OfficeMax,44,17.76,45
+3314,Hand Sanitizer,Cleaning,B,ChemSupply Co.,16,86.43,25
+3321,Ethanol,Chemicals,B,CleanAll Ltd.,27,98.85,29
+3323,Bunsen Burner,Laboratory,A,LabSource,16,216.66,20
+3325,Pipettes,Laboratory,B,CleanAll Ltd.,20,126.75,26
+3327,External Hard Drive,Electronics,B,OfficeMax,18,95.75,23
+3330,Tape Dispenser,Office Supplies,D,ChemSupply Co.,40,17.54,48
+3333,Hydrochloric Acid,Chemicals,A,TechWorld Inc.,9,243.54,20
+3334,Paper A4,Office Supplies,D,CleanAll Ltd.,33,40.16,42
+3335,Lab Coat,Safety Equipment,D,FurniTech,38,38.26,48
+3336,Petri Dishes,Laboratory,A,CleanAll Ltd.,13,243.88,17
+3341,Hydrochloric Acid,Chemicals,A,TechWorld Inc.,21,138.07,25
+3342,Respirator,Safety Equipment,D,FurniTech,35,63.0,37
+3343,Xylene,Chemicals,A,OfficeMax,8,178.14,15
+3346,Trash Bags,Cleaning,B,ChemSupply Co.,17,112.27,30
+3350,Benzene,Chemicals,A,TechWorld Inc.,8,184.37,18
+3351,Mouse,Electronics,B,ChemSupply Co.,24,34.65,30
+3354,Toluene,Chemicals,B,OfficeMax,14,146.6,17
+3357,Tape Dispenser,Office Supplies,D,CleanAll Ltd.,31,51.58,39
+3361,Hydrochloric Acid,Chemicals,A,OfficeMax,8,259.97,10
+3362,Hand Sanitizer,Cleaning,B,LabSource,23,147.36,33
+3363,Hydrochloric Acid,Chemicals,B,ChemSupply Co.,28,84.84,35
+3364,Chloroform,Chemicals,B,LabSource,10,140.16,24
+3366,Disinfectant,Cleaning,B,LabSource,14,117.85,34
+3368,Test Tubes,Laboratory,A,ChemSupply Co.,7,260.49,14
+3371,Face Shield,Safety Equipment,D,ChemSupply Co.,38,22.16,39
+3377,Sodium Hydroxide,Chemicals,B,CleanAll Ltd.,21,143.56,27
+3380,Whiteboard,Furniture,C,FurniTech,20,33.42,25
+3388,Trash Bags,Cleaning,B,TechWorld Inc.,15,61.8,18
+3389,Flask Set,Laboratory,B,LabSource,27,43.14,34
+3390,Chloroform,Chemicals,A,CleanAll Ltd.,13,114.25,17
+3392,Chloroform,Chemicals,A,FurniTech,5,120.59,16
+3393,Xylene,Chemicals,A,FurniTech,14,103.83,15
+3397,Chloroform,Chemicals,A,LabSource,20,178.01,25
+3401,Desktop Computer,Electronics,D,ChemSupply Co.,33,24.83,42
+3406,Xylene,Chemicals,A,FurniTech,5,275.53,15
+3407,Fire Extinguisher,Safety Equipment,D,CleanAll Ltd.,24,54.41,30
+3411,Disinfectant,Cleaning,B,TechWorld Inc.,32,70.01,34
+3418,Pipettes,Laboratory,A,ChemSupply Co.,19,252.39,24
+3420,Emergency Eyewash,Safety Equipment,D,FurniTech,33,6.93,48
+3426,Pen Set,Office Supplies,D,OfficeMax,33,28.82,42
+3427,Wet Mop,Cleaning,B,OfficeMax,34,119.56,35
+3428,Conference Table,Furniture,C,FurniTech,28,76.8,37
+3429,Xylene,Chemicals,B,CleanAll Ltd.,25,68.19,35
+3431,Marker Set,Office Supplies,C,OfficeMax,22,22.46,37
+3432,All-Purpose Cleaner,Cleaning,B,OfficeMax,12,60.2,28
+3435,Monitor,Electronics,B,LabSource,13,69.25,18
+3442,Trash Bags,Cleaning,B,CleanAll Ltd.,29,136.1,33
+3446,Benzene,Chemicals,A,ChemSupply Co.,8,134.47,20
+3448,Keyboard,Electronics,B,ChemSupply Co.,15,135.5,19
+3451,File Folders,Office Supplies,C,CleanAll Ltd.,28,63.68,36
+3459,Paper A4,Office Supplies,C,CleanAll Ltd.,26,17.24,33
+3461,Glass Cleaner,Cleaning,B,LabSource,19,32.67,23
+3466,Ear Protection,Safety Equipment,D,CleanAll Ltd.,34,45.9,48
+3467,Whiteboard,Furniture,C,TechWorld Inc.,16,60.71,20
+3469,pH Meter,Laboratory,B,FurniTech,17,90.34,22
+3470,Desktop Computer,Electronics,C,CleanAll Ltd.,23,82.5,39
+3474,Test Tubes,Laboratory,C,LabSource,24,28.83,30
+3478,Glass Cleaner,Cleaning,C,LabSource,18,74.54,23
+3483,Disinfectant,Cleaning,B,CleanAll Ltd.,22,50.66,23
+3484,Keyboard,Electronics,B,OfficeMax,24,113.32,25
+3485,Acetone,Chemicals,A,OfficeMax,6,277.72,20
+3489,Safety Goggles,Safety Equipment,D,CleanAll Ltd.,35,53.59,46
+3490,Mouse,Electronics,D,FurniTech,20,31.25,26
+3491,Chemical Gloves,Safety Equipment,D,ChemSupply Co.,21,27.09,27
+3497,Benzene,Chemicals,B,CleanAll Ltd.,11,97.39,29
+3501,Binder Clips,Office Supplies,C,OfficeMax,34,59.09,39
+3505,Methanol,Chemicals,A,TechWorld Inc.,7,60.79,11
+3506,Microscope,Laboratory,B,ChemSupply Co.,25,59.44,29
+3507,Face Shield,Safety Equipment,D,ChemSupply Co.,37,34.82,45
+3509,Whiteboard,Furniture,C,OfficeMax,18,53.06,23
+3511,Floor Cleaner,Cleaning,B,LabSource,16,135.24,20
+3514,Petri Dishes,Laboratory,A,LabSource,21,91.27,22
+3518,Ethanol,Chemicals,A,FurniTech,7,87.46,13
+3520,Methanol,Chemicals,B,CleanAll Ltd.,20,79.93,33
+3522,Whiteboard,Furniture,C,ChemSupply Co.,16,49.13,20
+3526,Floor Cleaner,Cleaning,C,TechWorld Inc.,31,51.94,39
+3528,Chemical Gloves,Safety Equipment,D,CleanAll Ltd.,32,73.87,46
+3531,Chemical Gloves,Safety Equipment,D,LabSource,33,44.7,36
+3540,Coffee Table,Furniture,D,ChemSupply Co.,21,56.47,27
+3541,Ethanol,Chemicals,A,TechWorld Inc.,19,147.45,24
+3542,Toluene,Chemicals,B,CleanAll Ltd.,12,60.54,16
+3545,Dust Mop,Cleaning,B,FurniTech,16,146.0,34
+3548,Benzene,Chemicals,B,ChemSupply Co.,16,109.7,20
+3554,Pipettes,Laboratory,B,TechWorld Inc.,17,93.42,23
+3555,First Aid Kit,Safety Equipment,D,CleanAll Ltd.,31,74.49,39
+3561,Hydrochloric Acid,Chemicals,B,ChemSupply Co.,26,63.66,31
+3564,Trash Bags,Cleaning,B,ChemSupply Co.,17,148.91,29
+3566,Wet Mop,Cleaning,B,TechWorld Inc.,17,69.7,35
+3570,Chloroform,Chemicals,B,TechWorld Inc.,24,57.01,28
+3574,Glass Cleaner,Cleaning,C,FurniTech,21,92.65,27
+3576,Ear Protection,Safety Equipment,D,ChemSupply Co.,24,59.77,31
+3578,Petri Dishes,Laboratory,B,FurniTech,18,122.46,23
+3582,Disinfectant,Cleaning,B,CleanAll Ltd.,16,73.11,22
+3583,Petri Dishes,Laboratory,C,LabSource,21,54.34,22
+3584,Conference Table,Furniture,D,CleanAll Ltd.,34,7.62,43
+3595,Xylene,Chemicals,B,OfficeMax,14,71.09,31
+3596,Chemical Gloves,Safety Equipment,D,CleanAll Ltd.,36,44.02,45
+3601,Printer,Electronics,B,CleanAll Ltd.,24,84.48,31
+3602,pH Meter,Laboratory,B,FurniTech,29,123.87,34
+3603,First Aid Kit,Safety Equipment,D,OfficeMax,39,73.6,47
+3609,Paper A3,Office Supplies,D,OfficeMax,33,10.31,42
+3613,Keyboard,Electronics,C,CleanAll Ltd.,30,41.37,38
+3616,Chloroform,Chemicals,B,ChemSupply Co.,11,80.36,31
+3621,Chloroform,Chemicals,A,CleanAll Ltd.,11,100.92,19
+3622,pH Meter,Laboratory,A,LabSource,10,201.32,17
+3625,Disinfectant,Cleaning,C,FurniTech,26,30.79,33
+3626,Filing Cabinet,Furniture,C,ChemSupply Co.,17,30.85,22
+3634,Monitor,Electronics,C,CleanAll Ltd.,30,81.72,36
+3640,Benzene,Chemicals,A,TechWorld Inc.,5,266.29,18
+3641,Wet Mop,Cleaning,C,FurniTech,22,86.16,28
+3642,Beakers,Laboratory,A,ChemSupply Co.,13,227.43,22
+3643,Bunsen Burner,Laboratory,C,FurniTech,22,82.23,28
+3647,Sofa,Furniture,C,OfficeMax,22,77.05,28
+3650,Keyboard,Electronics,D,CleanAll Ltd.,38,61.97,48
+3653,Sofa,Furniture,C,OfficeMax,29,50.41,37
+3656,Centrifuge,Laboratory,B,LabSource,26,132.04,27
+3658,Printer,Electronics,D,OfficeMax,24,60.98,30
+3659,Trash Bags,Cleaning,B,OfficeMax,12,83.99,24
+3661,Chloroform,Chemicals,A,LabSource,20,275.02,24
+3662,Scanner,Electronics,C,ChemSupply Co.,33,80.15,40
+3663,Conference Table,Furniture,D,CleanAll Ltd.,23,66.78,29
+3670,Safety Goggles,Safety Equipment,D,TechWorld Inc.,30,20.41,44
+3671,Mouse,Electronics,B,LabSource,28,54.41,35
+3675,Paper A3,Office Supplies,C,FurniTech,25,66.89,31
+3676,Laptop,Electronics,C,OfficeMax,17,84.67,22
+3679,Centrifuge,Laboratory,A,ChemSupply Co.,9,79.33,12
+3686,Conference Table,Furniture,D,ChemSupply Co.,37,52.86,47
+3687,Glass Cleaner,Cleaning,B,ChemSupply Co.,21,48.3,27
+3688,Bunsen Burner,Laboratory,A,FurniTech,8,134.64,12
+3689,Paper A3,Office Supplies,D,FurniTech,23,79.21,29
+3695,Disinfectant,Cleaning,C,ChemSupply Co.,18,91.65,23
+3698,Bookshelf,Furniture,D,FurniTech,28,77.64,35
+3705,Tablet,Electronics,D,ChemSupply Co.,42,40.07,45
+3708,Benzene,Chemicals,B,ChemSupply Co.,11,76.11,18
+3710,Respirator,Safety Equipment,D,TechWorld Inc.,22,17.11,28
+3713,Standing Desk,Furniture,C,FurniTech,24,28.62,28
+3716,Methanol,Chemicals,B,TechWorld Inc.,20,131.64,30
+3722,Mouse,Electronics,C,LabSource,17,68.46,22
+3723,Cork Board,Furniture,D,FurniTech,25,43.8,32
+3724,Benzene,Chemicals,B,TechWorld Inc.,14,140.97,21
+3729,All-Purpose Cleaner,Cleaning,C,CleanAll Ltd.,32,85.39,40
+3731,Trash Bags,Cleaning,B,ChemSupply Co.,22,130.11,23
+3736,Mouse,Electronics,C,CleanAll Ltd.,28,99.68,35
+3737,Dust Mop,Cleaning,B,FurniTech,24,98.56,31
+3739,Toluene,Chemicals,A,TechWorld Inc.,8,164.03,10
+3742,Acetone,Chemicals,A,OfficeMax,14,244.36,17
+3744,Microscope,Laboratory,B,TechWorld Inc.,16,46.55,21
+3749,All-Purpose Cleaner,Cleaning,B,FurniTech,29,50.23,33
+3751,Office Desk,Furniture,D,FurniTech,24,59.29,31
+3752,Pen Set,Office Supplies,C,ChemSupply Co.,21,37.92,27
+3753,Xylene,Chemicals,B,TechWorld Inc.,15,83.96,26
+3756,Hand Sanitizer,Cleaning,B,FurniTech,20,117.76,31
+3757,Acetone,Chemicals,A,LabSource,6,206.92,15
+3759,Paper Towels,Cleaning,B,CleanAll Ltd.,28,118.32,35
+3763,Paper A3,Office Supplies,D,TechWorld Inc.,22,68.37,28
+3764,Chloroform,Chemicals,B,ChemSupply Co.,22,91.88,31
+3767,Safety Helmet,Safety Equipment,D,ChemSupply Co.,24,28.11,31
+3768,pH Meter,Laboratory,C,CleanAll Ltd.,30,16.71,38
+3771,Filing Cabinet,Furniture,C,OfficeMax,28,68.25,36
+3772,Beakers,Laboratory,B,ChemSupply Co.,27,137.04,31
+3773,Sofa,Furniture,C,FurniTech,29,63.91,37
+3774,Beakers,Laboratory,B,TechWorld Inc.,20,98.3,23
+3780,Dust Mop,Cleaning,C,LabSource,24,26.95,30
+3781,Keyboard,Electronics,B,OfficeMax,16,60.62,21
+3783,Centrifuge,Laboratory,B,TechWorld Inc.,12,137.78,16
+3784,Ethanol,Chemicals,A,TechWorld Inc.,5,71.65,15
+3792,Microscope,Laboratory,B,LabSource,12,100.5,15
+3794,Fire Extinguisher,Safety Equipment,D,LabSource,41,68.51,46
+3795,Wet Mop,Cleaning,C,FurniTech,27,31.76,39
+3798,Analytical Balance,Laboratory,A,OfficeMax,9,149.3,12
+3801,Printer,Electronics,D,LabSource,44,69.88,46
+3803,Bunsen Burner,Laboratory,B,FurniTech,13,87.29,17
+3805,Scanner,Electronics,B,FurniTech,25,58.19,31
+3807,Desktop Computer,Electronics,B,FurniTech,19,83.45,24
+3809,Wet Mop,Cleaning,B,LabSource,16,63.47,32
+3810,Floor Cleaner,Cleaning,C,TechWorld Inc.,32,80.47,35
+3812,Ethanol,Chemicals,A,FurniTech,19,171.46,20
+3817,Safety Goggles,Safety Equipment,D,OfficeMax,45,24.7,50
+3819,Paper Towels,Cleaning,B,CleanAll Ltd.,15,125.78,17
+3821,Laptop,Electronics,C,TechWorld Inc.,24,77.75,30
+3825,Analytical Balance,Laboratory,B,TechWorld Inc.,15,70.24,19
+3826,Filing Cabinet,Furniture,D,TechWorld Inc.,31,29.06,39
+3827,Flask Set,Laboratory,C,OfficeMax,22,24.89,27
+3829,Tablet,Electronics,D,LabSource,36,31.25,45
+3830,All-Purpose Cleaner,Cleaning,C,CleanAll Ltd.,16,15.06,21
+3831,Desktop Computer,Electronics,B,TechWorld Inc.,14,65.29,25
+3834,Xylene,Chemicals,A,CleanAll Ltd.,10,142.95,13
+3835,Dust Mop,Cleaning,B,CleanAll Ltd.,15,73.69,32
+3840,Acetone,Chemicals,A,TechWorld Inc.,13,293.03,18
+3843,Analytical Balance,Laboratory,B,LabSource,19,130.13,31
+3845,Coffee Table,Furniture,D,OfficeMax,24,68.72,30
+3850,Floor Cleaner,Cleaning,B,LabSource,26,88.2,28
+3852,Pen Set,Office Supplies,C,FurniTech,23,29.88,34
+3855,Keyboard,Electronics,B,FurniTech,25,76.95,32
+3856,Fire Extinguisher,Safety Equipment,D,FurniTech,32,65.89,41
+3860,Benzene,Chemicals,B,FurniTech,24,123.88,30
+3862,Coffee Table,Furniture,C,LabSource,24,47.16,29
+3864,Beakers,Laboratory,C,CleanAll Ltd.,22,48.09,28
+3865,Monitor,Electronics,D,FurniTech,27,29.35,34
+3867,Centrifuge,Laboratory,C,FurniTech,21,40.32,27
+3868,Wet Mop,Cleaning,B,TechWorld Inc.,29,78.18,32
+3869,Keyboard,Electronics,D,FurniTech,33,37.28,34
+3871,Acetone,Chemicals,B,CleanAll Ltd.,17,58.08,22
+3873,Glass Cleaner,Cleaning,C,FurniTech,26,62.58,33
+3881,Cork Board,Furniture,D,ChemSupply Co.,33,56.22,42
+3882,Emergency Eyewash,Safety Equipment,D,ChemSupply Co.,30,77.98,38
+3888,Sofa,Furniture,C,FurniTech,32,88.85,40
+3889,pH Meter,Laboratory,B,FurniTech,24,86.74,31
+3891,First Aid Kit,Safety Equipment,D,FurniTech,25,79.73,32
+3895,Pen Set,Office Supplies,C,LabSource,35,52.61,36
+3898,Analytical Balance,Laboratory,A,FurniTech,19,242.91,22
+3901,Hand Sanitizer,Cleaning,C,ChemSupply Co.,21,80.51,28
+3902,Formaldehyde,Chemicals,B,FurniTech,13,76.37,35
+3903,Ear Protection,Safety Equipment,D,FurniTech,25,13.76,32
+3906,Mouse,Electronics,B,CleanAll Ltd.,24,122.74,30
+3907,Scissors,Office Supplies,D,ChemSupply Co.,43,47.19,45
+3909,Floor Cleaner,Cleaning,C,OfficeMax,31,47.76,39
+3910,Hydrochloric Acid,Chemicals,A,LabSource,14,192.09,24
+3913,Office Chair,Furniture,C,TechWorld Inc.,29,24.5,37
+3914,Flask Set,Laboratory,A,TechWorld Inc.,11,168.89,14
+3915,Toilet Paper,Cleaning,B,OfficeMax,16,50.83,26
+3917,Pipettes,Laboratory,B,ChemSupply Co.,12,100.47,23
+3919,Lab Coat,Safety Equipment,D,FurniTech,28,48.91,36
+3923,Formaldehyde,Chemicals,A,FurniTech,8,245.01,11
+3929,All-Purpose Cleaner,Cleaning,C,FurniTech,32,45.92,34
+3930,Hydrochloric Acid,Chemicals,A,TechWorld Inc.,15,240.94,22
+3933,Microscope,Laboratory,C,CleanAll Ltd.,32,40.9,40
+3935,First Aid Kit,Safety Equipment,D,LabSource,30,74.94,41
+3939,Analytical Balance,Laboratory,A,FurniTech,24,58.09,25
+3940,Chloroform,Chemicals,B,TechWorld Inc.,14,38.21,17
+3944,Safety Goggles,Safety Equipment,D,LabSource,31,74.41,39
+3945,Acetone,Chemicals,A,OfficeMax,5,53.07,11
+3947,Acetone,Chemicals,A,FurniTech,7,171.6,23
+3950,Pen Set,Office Supplies,C,OfficeMax,23,83.03,38
+3954,Bunsen Burner,Laboratory,B,OfficeMax,12,86.17,29
+3958,Bookshelf,Furniture,D,FurniTech,28,9.15,35
+3961,Petri Dishes,Laboratory,B,CleanAll Ltd.,15,120.52,26
+3966,Floor Cleaner,Cleaning,B,OfficeMax,11,138.94,25
+3967,Whiteboard,Furniture,D,OfficeMax,30,73.8,48
+3969,Flask Set,Laboratory,B,LabSource,29,38.97,30
+3973,Petri Dishes,Laboratory,A,TechWorld Inc.,6,103.57,21
+3976,Laptop,Electronics,B,ChemSupply Co.,21,105.44,27
+3978,Desktop Computer,Electronics,B,OfficeMax,20,67.43,34
+3980,Chemical Gloves,Safety Equipment,D,OfficeMax,36,20.38,49
+3983,Scissors,Office Supplies,C,LabSource,27,31.28,34
+3984,Coffee Table,Furniture,C,CleanAll Ltd.,28,46.9,36
+3988,Safety Helmet,Safety Equipment,D,TechWorld Inc.,32,7.49,39
+3996,Xylene,Chemicals,A,FurniTech,5,283.95,12
+4019,Face Shield,Safety Equipment,D,ChemSupply Co.,35,63.21,44
+4020,Analytical Balance,Laboratory,B,LabSource,26,68.76,34
+4023,Monitor,Electronics,B,CleanAll Ltd.,23,47.46,29
+4026,Microscope,Laboratory,B,FurniTech,19,72.25,20
+4028,Office Desk,Furniture,C,FurniTech,30,18.14,34
+4030,UPS,Electronics,B,OfficeMax,12,126.43,29
+4031,Ear Protection,Safety Equipment,D,FurniTech,42,34.23,44
+4033,Cork Board,Furniture,C,TechWorld Inc.,19,79.89,24
+4034,pH Meter,Laboratory,B,LabSource,13,116.74,17
+4037,Sodium Hydroxide,Chemicals,B,FurniTech,12,147.62,26
+4038,Safety Goggles,Safety Equipment,D,FurniTech,29,70.69,37
+4040,Ethanol,Chemicals,B,FurniTech,24,143.67,30
+4043,Petri Dishes,Laboratory,A,TechWorld Inc.,13,87.41,17
+4046,Analytical Balance,Laboratory,A,CleanAll Ltd.,16,282.59,20
+4050,Desktop Computer,Electronics,D,CleanAll Ltd.,30,19.12,38
+4051,pH Meter,Laboratory,A,TechWorld Inc.,15,50.84,20
+4053,Sofa,Furniture,D,LabSource,32,20.86,41
+4060,Test Tubes,Laboratory,B,FurniTech,17,98.35,27
+4061,Filing Cabinet,Furniture,D,OfficeMax,37,72.87,47
+4062,Petri Dishes,Laboratory,A,OfficeMax,17,150.92,25
+4064,Chemical Gloves,Safety Equipment,D,OfficeMax,23,70.13,29
+4067,Laptop,Electronics,C,ChemSupply Co.,25,77.59,32
+4069,Ear Protection,Safety Equipment,D,LabSource,36,40.45,42
+4070,Wet Mop,Cleaning,C,ChemSupply Co.,34,55.17,36
+4072,Petri Dishes,Laboratory,A,TechWorld Inc.,20,127.8,23
+4073,Methanol,Chemicals,B,TechWorld Inc.,21,123.99,27
+4079,Trash Bags,Cleaning,B,LabSource,22,66.72,28
+4081,Formaldehyde,Chemicals,B,FurniTech,26,134.48,35
+4086,Toilet Paper,Cleaning,C,ChemSupply Co.,29,70.84,37
+4089,Disinfectant,Cleaning,C,CleanAll Ltd.,25,84.76,32
+4092,UPS,Electronics,B,FurniTech,21,70.33,27
+4105,Scanner,Electronics,D,FurniTech,38,59.14,46
+4107,Formaldehyde,Chemicals,B,LabSource,18,135.23,29
+4114,Safety Goggles,Safety Equipment,D,ChemSupply Co.,36,47.03,45
+4115,Respirator,Safety Equipment,D,CleanAll Ltd.,28,66.78,35
+4121,First Aid Kit,Safety Equipment,D,CleanAll Ltd.,32,42.22,40
+4124,Acetone,Chemicals,A,FurniTech,24,89.87,25
+4134,Flask Set,Laboratory,A,OfficeMax,8,230.39,21
+4140,Trash Bags,Cleaning,C,ChemSupply Co.,29,56.75,37
+4142,Flask Set,Laboratory,A,LabSource,18,74.8,23
+4143,Benzene,Chemicals,B,FurniTech,20,36.04,27
+4145,Benzene,Chemicals,A,FurniTech,10,270.06,21
+4147,Chloroform,Chemicals,B,OfficeMax,24,105.15,27
+4153,UPS,Electronics,B,OfficeMax,17,132.03,20
+4160,Desktop Computer,Electronics,C,OfficeMax,29,48.38,37
+4169,Printer,Electronics,B,CleanAll Ltd.,12,133.05,16
+4171,Toilet Paper,Cleaning,C,TechWorld Inc.,28,16.24,35
+4176,Keyboard,Electronics,D,LabSource,36,38.54,42
+4177,Stapler,Office Supplies,C,CleanAll Ltd.,22,64.56,32
+4179,Bookshelf,Furniture,C,LabSource,32,42.41,37
+4180,Beakers,Laboratory,B,TechWorld Inc.,12,77.99,15
+4183,Toluene,Chemicals,B,ChemSupply Co.,26,128.1,33
+4187,Test Tubes,Laboratory,A,OfficeMax,15,196.19,17
+4197,pH Meter,Laboratory,C,ChemSupply Co.,39,64.88,40
+4198,External Hard Drive,Electronics,B,LabSource,14,147.02,18
+4199,Acetone,Chemicals,B,LabSource,13,63.69,18
+4203,File Folders,Office Supplies,D,FurniTech,36,35.44,45
+4207,Test Tubes,Laboratory,A,TechWorld Inc.,14,182.7,19
+4209,Sodium Hydroxide,Chemicals,A,TechWorld Inc.,8,188.26,17
+4210,Coffee Table,Furniture,C,ChemSupply Co.,31,63.3,39
+4211,Toluene,Chemicals,B,CleanAll Ltd.,26,72.73,33
+4212,Glass Cleaner,Cleaning,C,OfficeMax,20,49.25,26
+4213,Face Shield,Safety Equipment,D,FurniTech,33,57.77,49
+4217,Hand Sanitizer,Cleaning,B,CleanAll Ltd.,19,41.48,24
+4218,Laptop,Electronics,B,OfficeMax,10,110.22,31
+4219,Keyboard,Electronics,D,CleanAll Ltd.,32,6.92,41
+4225,Chloroform,Chemicals,B,ChemSupply Co.,24,97.82,31
+4226,Mouse,Electronics,B,ChemSupply Co.,22,106.09,24
+4227,Cork Board,Furniture,C,ChemSupply Co.,27,94.31,34
+4229,Test Tubes,Laboratory,A,TechWorld Inc.,19,187.87,24
+4230,Stapler,Office Supplies,D,CleanAll Ltd.,38,49.02,48
+4231,Coffee Table,Furniture,C,CleanAll Ltd.,31,70.57,39
+4236,Toilet Paper,Cleaning,C,LabSource,28,81.28,36
+4240,Filing Cabinet,Furniture,C,CleanAll Ltd.,16,94.72,20
+4246,Keyboard,Electronics,D,TechWorld Inc.,36,41.67,37
+4249,Laptop,Electronics,D,LabSource,23,75.92,29
+4250,Monitor,Electronics,B,OfficeMax,16,136.76,34
+4251,UPS,Electronics,C,ChemSupply Co.,26,56.62,33
+4259,pH Meter,Laboratory,A,FurniTech,12,177.79,16
+4262,File Folders,Office Supplies,C,ChemSupply Co.,25,92.81,32
+4266,Filing Cabinet,Furniture,C,FurniTech,28,55.82,36
+4267,Analytical Balance,Laboratory,B,CleanAll Ltd.,20,78.76,25
+4268,Ear Protection,Safety Equipment,D,FurniTech,36,8.19,45
+4270,File Folders,Office Supplies,D,OfficeMax,33,75.82,44
+4271,Tablet,Electronics,D,OfficeMax,36,13.72,44
+4286,Toilet Paper,Cleaning,C,LabSource,24,72.56,30
+4288,Conference Table,Furniture,C,OfficeMax,20,52.94,26
+4290,Chloroform,Chemicals,A,ChemSupply Co.,7,146.1,17
+4294,Formaldehyde,Chemicals,A,ChemSupply Co.,6,75.66,20
+4296,Scanner,Electronics,C,TechWorld Inc.,29,94.41,33
+4298,Fire Extinguisher,Safety Equipment,D,TechWorld Inc.,31,47.99,39
+4299,Lab Coat,Safety Equipment,D,ChemSupply Co.,24,43.39,30
+4301,Safety Helmet,Safety Equipment,D,ChemSupply Co.,46,75.23,48
+4303,Scanner,Electronics,C,TechWorld Inc.,26,79.36,29
+4306,Stapler,Office Supplies,D,ChemSupply Co.,21,24.23,27
+4312,Desktop Computer,Electronics,B,TechWorld Inc.,11,43.95,17
+4315,Marker Set,Office Supplies,C,CleanAll Ltd.,28,59.98,35
+4316,Chemical Gloves,Safety Equipment,D,TechWorld Inc.,33,57.57,42
+4319,Chemical Gloves,Safety Equipment,D,OfficeMax,36,54.83,40
+4324,Paper A3,Office Supplies,D,FurniTech,22,67.76,28
+4326,Trash Bags,Cleaning,B,LabSource,19,43.13,34
+4329,Acetone,Chemicals,A,OfficeMax,10,94.86,15
+4330,Monitor,Electronics,C,ChemSupply Co.,22,38.31,33
+4331,Benzene,Chemicals,A,OfficeMax,10,98.4,24
+4332,Test Tubes,Laboratory,A,ChemSupply Co.,10,244.44,14
+4334,All-Purpose Cleaner,Cleaning,B,TechWorld Inc.,15,92.72,19
+4346,Paper A3,Office Supplies,C,LabSource,20,41.69,28
+4347,Fire Extinguisher,Safety Equipment,D,CleanAll Ltd.,32,38.7,41
+4349,Monitor,Electronics,B,OfficeMax,19,120.87,34
+4351,Printer,Electronics,B,OfficeMax,19,133.37,24
+4354,Face Shield,Safety Equipment,D,TechWorld Inc.,20,68.29,25
+4360,Staples Box,Office Supplies,C,TechWorld Inc.,30,77.96,38
+4361,Chloroform,Chemicals,B,TechWorld Inc.,17,62.19,21
+4364,Standing Desk,Furniture,C,TechWorld Inc.,20,78.2,25
+4365,Chloroform,Chemicals,B,ChemSupply Co.,20,67.32,25
+4367,Laptop,Electronics,B,OfficeMax,27,82.03,34
+4370,Tablet,Electronics,B,ChemSupply Co.,27,31.73,29
+4372,Toilet Paper,Cleaning,B,LabSource,20,130.97,26
+4375,Methanol,Chemicals,B,FurniTech,29,75.14,35
+4376,Wet Mop,Cleaning,C,FurniTech,22,92.98,27
+4378,Glass Cleaner,Cleaning,B,TechWorld Inc.,14,44.05,22
+4380,Benzene,Chemicals,A,CleanAll Ltd.,8,103.65,12
+4381,Ethanol,Chemicals,B,OfficeMax,16,53.2,26
+4383,Filing Cabinet,Furniture,D,CleanAll Ltd.,40,15.51,50
+4385,Floor Cleaner,Cleaning,C,TechWorld Inc.,23,44.94,33
+4386,Whiteboard,Furniture,D,LabSource,24,78.16,31
+4393,Xylene,Chemicals,B,CleanAll Ltd.,11,119.87,30
+4394,Trash Bags,Cleaning,C,FurniTech,31,50.16,39
+4395,Office Chair,Furniture,C,FurniTech,32,75.53,40
+4396,Centrifuge,Laboratory,C,TechWorld Inc.,21,94.19,27
+4398,Safety Helmet,Safety Equipment,D,ChemSupply Co.,39,39.23,49
+4400,Keyboard,Electronics,B,CleanAll Ltd.,29,83.65,31
+4405,Mouse,Electronics,C,OfficeMax,29,98.03,37
+4406,All-Purpose Cleaner,Cleaning,B,TechWorld Inc.,14,135.26,30
+4409,Laptop,Electronics,C,CleanAll Ltd.,25,74.82,32
+4410,Stapler,Office Supplies,C,FurniTech,28,62.22,34
+4411,Safety Goggles,Safety Equipment,D,FurniTech,31,16.84,38
+4413,Toluene,Chemicals,B,FurniTech,12,137.97,20
+4414,Filing Cabinet,Furniture,C,ChemSupply Co.,27,43.73,34
+4416,Filing Cabinet,Furniture,D,ChemSupply Co.,44,7.04,50
+4417,Floor Cleaner,Cleaning,B,ChemSupply Co.,24,73.58,30
+4418,Centrifuge,Laboratory,A,FurniTech,10,253.64,13
+4419,Analytical Balance,Laboratory,B,CleanAll Ltd.,12,112.93,22
+4428,Office Desk,Furniture,D,TechWorld Inc.,32,46.94,41
+4429,Benzene,Chemicals,A,OfficeMax,8,234.05,17
+4431,pH Meter,Laboratory,B,FurniTech,20,43.59,26
+4432,Ear Protection,Safety Equipment,D,ChemSupply Co.,42,55.77,50
+4433,External Hard Drive,Electronics,B,ChemSupply Co.,16,121.05,35
+4436,External Hard Drive,Electronics,C,FurniTech,16,43.88,21
+4440,Ethanol,Chemicals,B,LabSource,18,110.23,30
+4441,Centrifuge,Laboratory,A,OfficeMax,20,281.95,23
+4442,Petri Dishes,Laboratory,B,LabSource,14,81.91,22
+4445,Disinfectant,Cleaning,C,TechWorld Inc.,20,98.77,28
+4450,Glass Cleaner,Cleaning,B,FurniTech,11,76.65,26
+4456,Fire Extinguisher,Safety Equipment,D,OfficeMax,36,65.81,46
+4458,Keyboard,Electronics,C,OfficeMax,21,22.37,24
+4462,Wet Mop,Cleaning,B,LabSource,18,111.07,23
+4466,Hydrochloric Acid,Chemicals,A,LabSource,18,160.72,20
+4467,Glass Cleaner,Cleaning,B,ChemSupply Co.,25,51.25,32
+4471,Desktop Computer,Electronics,B,CleanAll Ltd.,12,141.26,25
+4472,Staples Box,Office Supplies,D,OfficeMax,29,55.27,37
+4473,Wet Mop,Cleaning,B,TechWorld Inc.,26,41.12,34
+4474,Bookshelf,Furniture,D,OfficeMax,42,43.89,43
+4475,Beakers,Laboratory,A,CleanAll Ltd.,13,161.55,16
+4477,Office Chair,Furniture,D,ChemSupply Co.,41,48.35,45
+4492,Sodium Hydroxide,Chemicals,B,FurniTech,14,83.32,29
+4493,Toilet Paper,Cleaning,B,LabSource,10,128.14,29
+4495,Disinfectant,Cleaning,B,FurniTech,24,123.5,31
+4497,Acetone,Chemicals,A,OfficeMax,9,61.97,16
+4498,Hydrochloric Acid,Chemicals,A,FurniTech,19,261.42,21
+4502,Benzene,Chemicals,A,FurniTech,16,220.83,20
+4503,Face Shield,Safety Equipment,D,FurniTech,34,7.26,35
+4508,Respirator,Safety Equipment,D,ChemSupply Co.,31,48.03,33
+4517,Mouse,Electronics,C,ChemSupply Co.,18,72.67,23
+4518,Flask Set,Laboratory,A,ChemSupply Co.,11,297.78,14
+4522,Office Chair,Furniture,C,CleanAll Ltd.,20,88.81,32
+4523,Acetone,Chemicals,A,CleanAll Ltd.,20,248.69,22
+4525,Acetone,Chemicals,B,FurniTech,30,73.28,33
+4526,Sodium Hydroxide,Chemicals,B,FurniTech,21,110.59,29
+4527,Laptop,Electronics,C,TechWorld Inc.,21,26.13,27
+4529,Acetone,Chemicals,A,CleanAll Ltd.,18,144.86,23
+4534,Dust Mop,Cleaning,B,TechWorld Inc.,19,79.49,26
+4536,UPS,Electronics,C,ChemSupply Co.,23,15.3,30
+4538,Beakers,Laboratory,C,FurniTech,24,60.8,30
+4540,Benzene,Chemicals,A,ChemSupply Co.,8,111.04,17
+4542,Floor Cleaner,Cleaning,B,FurniTech,23,78.55,33
+4543,Paper A3,Office Supplies,D,ChemSupply Co.,37,34.71,41
+4548,Emergency Eyewash,Safety Equipment,D,FurniTech,36,66.98,43
+4553,All-Purpose Cleaner,Cleaning,C,TechWorld Inc.,28,51.12,37
+4559,Ethanol,Chemicals,A,OfficeMax,8,173.91,16
+4562,Bunsen Burner,Laboratory,B,CleanAll Ltd.,11,73.39,23
+4569,Laptop,Electronics,B,CleanAll Ltd.,19,39.71,34
+4571,Keyboard,Electronics,B,TechWorld Inc.,13,147.01,21
+4572,Sodium Hydroxide,Chemicals,B,LabSource,27,78.14,31
+4573,Flask Set,Laboratory,A,OfficeMax,15,268.85,19
+4579,Paper A4,Office Supplies,C,LabSource,34,91.32,35
+4580,Bunsen Burner,Laboratory,B,LabSource,13,76.76,16
+4583,Disinfectant,Cleaning,B,ChemSupply Co.,20,96.92,34
+4585,Paper A4,Office Supplies,D,LabSource,31,63.39,49
+4590,Benzene,Chemicals,A,FurniTech,8,148.8,11
+4591,Monitor,Electronics,B,TechWorld Inc.,12,145.36,29
+4604,Tablet,Electronics,C,OfficeMax,31,27.59,39
+4609,Toluene,Chemicals,A,ChemSupply Co.,12,52.07,14
+4614,Cork Board,Furniture,C,FurniTech,20,67.79,27
+4615,Fire Extinguisher,Safety Equipment,D,OfficeMax,32,23.8,41
+4618,Scanner,Electronics,D,FurniTech,27,5.23,34
+4620,Centrifuge,Laboratory,A,OfficeMax,5,160.17,14
+4621,Paper Towels,Cleaning,B,ChemSupply Co.,14,74.94,29
+4624,Trash Bags,Cleaning,B,OfficeMax,10,144.63,30
+4625,Formaldehyde,Chemicals,A,FurniTech,8,178.37,17
+4627,Hydrochloric Acid,Chemicals,A,ChemSupply Co.,16,233.26,20
+4636,Sodium Hydroxide,Chemicals,A,TechWorld Inc.,11,153.71,22
+4641,Disinfectant,Cleaning,B,TechWorld Inc.,28,99.45,35
+4643,Pipettes,Laboratory,B,CleanAll Ltd.,19,107.41,26
+4644,Lab Coat,Safety Equipment,D,TechWorld Inc.,32,44.02,46
+4645,Laptop,Electronics,D,ChemSupply Co.,32,15.3,41
+4647,Safety Goggles,Safety Equipment,D,ChemSupply Co.,47,14.6,49
+4653,Whiteboard,Furniture,D,TechWorld Inc.,37,64.75,38
+4658,Stapler,Office Supplies,C,TechWorld Inc.,21,33.16,27
+4659,Petri Dishes,Laboratory,B,CleanAll Ltd.,31,68.97,34
+4661,Flask Set,Laboratory,C,LabSource,21,63.18,27
+4666,Floor Cleaner,Cleaning,C,ChemSupply Co.,29,49.3,37
+4667,Filing Cabinet,Furniture,C,TechWorld Inc.,23,18.02,36
+4668,Keyboard,Electronics,B,OfficeMax,10,115.01,30
+4670,Toilet Paper,Cleaning,B,CleanAll Ltd.,21,113.1,27
+4673,Floor Cleaner,Cleaning,C,CleanAll Ltd.,24,88.61,28
+4676,Paper Towels,Cleaning,B,FurniTech,20,112.09,24
+4690,Pipettes,Laboratory,C,ChemSupply Co.,20,36.64,25
+4696,Standing Desk,Furniture,D,FurniTech,20,79.21,25
+4697,Cork Board,Furniture,C,ChemSupply Co.,35,80.73,39
+4698,Test Tubes,Laboratory,A,LabSource,16,144.71,25
+4699,Xylene,Chemicals,A,ChemSupply Co.,18,172.41,23
+4701,Flask Set,Laboratory,A,LabSource,8,60.56,17
+4702,First Aid Kit,Safety Equipment,D,LabSource,40,75.96,50
+4703,All-Purpose Cleaner,Cleaning,B,TechWorld Inc.,19,67.31,26
+4705,Standing Desk,Furniture,C,OfficeMax,21,88.39,35
+4711,Standing Desk,Furniture,D,CleanAll Ltd.,28,22.16,35
+4713,Fire Extinguisher,Safety Equipment,D,FurniTech,32,9.63,40
+4714,Sodium Hydroxide,Chemicals,A,FurniTech,14,262.42,15
+4722,Binder Clips,Office Supplies,D,CleanAll Ltd.,22,47.21,28
+4724,Methanol,Chemicals,B,ChemSupply Co.,17,72.62,33
+4732,Flask Set,Laboratory,A,LabSource,9,68.8,24
+4736,Pen Set,Office Supplies,C,LabSource,31,71.38,35
+4739,Analytical Balance,Laboratory,B,FurniTech,12,119.16,24
+4741,Standing Desk,Furniture,D,CleanAll Ltd.,22,42.62,28
+4748,Ethanol,Chemicals,A,OfficeMax,11,251.06,14
+4749,Respirator,Safety Equipment,D,FurniTech,25,29.59,32
+4750,Paper Towels,Cleaning,B,CleanAll Ltd.,23,122.55,29
+4753,Flask Set,Laboratory,A,LabSource,16,291.41,23
+4754,Fire Extinguisher,Safety Equipment,D,FurniTech,29,15.03,37
+4757,Laptop,Electronics,D,CleanAll Ltd.,34,21.66,43
+4759,Petri Dishes,Laboratory,A,CleanAll Ltd.,9,230.53,20
+4761,UPS,Electronics,B,LabSource,15,112.04,31
+4762,pH Meter,Laboratory,C,CleanAll Ltd.,23,71.11,29
+4764,Chloroform,Chemicals,A,OfficeMax,12,269.41,24
+4765,Safety Goggles,Safety Equipment,D,ChemSupply Co.,34,31.69,43
+4766,Office Desk,Furniture,D,ChemSupply Co.,20,73.45,25
+4769,Centrifuge,Laboratory,B,ChemSupply Co.,16,60.45,22
+4771,Floor Cleaner,Cleaning,B,CleanAll Ltd.,16,100.05,18
+4773,Petri Dishes,Laboratory,B,CleanAll Ltd.,14,116.17,18
+4780,Sofa,Furniture,C,TechWorld Inc.,22,26.64,28
+4783,Sodium Hydroxide,Chemicals,B,LabSource,25,84.68,28
+4785,Monitor,Electronics,B,OfficeMax,15,67.5,16
+4786,Respirator,Safety Equipment,D,ChemSupply Co.,37,77.97,45
+4789,Ear Protection,Safety Equipment,D,TechWorld Inc.,31,21.05,39
+4792,All-Purpose Cleaner,Cleaning,C,FurniTech,27,95.27,28
+4794,Methanol,Chemicals,A,TechWorld Inc.,19,146.4,20
+4795,Ethanol,Chemicals,A,LabSource,20,226.28,21
+4797,Trash Bags,Cleaning,B,CleanAll Ltd.,27,52.91,34
+4798,Paper Towels,Cleaning,B,ChemSupply Co.,12,136.24,15
+4799,Dust Mop,Cleaning,B,TechWorld Inc.,32,145.19,34
+4805,Scanner,Electronics,D,CleanAll Ltd.,34,19.38,39
+4807,Tablet,Electronics,B,OfficeMax,18,127.67,26
+4808,Sodium Hydroxide,Chemicals,A,LabSource,11,184.06,23
+4811,Scissors,Office Supplies,D,ChemSupply Co.,39,58.83,49
+4813,Chloroform,Chemicals,A,CleanAll Ltd.,10,119.37,20
+4814,Toluene,Chemicals,B,OfficeMax,16,88.92,20
+4818,Monitor,Electronics,B,LabSource,11,69.83,20
+4824,Wet Mop,Cleaning,C,ChemSupply Co.,30,23.48,38
+4826,Ear Protection,Safety Equipment,D,TechWorld Inc.,29,25.1,37
+4827,Staples Box,Office Supplies,D,LabSource,33,49.12,42
+4828,Acetone,Chemicals,B,FurniTech,22,105.18,25
+4830,Scissors,Office Supplies,C,ChemSupply Co.,28,43.05,29
+4831,Methanol,Chemicals,A,LabSource,12,169.45,13
+4832,Hand Sanitizer,Cleaning,B,TechWorld Inc.,11,138.5,35
+4833,Staples Box,Office Supplies,C,TechWorld Inc.,26,78.75,27
+4834,Office Chair,Furniture,D,CleanAll Ltd.,35,30.3,41
+4836,Formaldehyde,Chemicals,B,LabSource,30,110.79,31
+4840,Ear Protection,Safety Equipment,D,CleanAll Ltd.,29,69.14,37
+4847,Safety Helmet,Safety Equipment,D,ChemSupply Co.,37,27.28,47
+4851,Pen Set,Office Supplies,D,ChemSupply Co.,36,24.1,46
+4853,Desktop Computer,Electronics,D,TechWorld Inc.,43,16.54,50
+4856,Emergency Eyewash,Safety Equipment,D,LabSource,41,31.44,46
+4858,Binder Clips,Office Supplies,D,ChemSupply Co.,25,44.21,32
+4859,Whiteboard,Furniture,D,CleanAll Ltd.,33,33.75,46
+4860,Centrifuge,Laboratory,A,CleanAll Ltd.,18,216.73,23
+4863,Ear Protection,Safety Equipment,D,FurniTech,39,5.25,41
+4868,Beakers,Laboratory,A,OfficeMax,10,201.34,21
+4873,Standing Desk,Furniture,D,CleanAll Ltd.,40,75.97,43
+4876,Paper Towels,Cleaning,B,OfficeMax,10,48.46,28
+4878,Laptop,Electronics,B,TechWorld Inc.,10,85.1,15
+4882,Tablet,Electronics,D,TechWorld Inc.,30,74.21,44
+4883,Flask Set,Laboratory,A,OfficeMax,7,282.05,13
+4884,Chloroform,Chemicals,A,OfficeMax,18,259.48,24
+4892,External Hard Drive,Electronics,B,FurniTech,27,72.21,32
+4894,Sodium Hydroxide,Chemicals,B,LabSource,24,130.69,30
+4900,Ear Protection,Safety Equipment,D,TechWorld Inc.,31,45.81,42
+4901,Staples Box,Office Supplies,C,OfficeMax,23,72.95,29
+4911,Chloroform,Chemicals,A,CleanAll Ltd.,7,213.41,14
+4914,Ear Protection,Safety Equipment,D,LabSource,30,21.69,40
+4916,Emergency Eyewash,Safety Equipment,D,LabSource,32,66.13,39
+4917,Dust Mop,Cleaning,C,LabSource,20,63.05,25
+4919,Analytical Balance,Laboratory,C,TechWorld Inc.,24,90.84,30
+4920,Hydrochloric Acid,Chemicals,A,TechWorld Inc.,5,280.96,14
+4922,Hydrochloric Acid,Chemicals,B,CleanAll Ltd.,21,84.5,24
+4925,Laptop,Electronics,B,ChemSupply Co.,15,47.32,32
+4928,Centrifuge,Laboratory,B,ChemSupply Co.,28,100.41,29
+4929,Trash Bags,Cleaning,C,ChemSupply Co.,16,74.91,20
+4932,Hand Sanitizer,Cleaning,B,OfficeMax,17,69.04,22
+4934,Chemical Gloves,Safety Equipment,D,CleanAll Ltd.,39,35.95,49
+4935,Sodium Hydroxide,Chemicals,A,CleanAll Ltd.,23,201.45,24
+4936,Coffee Table,Furniture,C,OfficeMax,20,83.53,25
+4940,Filing Cabinet,Furniture,C,TechWorld Inc.,16,50.77,20
+4941,Disinfectant,Cleaning,B,LabSource,25,144.8,34
+4942,Trash Bags,Cleaning,B,TechWorld Inc.,20,83.92,21
+4943,Fire Extinguisher,Safety Equipment,D,TechWorld Inc.,26,59.67,33
+4944,Formaldehyde,Chemicals,A,FurniTech,8,265.02,21
+4946,Glass Cleaner,Cleaning,B,CleanAll Ltd.,19,73.34,31
+4949,Bookshelf,Furniture,C,OfficeMax,21,61.37,27
+4958,Disinfectant,Cleaning,B,OfficeMax,12,90.42,16
+4960,Laptop,Electronics,B,LabSource,21,70.3,27
+4961,Trash Bags,Cleaning,C,TechWorld Inc.,39,22.64,40
+4963,Petri Dishes,Laboratory,A,ChemSupply Co.,7,282.45,11
+4965,Hand Sanitizer,Cleaning,C,OfficeMax,27,35.8,34
+4967,Ethanol,Chemicals,A,OfficeMax,5,231.28,15
+4968,Bunsen Burner,Laboratory,B,ChemSupply Co.,17,134.43,32
+4969,Safety Goggles,Safety Equipment,D,FurniTech,36,15.65,50
+4971,Ethanol,Chemicals,A,OfficeMax,12,254.73,16
+4972,Methanol,Chemicals,B,OfficeMax,17,99.34,22
+4975,Methanol,Chemicals,B,TechWorld Inc.,21,63.45,27
+4981,Wet Mop,Cleaning,B,OfficeMax,18,31.44,32
+4982,Keyboard,Electronics,B,ChemSupply Co.,33,68.28,34
+4985,Tablet,Electronics,D,ChemSupply Co.,20,19.54,25
+4989,Sodium Hydroxide,Chemicals,B,OfficeMax,23,66.32,27
+4991,Hydrochloric Acid,Chemicals,A,CleanAll Ltd.,18,216.9,23
+4995,Cork Board,Furniture,D,TechWorld Inc.,30,22.72,38
+4997,Wet Mop,Cleaning,C,CleanAll Ltd.,20,81.63,25
+5002,UPS,Electronics,B,OfficeMax,11,33.01,21
+5004,Face Shield,Safety Equipment,D,OfficeMax,21,50.01,27
+5005,Glass Cleaner,Cleaning,B,FurniTech,12,146.82,16
+5007,Benzene,Chemicals,A,LabSource,14,293.5,18
+5008,Methanol,Chemicals,B,LabSource,17,92.84,19
+5012,Methanol,Chemicals,B,ChemSupply Co.,24,93.99,30
+5016,Laptop,Electronics,B,OfficeMax,15,90.55,23
+5017,Microscope,Laboratory,A,LabSource,6,298.06,13
+5022,Pen Set,Office Supplies,D,TechWorld Inc.,32,58.71,33
+5023,Marker Set,Office Supplies,C,CleanAll Ltd.,28,26.47,36
+5027,Petri Dishes,Laboratory,B,TechWorld Inc.,27,129.52,34
+5028,Staples Box,Office Supplies,D,ChemSupply Co.,36,52.82,45
+5030,Ear Protection,Safety Equipment,D,OfficeMax,32,60.56,41
+5041,Hand Sanitizer,Cleaning,C,ChemSupply Co.,26,78.05,27
+5042,Scanner,Electronics,B,LabSource,10,148.17,24
+5043,Bunsen Burner,Laboratory,C,FurniTech,20,41.34,26
+5045,External Hard Drive,Electronics,D,ChemSupply Co.,34,78.55,43
+5050,File Folders,Office Supplies,C,FurniTech,23,79.77,33
+5051,Paper A3,Office Supplies,C,OfficeMax,21,46.31,27
+5053,Bunsen Burner,Laboratory,A,OfficeMax,10,217.54,15
+5064,Hydrochloric Acid,Chemicals,A,OfficeMax,16,182.74,22
+5066,Glass Cleaner,Cleaning,B,LabSource,14,86.8,22
+5071,Office Desk,Furniture,D,ChemSupply Co.,25,76.05,32
+5072,Test Tubes,Laboratory,B,CleanAll Ltd.,25,126.82,32
+5073,Bunsen Burner,Laboratory,B,LabSource,22,35.72,29
+5075,External Hard Drive,Electronics,B,CleanAll Ltd.,19,47.56,24
+5077,Office Chair,Furniture,C,FurniTech,21,73.73,27
+5079,Desktop Computer,Electronics,C,OfficeMax,21,94.67,27
+5080,Microscope,Laboratory,A,ChemSupply Co.,20,64.66,25
+5083,Chemical Gloves,Safety Equipment,D,ChemSupply Co.,34,14.89,44
+5084,Trash Bags,Cleaning,C,ChemSupply Co.,32,80.18,40
+5090,Office Desk,Furniture,C,ChemSupply Co.,24,38.56,27
+5091,Benzene,Chemicals,B,OfficeMax,24,115.88,31
+5097,All-Purpose Cleaner,Cleaning,B,ChemSupply Co.,18,135.23,20
+5102,Toilet Paper,Cleaning,C,FurniTech,30,56.97,37
+5107,Flask Set,Laboratory,B,LabSource,21,81.95,30
+5109,Scissors,Office Supplies,D,LabSource,33,30.36,42
+5112,Methanol,Chemicals,A,OfficeMax,8,151.5,18
+5113,Tablet,Electronics,C,ChemSupply Co.,32,49.0,36
+5116,Petri Dishes,Laboratory,A,TechWorld Inc.,20,255.74,25
+5119,Beakers,Laboratory,A,LabSource,22,282.69,24
+5121,Xylene,Chemicals,A,FurniTech,16,296.44,21
+5122,All-Purpose Cleaner,Cleaning,B,FurniTech,22,84.26,34
+5128,Beakers,Laboratory,C,CleanAll Ltd.,16,95.28,21
+5133,First Aid Kit,Safety Equipment,D,TechWorld Inc.,37,31.17,45
+5136,Toilet Paper,Cleaning,B,OfficeMax,25,141.27,32
+5142,Centrifuge,Laboratory,B,CleanAll Ltd.,30,81.17,35
+5149,Microscope,Laboratory,A,LabSource,8,263.15,20
+5150,Acetone,Chemicals,A,CleanAll Ltd.,16,122.82,24
+5152,Dust Mop,Cleaning,B,ChemSupply Co.,10,47.99,26
+5153,UPS,Electronics,B,OfficeMax,11,118.14,27
+5154,Benzene,Chemicals,A,ChemSupply Co.,9,196.3,12
+5159,Fire Extinguisher,Safety Equipment,D,CleanAll Ltd.,39,29.09,49
+5161,All-Purpose Cleaner,Cleaning,C,OfficeMax,32,68.3,39
+5162,UPS,Electronics,B,LabSource,21,80.76,26
+5163,Methanol,Chemicals,A,FurniTech,5,142.39,18
+5166,Face Shield,Safety Equipment,D,TechWorld Inc.,20,48.15,26
+5176,Office Chair,Furniture,C,FurniTech,20,36.87,40
+5177,Sodium Hydroxide,Chemicals,B,TechWorld Inc.,25,30.48,33
+5185,Staples Box,Office Supplies,C,FurniTech,22,28.85,34
+5187,pH Meter,Laboratory,B,ChemSupply Co.,23,55.83,33
+5191,Fire Extinguisher,Safety Equipment,D,CleanAll Ltd.,21,13.67,27
+5193,Hydrochloric Acid,Chemicals,A,OfficeMax,16,57.99,20
+5194,Paper A4,Office Supplies,C,FurniTech,19,61.13,24
+5195,Coffee Table,Furniture,C,ChemSupply Co.,28,49.78,36
+5196,Acetone,Chemicals,A,FurniTech,12,103.73,13
+5200,Toluene,Chemicals,B,CleanAll Ltd.,15,80.91,24
+5201,Ethanol,Chemicals,B,CleanAll Ltd.,20,110.65,25
+5203,Mouse,Electronics,B,FurniTech,26,112.12,31
+5204,Hydrochloric Acid,Chemicals,A,LabSource,7,107.86,15
+5205,Dust Mop,Cleaning,B,OfficeMax,13,48.62,35
+5206,Analytical Balance,Laboratory,B,TechWorld Inc.,23,96.19,34
+5214,Keyboard,Electronics,B,LabSource,32,115.34,34
+5218,Ear Protection,Safety Equipment,D,FurniTech,33,39.84,42
+5224,Marker Set,Office Supplies,D,TechWorld Inc.,36,65.29,50
+5225,Beakers,Laboratory,A,ChemSupply Co.,21,271.0,22
+5226,Chloroform,Chemicals,A,LabSource,16,119.32,25
+5228,All-Purpose Cleaner,Cleaning,C,FurniTech,22,50.4,35
+5229,First Aid Kit,Safety Equipment,D,ChemSupply Co.,41,46.21,47
+5230,Conference Table,Furniture,C,LabSource,20,92.14,31
+5231,Dust Mop,Cleaning,C,CleanAll Ltd.,20,32.74,24
+5232,Analytical Balance,Laboratory,A,FurniTech,23,258.24,25
+5235,Chemical Gloves,Safety Equipment,D,OfficeMax,34,19.81,40
+5237,Chemical Gloves,Safety Equipment,D,LabSource,31,78.05,39
+5238,Pen Set,Office Supplies,D,FurniTech,24,29.19,31
+5241,Paper Towels,Cleaning,B,CleanAll Ltd.,21,40.96,35
+5242,Methanol,Chemicals,A,LabSource,9,216.0,12
+5243,Monitor,Electronics,B,LabSource,32,81.26,33
+5244,Benzene,Chemicals,B,TechWorld Inc.,17,37.91,28
+5245,pH Meter,Laboratory,C,TechWorld Inc.,16,31.05,21
+5246,Methanol,Chemicals,A,LabSource,12,103.86,21
+5248,External Hard Drive,Electronics,B,OfficeMax,19,111.48,25
+5251,Glass Cleaner,Cleaning,C,FurniTech,16,89.94,21
+5252,Face Shield,Safety Equipment,D,LabSource,31,74.37,37
+5255,Ethanol,Chemicals,A,ChemSupply Co.,14,214.18,23
+5258,Petri Dishes,Laboratory,C,LabSource,36,43.22,39
+5259,Whiteboard,Furniture,D,CleanAll Ltd.,41,19.97,48
+5261,Ethanol,Chemicals,A,FurniTech,19,102.78,24
+5265,Trash Bags,Cleaning,C,ChemSupply Co.,24,15.45,36
+5274,Mouse,Electronics,D,CleanAll Ltd.,30,8.08,41
+5278,Paper A4,Office Supplies,D,TechWorld Inc.,31,60.79,33
+5280,Respirator,Safety Equipment,D,CleanAll Ltd.,37,61.63,47
+5281,UPS,Electronics,B,CleanAll Ltd.,21,81.96,34
+5284,UPS,Electronics,D,ChemSupply Co.,25,75.68,32
+5287,Scanner,Electronics,B,FurniTech,10,131.16,29
+5288,Monitor,Electronics,B,CleanAll Ltd.,13,128.14,27
+5289,Wet Mop,Cleaning,B,TechWorld Inc.,19,84.75,30
+5290,Microscope,Laboratory,A,LabSource,9,136.02,12
+5291,Xylene,Chemicals,A,OfficeMax,9,145.74,11
+5297,Chloroform,Chemicals,B,FurniTech,11,137.46,24
+5301,Petri Dishes,Laboratory,B,FurniTech,19,121.41,20
+5302,Ethanol,Chemicals,A,LabSource,14,147.29,17
+5308,Methanol,Chemicals,B,OfficeMax,10,109.44,31
+5317,Ear Protection,Safety Equipment,D,ChemSupply Co.,28,44.29,36
+5320,Sofa,Furniture,D,ChemSupply Co.,22,51.02,28
+5321,Scanner,Electronics,B,FurniTech,30,34.0,34
+5322,Scanner,Electronics,B,LabSource,16,39.07,20
+5327,Toluene,Chemicals,B,CleanAll Ltd.,12,124.09,22
+5331,Chloroform,Chemicals,A,CleanAll Ltd.,13,132.29,17
+5332,Paper Towels,Cleaning,B,TechWorld Inc.,14,102.13,19
+5336,Pen Set,Office Supplies,C,LabSource,24,45.55,30
+5337,Acetone,Chemicals,A,OfficeMax,21,126.79,25
+5346,Analytical Balance,Laboratory,B,ChemSupply Co.,25,110.13,32
+5347,Emergency Eyewash,Safety Equipment,D,CleanAll Ltd.,40,31.38,50
+5349,Formaldehyde,Chemicals,B,TechWorld Inc.,25,79.06,28
+5354,Test Tubes,Laboratory,A,TechWorld Inc.,7,217.85,10
+5358,External Hard Drive,Electronics,C,ChemSupply Co.,22,86.56,29
+5360,Pipettes,Laboratory,A,ChemSupply Co.,10,69.62,14
+5364,Acetone,Chemicals,B,FurniTech,20,124.09,25
+5371,Hand Sanitizer,Cleaning,B,FurniTech,24,120.49,28
+5372,UPS,Electronics,B,LabSource,10,71.52,34
+5375,Tape Dispenser,Office Supplies,D,ChemSupply Co.,40,73.19,50
+5376,Keyboard,Electronics,B,ChemSupply Co.,12,37.21,15
+5380,Printer,Electronics,B,ChemSupply Co.,23,31.97,33
+5381,Floor Cleaner,Cleaning,C,FurniTech,24,91.31,33
+5383,Respirator,Safety Equipment,D,ChemSupply Co.,30,77.84,48
+5384,Toilet Paper,Cleaning,B,LabSource,17,118.69,22
+5387,Emergency Eyewash,Safety Equipment,D,FurniTech,29,7.05,37
+5388,Trash Bags,Cleaning,B,TechWorld Inc.,13,91.08,32
+5390,Chloroform,Chemicals,B,TechWorld Inc.,16,116.67,20
+5397,Keyboard,Electronics,C,FurniTech,24,97.06,30
+5400,Trash Bags,Cleaning,B,LabSource,14,101.68,18
+5401,Glass Cleaner,Cleaning,C,ChemSupply Co.,20,68.01,27
+5402,Ethanol,Chemicals,B,ChemSupply Co.,18,89.17,26
+5405,Test Tubes,Laboratory,A,TechWorld Inc.,19,225.14,22
+5408,Bookshelf,Furniture,D,OfficeMax,39,71.34,42
+5410,Chemical Gloves,Safety Equipment,D,FurniTech,35,64.41,44
+5413,Acetone,Chemicals,B,ChemSupply Co.,12,48.62,15
+5414,Xylene,Chemicals,B,OfficeMax,11,117.55,21
+5415,Marker Set,Office Supplies,D,TechWorld Inc.,21,47.34,27
+5416,Sodium Hydroxide,Chemicals,A,CleanAll Ltd.,14,71.24,24
+5420,Desktop Computer,Electronics,B,ChemSupply Co.,26,126.66,33
+5422,Laptop,Electronics,B,OfficeMax,17,32.11,20
+5425,Hydrochloric Acid,Chemicals,B,TechWorld Inc.,22,69.81,25
+5426,Filing Cabinet,Furniture,D,OfficeMax,28,33.07,35
+5429,Test Tubes,Laboratory,C,OfficeMax,24,60.38,31
+5431,Analytical Balance,Laboratory,C,FurniTech,24,18.84,30
+5433,Fire Extinguisher,Safety Equipment,D,FurniTech,24,41.7,31
+5434,Laptop,Electronics,B,ChemSupply Co.,21,30.08,30
+5435,Paper Towels,Cleaning,C,FurniTech,28,94.42,29
+5436,Benzene,Chemicals,A,ChemSupply Co.,12,51.47,17
+5447,All-Purpose Cleaner,Cleaning,C,LabSource,29,57.01,33
+5448,Standing Desk,Furniture,C,TechWorld Inc.,29,77.83,37
+5449,Methanol,Chemicals,B,LabSource,23,78.64,29
+5451,Microscope,Laboratory,A,LabSource,16,235.66,20
+5456,Analytical Balance,Laboratory,A,CleanAll Ltd.,9,91.08,12
+5457,Xylene,Chemicals,A,ChemSupply Co.,19,59.34,24
+5458,File Folders,Office Supplies,C,ChemSupply Co.,18,25.35,23
+5465,All-Purpose Cleaner,Cleaning,C,TechWorld Inc.,21,64.52,27
+5470,UPS,Electronics,B,ChemSupply Co.,16,140.72,21
+5476,Paper A3,Office Supplies,C,CleanAll Ltd.,29,52.75,38
+5479,Tape Dispenser,Office Supplies,C,CleanAll Ltd.,32,97.1,33
+5481,Dust Mop,Cleaning,B,OfficeMax,26,100.67,33
+5483,Marker Set,Office Supplies,D,CleanAll Ltd.,39,69.98,43
+5484,Tape Dispenser,Office Supplies,D,LabSource,30,45.62,41
+5490,Formaldehyde,Chemicals,B,CleanAll Ltd.,25,54.12,27
+5494,Toluene,Chemicals,A,TechWorld Inc.,6,275.24,10
+5496,Dust Mop,Cleaning,C,ChemSupply Co.,22,47.45,28
+5502,Paper Towels,Cleaning,C,LabSource,20,35.72,26
+5503,Keyboard,Electronics,C,ChemSupply Co.,28,21.17,36
+5504,Dust Mop,Cleaning,C,ChemSupply Co.,27,90.29,34
+5515,Lab Coat,Safety Equipment,D,ChemSupply Co.,20,29.47,25
+5516,Office Chair,Furniture,C,CleanAll Ltd.,24,56.22,31
+5521,Respirator,Safety Equipment,D,OfficeMax,32,54.68,40
+5522,Emergency Eyewash,Safety Equipment,D,LabSource,32,29.93,40
+5524,Formaldehyde,Chemicals,A,CleanAll Ltd.,19,150.08,24
+5529,pH Meter,Laboratory,C,FurniTech,20,70.97,26
+5531,Dust Mop,Cleaning,B,FurniTech,16,58.32,21
+5535,Formaldehyde,Chemicals,A,TechWorld Inc.,11,298.19,14
+5538,Tape Dispenser,Office Supplies,D,FurniTech,34,29.12,41
+5540,Chemical Gloves,Safety Equipment,D,TechWorld Inc.,37,12.68,38
+5542,Wet Mop,Cleaning,B,TechWorld Inc.,12,45.1,19
+5545,Analytical Balance,Laboratory,A,CleanAll Ltd.,8,232.73,21
+5546,Analytical Balance,Laboratory,B,CleanAll Ltd.,11,62.78,20
+5548,Tape Dispenser,Office Supplies,C,CleanAll Ltd.,26,36.11,33
+5549,Coffee Table,Furniture,C,ChemSupply Co.,18,91.79,23
+5550,Test Tubes,Laboratory,A,FurniTech,17,240.69,23
+5553,Tape Dispenser,Office Supplies,C,ChemSupply Co.,22,66.49,33
+5556,All-Purpose Cleaner,Cleaning,B,CleanAll Ltd.,14,86.4,22
+5560,Sofa,Furniture,D,CleanAll Ltd.,39,62.36,47
+5561,First Aid Kit,Safety Equipment,D,ChemSupply Co.,24,15.63,31
+5570,Acetone,Chemicals,A,FurniTech,8,261.78,11
+5574,Test Tubes,Laboratory,B,FurniTech,20,69.23,22
+5575,Office Chair,Furniture,D,LabSource,23,63.67,29
+5577,Acetone,Chemicals,A,FurniTech,12,131.52,16
+5578,Benzene,Chemicals,A,ChemSupply Co.,11,194.15,14
+5580,Formaldehyde,Chemicals,A,OfficeMax,7,157.68,18
+5581,Filing Cabinet,Furniture,D,ChemSupply Co.,36,29.69,50
+5583,Safety Helmet,Safety Equipment,D,CleanAll Ltd.,32,53.73,35
+5584,Paper Towels,Cleaning,B,TechWorld Inc.,16,97.46,21
+5591,Paper A3,Office Supplies,C,ChemSupply Co.,17,68.18,22
+5593,Staples Box,Office Supplies,C,CleanAll Ltd.,26,28.4,33
+5598,Sodium Hydroxide,Chemicals,A,FurniTech,5,172.2,19
+5601,Pen Set,Office Supplies,C,ChemSupply Co.,23,73.98,29
+5604,Pen Set,Office Supplies,C,FurniTech,16,78.07,21
+5605,Beakers,Laboratory,B,CleanAll Ltd.,21,111.92,27
+5609,Cork Board,Furniture,C,OfficeMax,26,28.18,33
+5619,Flask Set,Laboratory,C,FurniTech,28,34.76,35
+5620,Sofa,Furniture,D,TechWorld Inc.,23,53.05,29
+5622,Desktop Computer,Electronics,D,OfficeMax,32,77.03,36
+5632,Emergency Eyewash,Safety Equipment,D,ChemSupply Co.,31,70.78,47
+5634,Face Shield,Safety Equipment,D,OfficeMax,33,29.57,36
+5638,Dust Mop,Cleaning,B,CleanAll Ltd.,10,128.57,33
+5640,Keyboard,Electronics,B,FurniTech,14,147.16,26
+5645,Wet Mop,Cleaning,B,OfficeMax,16,139.12,22
+5646,Tape Dispenser,Office Supplies,D,CleanAll Ltd.,20,41.86,25
+5651,Bunsen Burner,Laboratory,A,TechWorld Inc.,8,110.43,11
+5661,Binder Clips,Office Supplies,C,OfficeMax,26,20.6,31
+5662,pH Meter,Laboratory,C,FurniTech,27,17.7,38
+5663,Laptop,Electronics,D,ChemSupply Co.,38,23.11,40
+5665,Binder Clips,Office Supplies,C,CleanAll Ltd.,31,45.67,39
+5668,File Folders,Office Supplies,C,OfficeMax,32,81.54,36
+5669,Glass Cleaner,Cleaning,B,OfficeMax,16,135.15,21
+5672,pH Meter,Laboratory,A,ChemSupply Co.,13,170.36,17
+5673,Paper Towels,Cleaning,B,CleanAll Ltd.,23,81.53,29
+5678,Ethanol,Chemicals,B,ChemSupply Co.,19,141.02,29
+5682,External Hard Drive,Electronics,B,FurniTech,22,89.3,27
+5684,Flask Set,Laboratory,A,OfficeMax,13,67.2,17
+5689,Monitor,Electronics,D,OfficeMax,38,33.83,48
+5696,Tape Dispenser,Office Supplies,C,CleanAll Ltd.,26,64.19,37
+5698,File Folders,Office Supplies,D,LabSource,38,58.71,46
+5701,Paper A4,Office Supplies,D,ChemSupply Co.,41,54.0,44
+5702,Benzene,Chemicals,A,OfficeMax,14,279.5,18
+5705,Scanner,Electronics,B,LabSource,12,102.73,15
+5707,Desktop Computer,Electronics,D,ChemSupply Co.,32,54.21,42
+5709,Flask Set,Laboratory,B,LabSource,17,94.58,22
+5712,File Folders,Office Supplies,D,CleanAll Ltd.,32,49.4,40
+5713,Toluene,Chemicals,A,ChemSupply Co.,20,67.05,23
+5716,Petri Dishes,Laboratory,A,ChemSupply Co.,12,236.07,16
+5718,Ethanol,Chemicals,A,OfficeMax,7,189.14,23
+5719,Xylene,Chemicals,A,FurniTech,15,204.9,19
+5720,First Aid Kit,Safety Equipment,D,OfficeMax,30,57.6,43
+5723,Filing Cabinet,Furniture,D,FurniTech,36,67.05,37
+5724,Coffee Table,Furniture,C,ChemSupply Co.,28,64.05,32
+5728,Flask Set,Laboratory,B,ChemSupply Co.,20,132.49,25
+5730,Microscope,Laboratory,B,LabSource,22,140.75,28
+5731,Analytical Balance,Laboratory,B,ChemSupply Co.,14,40.5,18
+5733,Toluene,Chemicals,A,LabSource,8,105.21,16
+5739,Office Desk,Furniture,D,ChemSupply Co.,33,15.94,41
+5741,External Hard Drive,Electronics,B,ChemSupply Co.,26,87.62,33
+5742,Pipettes,Laboratory,A,TechWorld Inc.,9,89.93,12
+5743,Paper A4,Office Supplies,C,CleanAll Ltd.,18,79.65,23
+5746,Toilet Paper,Cleaning,B,CleanAll Ltd.,14,78.64,24
+5747,Trash Bags,Cleaning,C,OfficeMax,34,57.84,36
+5749,Pen Set,Office Supplies,D,OfficeMax,23,29.34,29
+5756,Wet Mop,Cleaning,C,OfficeMax,25,81.08,40
+5757,Binder Clips,Office Supplies,D,FurniTech,28,41.9,35
+5758,File Folders,Office Supplies,D,OfficeMax,36,45.41,43
+5762,Toluene,Chemicals,A,LabSource,8,236.54,10
+5769,Chemical Gloves,Safety Equipment,D,CleanAll Ltd.,25,58.8,32
+5770,Printer,Electronics,D,CleanAll Ltd.,40,8.85,50
+5775,Lab Coat,Safety Equipment,D,LabSource,38,57.71,48
+5776,Mouse,Electronics,D,FurniTech,20,31.33,26
+5778,Glass Cleaner,Cleaning,B,ChemSupply Co.,26,116.33,33
+5779,External Hard Drive,Electronics,C,ChemSupply Co.,29,28.84,37
+5780,Safety Helmet,Safety Equipment,D,LabSource,26,8.56,33
+5786,Laptop,Electronics,C,LabSource,28,56.1,38
+5789,Staples Box,Office Supplies,D,FurniTech,29,25.58,37
+5790,Staples Box,Office Supplies,C,ChemSupply Co.,29,66.76,37
+5792,Safety Goggles,Safety Equipment,D,TechWorld Inc.,33,9.97,42
+5793,pH Meter,Laboratory,B,OfficeMax,11,119.93,21
+5794,Paper Towels,Cleaning,C,FurniTech,19,65.48,24
+5795,Sodium Hydroxide,Chemicals,B,LabSource,14,107.69,18
+5796,Flask Set,Laboratory,B,CleanAll Ltd.,33,55.0,34
+5800,Ethanol,Chemicals,A,FurniTech,11,282.7,14
+5802,Emergency Eyewash,Safety Equipment,D,ChemSupply Co.,31,38.19,46
+5803,Bunsen Burner,Laboratory,A,FurniTech,16,77.71,21
+5811,Test Tubes,Laboratory,A,FurniTech,5,92.48,21
+5817,Methanol,Chemicals,B,TechWorld Inc.,19,64.49,24
+5825,Flask Set,Laboratory,C,OfficeMax,22,86.99,28
+5826,Toluene,Chemicals,A,OfficeMax,8,265.09,11
+5827,Pipettes,Laboratory,A,CleanAll Ltd.,8,103.32,10
+5830,Mouse,Electronics,D,FurniTech,48,79.38,49
+5832,Chemical Gloves,Safety Equipment,D,LabSource,38,7.45,48
+5839,Lab Coat,Safety Equipment,D,ChemSupply Co.,34,46.89,48
+5840,UPS,Electronics,D,TechWorld Inc.,40,59.46,44
+5844,Paper Towels,Cleaning,B,OfficeMax,28,93.57,34
+5846,Chloroform,Chemicals,B,CleanAll Ltd.,15,128.85,19
+5848,Laptop,Electronics,D,OfficeMax,38,36.69,48
+5849,Keyboard,Electronics,C,TechWorld Inc.,17,54.54,22
+5856,Lab Coat,Safety Equipment,D,ChemSupply Co.,34,23.68,43
+5857,Scanner,Electronics,C,LabSource,20,91.45,25
+5858,Chloroform,Chemicals,B,ChemSupply Co.,26,126.17,33
+5860,Sodium Hydroxide,Chemicals,A,FurniTech,11,152.24,14
+5863,Formaldehyde,Chemicals,A,CleanAll Ltd.,13,54.26,23
+5867,Binder Clips,Office Supplies,C,ChemSupply Co.,22,74.32,32
+5870,Chloroform,Chemicals,A,OfficeMax,17,129.68,22
+5871,Sofa,Furniture,C,LabSource,30,79.25,38
+5873,Disinfectant,Cleaning,B,FurniTech,23,119.01,29
+5874,Ethanol,Chemicals,B,OfficeMax,14,59.08,21
+5875,Chloroform,Chemicals,A,ChemSupply Co.,19,291.16,21
+5878,Floor Cleaner,Cleaning,C,CleanAll Ltd.,22,38.74,35
+5883,Ethanol,Chemicals,B,ChemSupply Co.,24,124.6,31
+5888,Acetone,Chemicals,A,FurniTech,8,182.46,15
+5891,Microscope,Laboratory,C,ChemSupply Co.,25,90.42,38
+5893,Dust Mop,Cleaning,B,CleanAll Ltd.,21,96.95,28
+5896,Printer,Electronics,B,TechWorld Inc.,22,89.44,26
+5898,File Folders,Office Supplies,C,TechWorld Inc.,16,68.16,20
+5901,Methanol,Chemicals,A,OfficeMax,23,169.88,25
+5903,Safety Helmet,Safety Equipment,D,TechWorld Inc.,25,8.71,32
+5904,Tablet,Electronics,C,LabSource,20,54.52,26
+5905,Tape Dispenser,Office Supplies,D,OfficeMax,36,22.03,45
+5906,Conference Table,Furniture,C,ChemSupply Co.,20,53.4,25
+5908,Keyboard,Electronics,D,OfficeMax,38,37.15,48
+5910,Hydrochloric Acid,Chemicals,A,CleanAll Ltd.,7,281.29,15
+5912,Printer,Electronics,B,ChemSupply Co.,10,108.99,15
+5914,Methanol,Chemicals,A,TechWorld Inc.,19,85.58,24
+5916,Keyboard,Electronics,B,TechWorld Inc.,14,42.76,31
+5920,All-Purpose Cleaner,Cleaning,B,OfficeMax,22,98.16,23
+5925,Emergency Eyewash,Safety Equipment,D,TechWorld Inc.,35,57.83,44
+5927,Microscope,Laboratory,B,TechWorld Inc.,25,60.0,32
+5935,Printer,Electronics,B,ChemSupply Co.,19,140.02,24
+5936,Beakers,Laboratory,C,TechWorld Inc.,23,97.85,30
+5937,Toluene,Chemicals,A,CleanAll Ltd.,18,200.91,23
+5939,Petri Dishes,Laboratory,B,TechWorld Inc.,29,112.37,32
+5946,External Hard Drive,Electronics,C,CleanAll Ltd.,29,93.94,34
+5947,Standing Desk,Furniture,D,LabSource,36,50.42,45
+5948,Bookshelf,Furniture,C,CleanAll Ltd.,27,41.08,34
+5952,Staples Box,Office Supplies,C,ChemSupply Co.,32,23.78,40
+5954,Desktop Computer,Electronics,D,TechWorld Inc.,30,16.53,38
+5959,Scissors,Office Supplies,C,FurniTech,21,95.03,27
+5962,Fire Extinguisher,Safety Equipment,D,LabSource,32,18.63,41
+5963,File Folders,Office Supplies,C,OfficeMax,27,70.32,39
+5964,Keyboard,Electronics,D,FurniTech,22,72.67,28
+5967,Hydrochloric Acid,Chemicals,A,TechWorld Inc.,7,220.85,25
+5969,Centrifuge,Laboratory,B,ChemSupply Co.,14,73.34,27
+5972,Analytical Balance,Laboratory,A,CleanAll Ltd.,11,187.26,14
+5973,Scissors,Office Supplies,C,FurniTech,20,80.0,26
+5979,Beakers,Laboratory,A,LabSource,13,152.52,19
+5985,Glass Cleaner,Cleaning,C,FurniTech,39,37.26,40
+5987,Emergency Eyewash,Safety Equipment,D,TechWorld Inc.,22,42.21,28
+5993,Respirator,Safety Equipment,D,TechWorld Inc.,24,59.48,30
+5994,Pipettes,Laboratory,B,FurniTech,32,138.01,35
+5996,Methanol,Chemicals,A,FurniTech,14,211.6,24
+6003,Pipettes,Laboratory,C,OfficeMax,27,68.1,34
+6004,pH Meter,Laboratory,A,LabSource,21,210.08,23
+6005,First Aid Kit,Safety Equipment,D,TechWorld Inc.,28,63.57,36
+6010,Desktop Computer,Electronics,B,LabSource,16,56.67,21
+6013,Keyboard,Electronics,D,OfficeMax,31,22.01,39
+6017,Acetone,Chemicals,B,LabSource,22,111.03,28
+6024,Glass Cleaner,Cleaning,B,CleanAll Ltd.,17,96.75,22
+6030,Xylene,Chemicals,A,OfficeMax,9,179.3,15
+6031,Respirator,Safety Equipment,D,FurniTech,37,59.59,47
+6035,Coffee Table,Furniture,C,OfficeMax,25,99.51,32
+6036,UPS,Electronics,C,OfficeMax,30,27.98,31
+6038,Conference Table,Furniture,D,CleanAll Ltd.,36,45.8,46
+6039,Bunsen Burner,Laboratory,B,TechWorld Inc.,27,134.63,31
+6040,Xylene,Chemicals,B,TechWorld Inc.,13,114.05,32
+6042,Scissors,Office Supplies,D,CleanAll Ltd.,46,15.85,50
+6043,Pen Set,Office Supplies,C,LabSource,28,33.67,35
+6045,Acetone,Chemicals,B,CleanAll Ltd.,16,116.98,20
+6046,Scanner,Electronics,C,OfficeMax,30,84.91,38
+6047,Printer,Electronics,B,OfficeMax,14,102.47,17
+6049,Sofa,Furniture,D,OfficeMax,32,57.24,43
+6052,Xylene,Chemicals,B,OfficeMax,18,80.17,23
+6056,Chloroform,Chemicals,B,TechWorld Inc.,29,120.43,30
+6058,Test Tubes,Laboratory,B,OfficeMax,21,90.5,25
+6059,UPS,Electronics,B,FurniTech,13,47.39,33
+6060,Benzene,Chemicals,A,CleanAll Ltd.,14,187.88,18
+6061,Benzene,Chemicals,A,ChemSupply Co.,20,163.51,22
+6065,Petri Dishes,Laboratory,A,ChemSupply Co.,9,137.03,15
+6067,Staples Box,Office Supplies,D,OfficeMax,30,42.16,46
+6069,Petri Dishes,Laboratory,A,LabSource,9,227.18,19
+6071,Office Desk,Furniture,D,ChemSupply Co.,28,42.64,36
+6072,Trash Bags,Cleaning,B,CleanAll Ltd.,11,97.22,17
+6074,Pipettes,Laboratory,A,FurniTech,8,162.43,21
+6075,Flask Set,Laboratory,A,CleanAll Ltd.,12,136.16,20
+6077,All-Purpose Cleaner,Cleaning,C,CleanAll Ltd.,20,65.79,32
+6082,Analytical Balance,Laboratory,C,FurniTech,26,83.25,33
+6083,Coffee Table,Furniture,C,CleanAll Ltd.,23,63.24,32
+6084,Ethanol,Chemicals,A,TechWorld Inc.,13,118.23,16
+6085,Stapler,Office Supplies,C,ChemSupply Co.,21,16.47,27
+6087,Ethanol,Chemicals,A,ChemSupply Co.,14,154.87,22
+6090,Coffee Table,Furniture,D,TechWorld Inc.,24,51.31,31
+6091,Scissors,Office Supplies,C,LabSource,31,61.66,39
+6092,Office Desk,Furniture,D,CleanAll Ltd.,46,49.14,49
+6093,Ear Protection,Safety Equipment,D,FurniTech,33,6.25,42
+6096,Lab Coat,Safety Equipment,D,FurniTech,20,76.56,26
+6099,External Hard Drive,Electronics,C,LabSource,20,86.75,40
+6101,Pipettes,Laboratory,B,CleanAll Ltd.,13,70.51,35
+6102,Lab Coat,Safety Equipment,D,OfficeMax,40,68.93,50
+6103,Coffee Table,Furniture,C,OfficeMax,22,92.53,28
+6104,Toluene,Chemicals,A,TechWorld Inc.,18,118.94,23
+6110,pH Meter,Laboratory,A,OfficeMax,16,221.05,20
+6117,Benzene,Chemicals,A,TechWorld Inc.,15,265.55,19
+6118,Hand Sanitizer,Cleaning,B,ChemSupply Co.,17,100.98,34
+6122,Scissors,Office Supplies,C,ChemSupply Co.,16,64.62,21
+6123,All-Purpose Cleaner,Cleaning,C,CleanAll Ltd.,27,84.98,34
+6125,Toilet Paper,Cleaning,B,ChemSupply Co.,23,35.89,29
+6126,Office Desk,Furniture,C,TechWorld Inc.,20,42.25,25
+6129,Analytical Balance,Laboratory,C,OfficeMax,23,97.09,24
+6136,Paper Towels,Cleaning,B,OfficeMax,11,135.37,23
+6137,Cork Board,Furniture,D,CleanAll Ltd.,30,64.19,42
+6140,Pipettes,Laboratory,B,ChemSupply Co.,24,59.01,31
+6142,Test Tubes,Laboratory,A,TechWorld Inc.,18,251.28,23
+6151,Floor Cleaner,Cleaning,C,CleanAll Ltd.,31,98.03,39
+6156,Keyboard,Electronics,B,OfficeMax,24,80.4,35
+6159,Filing Cabinet,Furniture,C,CleanAll Ltd.,30,18.55,38
+6166,Office Chair,Furniture,C,ChemSupply Co.,22,79.29,26
+6169,Beakers,Laboratory,C,CleanAll Ltd.,26,85.29,39
+6171,Fire Extinguisher,Safety Equipment,D,TechWorld Inc.,24,70.16,30
+6173,All-Purpose Cleaner,Cleaning,B,TechWorld Inc.,14,48.4,35
+6175,Keyboard,Electronics,C,FurniTech,21,16.47,27
+6177,Cork Board,Furniture,C,LabSource,20,70.7,34
+6179,Bunsen Burner,Laboratory,C,FurniTech,36,35.56,38
+6180,Monitor,Electronics,C,OfficeMax,17,30.36,22
+6181,Pen Set,Office Supplies,C,OfficeMax,24,74.26,37
+6185,All-Purpose Cleaner,Cleaning,B,LabSource,15,87.42,24
+6186,Test Tubes,Laboratory,B,LabSource,12,108.75,16
+6187,Respirator,Safety Equipment,D,CleanAll Ltd.,31,39.72,36
+6188,Laptop,Electronics,B,TechWorld Inc.,11,121.7,16
+6193,Wet Mop,Cleaning,B,FurniTech,13,115.1,28
+6196,Hand Sanitizer,Cleaning,C,FurniTech,20,18.23,25
+6197,Hydrochloric Acid,Chemicals,A,FurniTech,14,253.51,17
+6198,All-Purpose Cleaner,Cleaning,C,OfficeMax,24,21.87,33
+6199,Face Shield,Safety Equipment,D,ChemSupply Co.,36,40.85,47
+6200,Whiteboard,Furniture,D,OfficeMax,32,30.21,41
+6202,Whiteboard,Furniture,D,FurniTech,28,60.72,36
+6205,Bunsen Burner,Laboratory,B,TechWorld Inc.,15,102.53,33
+6206,Filing Cabinet,Furniture,D,TechWorld Inc.,32,50.59,41
+6208,pH Meter,Laboratory,C,OfficeMax,25,63.35,32
+6211,Tablet,Electronics,C,FurniTech,16,70.88,20
+6212,Tape Dispenser,Office Supplies,D,LabSource,25,59.9,32
+6215,Ethanol,Chemicals,A,OfficeMax,23,265.17,25
+6220,Formaldehyde,Chemicals,B,TechWorld Inc.,17,104.72,27
+6228,Emergency Eyewash,Safety Equipment,D,ChemSupply Co.,31,78.95,42
+6231,Hydrochloric Acid,Chemicals,B,FurniTech,16,113.74,27
+6233,Tablet,Electronics,B,TechWorld Inc.,16,102.5,20
+6235,Trash Bags,Cleaning,C,CleanAll Ltd.,31,60.81,39
+6236,First Aid Kit,Safety Equipment,D,OfficeMax,27,77.13,34
+6238,Pipettes,Laboratory,C,ChemSupply Co.,32,83.29,38
+6239,Sodium Hydroxide,Chemicals,A,OfficeMax,10,133.98,15
+6243,Petri Dishes,Laboratory,A,OfficeMax,15,249.15,21
+6244,Toilet Paper,Cleaning,B,FurniTech,27,139.48,33
+6250,Chemical Gloves,Safety Equipment,D,TechWorld Inc.,20,53.64,25
+6251,Dust Mop,Cleaning,B,CleanAll Ltd.,27,93.12,34
+6252,Coffee Table,Furniture,D,FurniTech,38,14.08,43
+6255,Mouse,Electronics,B,LabSource,10,35.39,17
+6257,Safety Goggles,Safety Equipment,D,OfficeMax,22,40.98,28
+6258,Benzene,Chemicals,B,FurniTech,19,105.12,24
+6260,Scissors,Office Supplies,D,OfficeMax,25,63.06,32
+6268,Safety Goggles,Safety Equipment,D,CleanAll Ltd.,32,45.89,44
+6269,Analytical Balance,Laboratory,B,ChemSupply Co.,23,85.46,30
+6271,First Aid Kit,Safety Equipment,D,TechWorld Inc.,28,26.68,35
+6272,Keyboard,Electronics,B,FurniTech,23,42.23,26
+6273,Xylene,Chemicals,B,FurniTech,21,135.85,25
+6274,Stapler,Office Supplies,D,OfficeMax,29,55.31,37
+6276,Safety Goggles,Safety Equipment,D,OfficeMax,24,7.6,30
+6278,Laptop,Electronics,C,TechWorld Inc.,23,87.49,28
+6279,Hand Sanitizer,Cleaning,B,ChemSupply Co.,26,126.77,33
+6282,Acetone,Chemicals,A,LabSource,18,211.19,19
+6283,Toluene,Chemicals,A,FurniTech,5,192.2,10
+6285,Office Chair,Furniture,D,FurniTech,28,43.76,35
+6286,Pipettes,Laboratory,B,CleanAll Ltd.,28,130.41,35
+6288,Trash Bags,Cleaning,C,OfficeMax,32,68.45,40
+6290,Methanol,Chemicals,B,ChemSupply Co.,21,42.22,22
+6297,Ethanol,Chemicals,A,ChemSupply Co.,12,90.13,15
+6300,Hand Sanitizer,Cleaning,B,ChemSupply Co.,20,125.1,26
+6302,Mouse,Electronics,B,ChemSupply Co.,20,90.93,28
+6304,Marker Set,Office Supplies,C,ChemSupply Co.,20,48.11,37
+6309,Beakers,Laboratory,A,TechWorld Inc.,9,159.76,22
+6311,Scanner,Electronics,D,ChemSupply Co.,26,47.4,33
+6313,Lab Coat,Safety Equipment,D,LabSource,24,66.47,31
+6316,Safety Goggles,Safety Equipment,D,LabSource,43,24.39,50
+6322,Hydrochloric Acid,Chemicals,A,LabSource,5,143.63,24
+6324,Face Shield,Safety Equipment,D,CleanAll Ltd.,38,35.07,47
+6330,Keyboard,Electronics,B,FurniTech,10,116.36,15
+6331,Conference Table,Furniture,D,LabSource,35,30.45,36
+6332,All-Purpose Cleaner,Cleaning,B,LabSource,16,80.32,25
+6338,Xylene,Chemicals,B,TechWorld Inc.,20,62.25,26
+6341,Conference Table,Furniture,C,FurniTech,29,43.79,33
+6342,Desktop Computer,Electronics,D,ChemSupply Co.,42,28.63,46
+6345,Ethanol,Chemicals,B,FurniTech,28,59.82,35
+6347,Lab Coat,Safety Equipment,D,FurniTech,24,6.77,31
+6350,Centrifuge,Laboratory,A,FurniTech,11,213.68,22
+6353,Binder Clips,Office Supplies,C,TechWorld Inc.,30,16.44,38
+6355,Chloroform,Chemicals,B,FurniTech,28,41.91,32
+6357,Wet Mop,Cleaning,C,LabSource,21,18.9,40
+6362,Toilet Paper,Cleaning,B,LabSource,15,36.67,17
+6369,First Aid Kit,Safety Equipment,D,ChemSupply Co.,36,6.25,46
+6370,Staples Box,Office Supplies,C,TechWorld Inc.,22,87.61,28
+6372,Sofa,Furniture,D,OfficeMax,34,47.8,43
+6377,Tape Dispenser,Office Supplies,C,CleanAll Ltd.,36,23.11,40
+6380,Xylene,Chemicals,B,OfficeMax,31,55.07,33
+6386,Xylene,Chemicals,A,TechWorld Inc.,8,78.48,17
+6390,Keyboard,Electronics,B,LabSource,19,63.14,24
+6392,Formaldehyde,Chemicals,A,FurniTech,8,101.7,22
+6394,Hand Sanitizer,Cleaning,B,CleanAll Ltd.,32,85.38,33
+6399,Chemical Gloves,Safety Equipment,D,TechWorld Inc.,37,7.58,43
+6404,Scanner,Electronics,B,LabSource,11,42.39,17
+6406,Ethanol,Chemicals,A,CleanAll Ltd.,21,254.6,23
+6407,Formaldehyde,Chemicals,A,CleanAll Ltd.,17,100.86,25
+6411,Analytical Balance,Laboratory,B,FurniTech,18,118.81,28
+6424,Fire Extinguisher,Safety Equipment,D,FurniTech,44,10.62,50
+6428,Safety Goggles,Safety Equipment,D,ChemSupply Co.,31,79.1,39
+6436,Centrifuge,Laboratory,B,ChemSupply Co.,14,52.73,17
+6439,Acetone,Chemicals,A,ChemSupply Co.,17,251.22,22
+6441,Sodium Hydroxide,Chemicals,B,CleanAll Ltd.,12,117.09,17
+6442,Pen Set,Office Supplies,C,TechWorld Inc.,20,35.63,39
+6447,Methanol,Chemicals,A,CleanAll Ltd.,19,259.33,24
+6451,External Hard Drive,Electronics,C,ChemSupply Co.,29,65.23,37
+6452,Trash Bags,Cleaning,B,OfficeMax,22,80.18,23
+6453,Tablet,Electronics,B,LabSource,12,109.08,15
+6456,Disinfectant,Cleaning,B,OfficeMax,26,48.52,28
+6457,Cork Board,Furniture,C,OfficeMax,31,81.22,35
+6458,Xylene,Chemicals,B,CleanAll Ltd.,23,107.82,32
+6461,Tablet,Electronics,B,LabSource,20,93.62,26
+6464,pH Meter,Laboratory,C,TechWorld Inc.,28,84.98,36
+6465,Chloroform,Chemicals,A,ChemSupply Co.,8,127.04,11
+6468,Acetone,Chemicals,A,CleanAll Ltd.,9,148.78,24
+6471,Glass Cleaner,Cleaning,C,LabSource,21,83.45,28
+6475,Office Chair,Furniture,C,LabSource,24,23.76,35
+6477,Hydrochloric Acid,Chemicals,B,CleanAll Ltd.,15,135.64,16
+6478,Lab Coat,Safety Equipment,D,CleanAll Ltd.,37,23.17,40
+6479,Laptop,Electronics,B,FurniTech,20,102.08,29
+6480,Standing Desk,Furniture,C,OfficeMax,27,68.99,34
+6481,Paper A4,Office Supplies,D,OfficeMax,34,60.59,38
+6483,Sofa,Furniture,C,LabSource,25,30.87,32
+6484,Hand Sanitizer,Cleaning,B,ChemSupply Co.,20,126.76,26
+6487,Beakers,Laboratory,C,ChemSupply Co.,16,77.72,20
+6492,Microscope,Laboratory,C,ChemSupply Co.,20,42.53,26
+6494,Wet Mop,Cleaning,C,FurniTech,22,40.77,28
+6495,Chloroform,Chemicals,B,LabSource,17,133.56,22
+6496,Paper A4,Office Supplies,C,OfficeMax,21,53.25,27
+6497,Office Desk,Furniture,C,LabSource,23,92.6,29
+6500,Ethanol,Chemicals,A,FurniTech,6,253.29,21
+6506,Acetone,Chemicals,B,OfficeMax,18,128.83,33
+6508,Tablet,Electronics,B,OfficeMax,23,55.89,30
+6510,UPS,Electronics,B,CleanAll Ltd.,20,148.18,25
+6512,Trash Bags,Cleaning,B,CleanAll Ltd.,18,82.79,27
+6516,Monitor,Electronics,D,ChemSupply Co.,25,64.33,32
+6517,Hydrochloric Acid,Chemicals,A,LabSource,11,232.6,18
+6518,Bunsen Burner,Laboratory,C,FurniTech,22,41.72,28
+6521,Cork Board,Furniture,D,CleanAll Ltd.,46,17.78,48
+6529,Benzene,Chemicals,A,OfficeMax,17,98.11,24
+6531,Hand Sanitizer,Cleaning,C,ChemSupply Co.,30,41.85,38
+6533,Beakers,Laboratory,A,OfficeMax,10,153.35,24
+6535,Scanner,Electronics,D,ChemSupply Co.,36,66.72,45
+6536,Office Chair,Furniture,C,TechWorld Inc.,21,55.56,34
+6539,Ethanol,Chemicals,A,CleanAll Ltd.,15,287.4,24
+6540,Xylene,Chemicals,B,OfficeMax,14,97.9,21
+6545,Sodium Hydroxide,Chemicals,B,OfficeMax,23,142.69,29
+6548,Ethanol,Chemicals,A,CleanAll Ltd.,17,292.02,21
+6553,Emergency Eyewash,Safety Equipment,D,CleanAll Ltd.,32,63.17,41
+6556,Sodium Hydroxide,Chemicals,B,TechWorld Inc.,14,85.35,28
+6557,Monitor,Electronics,C,ChemSupply Co.,27,36.99,31
+6559,Safety Goggles,Safety Equipment,D,FurniTech,43,13.3,44
+6561,Conference Table,Furniture,C,ChemSupply Co.,20,40.55,26
+6562,Microscope,Laboratory,A,TechWorld Inc.,14,141.28,18
+6563,UPS,Electronics,B,OfficeMax,13,30.69,16
+6566,Ethanol,Chemicals,A,LabSource,13,238.25,17
+6568,Monitor,Electronics,B,LabSource,28,78.67,29
+6570,pH Meter,Laboratory,B,OfficeMax,29,93.37,30
+6572,Standing Desk,Furniture,C,FurniTech,28,62.76,36
+6575,Hydrochloric Acid,Chemicals,B,FurniTech,21,65.98,32
+6576,Chloroform,Chemicals,B,FurniTech,22,40.19,32
+6582,Xylene,Chemicals,A,TechWorld Inc.,14,208.46,18
+6588,Flask Set,Laboratory,A,FurniTech,12,233.44,15
+6596,Chloroform,Chemicals,B,ChemSupply Co.,19,41.29,35
+6599,Scissors,Office Supplies,C,ChemSupply Co.,22,45.55,28
+6600,Binder Clips,Office Supplies,D,OfficeMax,33,20.0,42
+6609,Cork Board,Furniture,D,OfficeMax,28,25.27,35
+6610,Conference Table,Furniture,C,OfficeMax,31,42.21,39
+6611,Wet Mop,Cleaning,C,TechWorld Inc.,20,74.55,25
+6612,Filing Cabinet,Furniture,C,CleanAll Ltd.,18,88.87,23
+6617,Emergency Eyewash,Safety Equipment,D,FurniTech,35,21.32,44
+6618,Toilet Paper,Cleaning,C,TechWorld Inc.,20,57.48,25
+6625,Flask Set,Laboratory,C,OfficeMax,25,43.13,32
+6635,Analytical Balance,Laboratory,A,FurniTech,12,54.36,15
+6637,Emergency Eyewash,Safety Equipment,D,ChemSupply Co.,30,64.95,36
+6642,Hydrochloric Acid,Chemicals,B,LabSource,21,51.58,27
+6643,Sodium Hydroxide,Chemicals,B,OfficeMax,13,110.36,34
+6645,Chemical Gloves,Safety Equipment,D,TechWorld Inc.,42,14.6,49
+6648,Conference Table,Furniture,D,CleanAll Ltd.,38,44.08,48
+6650,Sodium Hydroxide,Chemicals,B,CleanAll Ltd.,12,134.43,26
+6653,Stapler,Office Supplies,D,LabSource,23,5.33,29
+6656,Pipettes,Laboratory,A,OfficeMax,20,287.23,22
+6659,Dust Mop,Cleaning,C,OfficeMax,29,37.53,39
+6661,Paper Towels,Cleaning,B,LabSource,15,128.59,33
+6664,Sofa,Furniture,C,OfficeMax,21,81.92,37
+6665,Benzene,Chemicals,A,CleanAll Ltd.,9,290.37,13
+6669,Office Desk,Furniture,D,CleanAll Ltd.,23,16.15,29
+6674,Centrifuge,Laboratory,C,FurniTech,19,68.87,24
+6679,pH Meter,Laboratory,B,TechWorld Inc.,17,92.38,22
+6683,Xylene,Chemicals,A,OfficeMax,7,85.88,19
+6690,Toluene,Chemicals,A,LabSource,9,72.84,23
+6692,Pipettes,Laboratory,C,FurniTech,32,51.14,40
+6694,Dust Mop,Cleaning,B,CleanAll Ltd.,22,73.51,28
+6697,Scanner,Electronics,B,FurniTech,17,88.21,32
+6700,Hydrochloric Acid,Chemicals,A,LabSource,11,220.57,22
+6701,Tablet,Electronics,D,CleanAll Ltd.,20,51.72,25
+6705,Respirator,Safety Equipment,D,FurniTech,38,31.27,44
+6706,Marker Set,Office Supplies,C,LabSource,29,86.04,37
+6707,Acetone,Chemicals,B,ChemSupply Co.,15,82.71,19
+6709,Scissors,Office Supplies,C,CleanAll Ltd.,20,56.67,26
+6715,Centrifuge,Laboratory,B,TechWorld Inc.,10,109.01,15
+6717,Tablet,Electronics,C,ChemSupply Co.,26,28.89,33
+6718,Office Desk,Furniture,C,CleanAll Ltd.,29,78.2,39
+6727,Sofa,Furniture,D,OfficeMax,21,65.14,27
+6728,Sodium Hydroxide,Chemicals,A,ChemSupply Co.,8,98.36,20
+6729,Chemical Gloves,Safety Equipment,D,TechWorld Inc.,39,7.69,49
+6731,Whiteboard,Furniture,D,OfficeMax,32,52.87,41
+6732,Dust Mop,Cleaning,B,LabSource,18,99.72,23
+6736,Bookshelf,Furniture,D,LabSource,43,9.41,48
+6742,Tablet,Electronics,B,OfficeMax,14,126.45,20
+6746,Scissors,Office Supplies,D,ChemSupply Co.,28,31.8,36
+6747,Paper Towels,Cleaning,B,ChemSupply Co.,11,54.74,33
+6750,Benzene,Chemicals,B,LabSource,12,119.64,27
+6751,Lab Coat,Safety Equipment,D,FurniTech,37,50.0,41
+6753,File Folders,Office Supplies,C,LabSource,28,89.46,36
+6754,Pen Set,Office Supplies,D,TechWorld Inc.,20,69.37,25
+6755,Desktop Computer,Electronics,C,LabSource,32,95.93,35
+6759,Office Desk,Furniture,D,FurniTech,20,37.85,25
+6766,Disinfectant,Cleaning,C,LabSource,24,92.85,31
+6768,Tablet,Electronics,C,ChemSupply Co.,33,74.2,40
+6770,Sodium Hydroxide,Chemicals,B,CleanAll Ltd.,14,136.24,24
+6771,Binder Clips,Office Supplies,C,TechWorld Inc.,33,94.29,39
+6773,Printer,Electronics,D,ChemSupply Co.,30,46.27,45
+6776,Wet Mop,Cleaning,B,ChemSupply Co.,12,100.5,28
+6777,Xylene,Chemicals,B,ChemSupply Co.,17,149.47,22
+6778,Floor Cleaner,Cleaning,B,TechWorld Inc.,19,127.5,33
+6792,Trash Bags,Cleaning,C,ChemSupply Co.,30,16.22,38
+6797,Acetone,Chemicals,B,FurniTech,23,112.86,27
+6801,Standing Desk,Furniture,D,OfficeMax,31,67.83,37
+6807,Office Desk,Furniture,D,OfficeMax,43,14.07,45
+6809,Sofa,Furniture,C,FurniTech,21,55.18,27
+6811,Paper Towels,Cleaning,B,CleanAll Ltd.,18,136.72,28
+6815,Dust Mop,Cleaning,C,LabSource,30,74.65,38
+6816,Methanol,Chemicals,B,TechWorld Inc.,24,55.1,30
+6825,Chemical Gloves,Safety Equipment,D,CleanAll Ltd.,29,22.98,37
+6826,Pen Set,Office Supplies,C,CleanAll Ltd.,30,72.93,38
+6828,pH Meter,Laboratory,A,CleanAll Ltd.,10,198.92,24
+6837,Sodium Hydroxide,Chemicals,B,ChemSupply Co.,10,89.99,31
+6840,Floor Cleaner,Cleaning,B,OfficeMax,18,60.04,34
+6842,Test Tubes,Laboratory,B,FurniTech,18,61.59,31
+6844,Toilet Paper,Cleaning,C,LabSource,26,76.76,40
+6852,Whiteboard,Furniture,D,LabSource,20,27.19,26
+6854,Filing Cabinet,Furniture,D,LabSource,29,18.5,37
+6855,Analytical Balance,Laboratory,B,TechWorld Inc.,13,141.57,30
+6858,Laptop,Electronics,B,OfficeMax,12,140.75,16
+6860,Tablet,Electronics,D,OfficeMax,32,23.62,40
+6865,Trash Bags,Cleaning,B,CleanAll Ltd.,30,125.02,35
+6867,Benzene,Chemicals,A,ChemSupply Co.,5,64.68,15
+6872,pH Meter,Laboratory,B,FurniTech,14,132.6,31
+6874,Xylene,Chemicals,A,OfficeMax,12,132.9,15
+6875,Toluene,Chemicals,B,OfficeMax,11,60.56,21
+6876,Cork Board,Furniture,D,OfficeMax,39,46.41,49
+6877,Petri Dishes,Laboratory,A,OfficeMax,12,228.0,15
+6878,Safety Goggles,Safety Equipment,D,ChemSupply Co.,40,52.71,50
+6885,Chemical Gloves,Safety Equipment,D,OfficeMax,31,69.87,39
+6887,All-Purpose Cleaner,Cleaning,B,ChemSupply Co.,10,51.05,25
+6888,Hand Sanitizer,Cleaning,B,FurniTech,19,68.89,27
+6890,Flask Set,Laboratory,A,CleanAll Ltd.,11,53.18,14
+6892,Xylene,Chemicals,B,TechWorld Inc.,24,82.59,33
+6894,Mouse,Electronics,C,OfficeMax,19,50.55,24
+6896,UPS,Electronics,B,ChemSupply Co.,19,43.11,24
+6900,Methanol,Chemicals,B,TechWorld Inc.,28,31.88,35
+6903,External Hard Drive,Electronics,C,TechWorld Inc.,24,54.94,30
+6904,Mouse,Electronics,D,OfficeMax,28,57.63,35
+6911,Keyboard,Electronics,D,CleanAll Ltd.,37,55.73,44
+6912,Scissors,Office Supplies,C,ChemSupply Co.,21,78.24,36
+6913,Stapler,Office Supplies,C,TechWorld Inc.,31,50.89,33
+6919,Laptop,Electronics,D,CleanAll Ltd.,32,75.73,40
+6920,Keyboard,Electronics,D,FurniTech,32,24.12,40
+6921,Trash Bags,Cleaning,C,TechWorld Inc.,36,42.96,37
+6923,Face Shield,Safety Equipment,D,LabSource,23,24.04,29
+6924,Ethanol,Chemicals,A,FurniTech,7,223.57,16
+6926,Standing Desk,Furniture,D,TechWorld Inc.,29,79.6,37
+6927,Toluene,Chemicals,A,TechWorld Inc.,16,250.41,21
+6934,Beakers,Laboratory,B,CleanAll Ltd.,23,47.06,26
+6938,UPS,Electronics,D,ChemSupply Co.,41,27.66,43
+6940,Chloroform,Chemicals,A,LabSource,16,179.22,21
+6943,Emergency Eyewash,Safety Equipment,D,TechWorld Inc.,32,11.66,50
+6944,Sofa,Furniture,C,ChemSupply Co.,23,62.06,32
+6945,Microscope,Laboratory,A,FurniTech,13,82.52,17
+6946,Hydrochloric Acid,Chemicals,A,CleanAll Ltd.,5,125.49,12
+6947,Chloroform,Chemicals,B,FurniTech,15,130.1,19
+6950,Pipettes,Laboratory,C,LabSource,16,64.84,21
+6952,Chemical Gloves,Safety Equipment,D,FurniTech,35,75.1,39
+6961,Glass Cleaner,Cleaning,B,OfficeMax,16,94.86,33
+6976,Laptop,Electronics,D,TechWorld Inc.,36,25.26,49
+6977,Lab Coat,Safety Equipment,D,LabSource,34,15.14,38
+6979,Scanner,Electronics,B,ChemSupply Co.,24,68.73,31
+6980,Paper Towels,Cleaning,B,LabSource,24,58.78,32
+6982,Test Tubes,Laboratory,A,OfficeMax,8,278.79,11
+6991,Fire Extinguisher,Safety Equipment,D,FurniTech,31,27.48,49
+6994,Dust Mop,Cleaning,C,TechWorld Inc.,27,76.2,40
+6997,Toilet Paper,Cleaning,C,LabSource,19,87.35,24
+6999,Ethanol,Chemicals,A,ChemSupply Co.,16,133.05,25
+7002,Sodium Hydroxide,Chemicals,A,TechWorld Inc.,9,132.24,17
+7006,Acetone,Chemicals,B,FurniTech,22,54.3,28
+7007,Filing Cabinet,Furniture,D,ChemSupply Co.,20,41.53,26
+7008,Disinfectant,Cleaning,B,FurniTech,17,137.52,32
+7012,Conference Table,Furniture,C,TechWorld Inc.,23,20.17,37
+7014,Benzene,Chemicals,B,OfficeMax,25,56.58,32
+7015,Pen Set,Office Supplies,D,OfficeMax,43,68.43,44
+7018,Lab Coat,Safety Equipment,D,TechWorld Inc.,30,53.13,50
+7020,Hydrochloric Acid,Chemicals,B,ChemSupply Co.,13,132.85,35
+7028,Sofa,Furniture,C,ChemSupply Co.,32,70.97,40
+7030,Paper A4,Office Supplies,C,TechWorld Inc.,23,62.51,31
+7031,Methanol,Chemicals,B,TechWorld Inc.,29,96.08,32
+7033,Office Desk,Furniture,D,FurniTech,38,48.84,48
+7043,Pipettes,Laboratory,B,TechWorld Inc.,14,63.36,35
+7045,Wet Mop,Cleaning,B,OfficeMax,25,48.34,29
+7049,Benzene,Chemicals,A,OfficeMax,16,163.23,24
+7050,Ethanol,Chemicals,B,CleanAll Ltd.,21,75.13,25
+7052,Microscope,Laboratory,C,FurniTech,20,65.77,28
+7055,First Aid Kit,Safety Equipment,D,LabSource,23,9.33,29
+7057,Glass Cleaner,Cleaning,C,ChemSupply Co.,25,66.61,33
+7061,Bookshelf,Furniture,C,OfficeMax,32,38.86,40
+7062,Sofa,Furniture,D,FurniTech,31,53.94,42
+7065,Formaldehyde,Chemicals,A,TechWorld Inc.,15,292.49,24
+7067,Acetone,Chemicals,A,CleanAll Ltd.,6,215.47,12
+7069,Disinfectant,Cleaning,B,TechWorld Inc.,19,137.94,22
+7070,Formaldehyde,Chemicals,A,LabSource,6,104.84,11
+7073,Office Desk,Furniture,C,OfficeMax,28,37.17,31
+7074,Mouse,Electronics,B,ChemSupply Co.,21,62.2,27
+7077,Respirator,Safety Equipment,D,TechWorld Inc.,40,45.65,48
+7078,Xylene,Chemicals,A,OfficeMax,17,215.03,23
+7081,Microscope,Laboratory,A,TechWorld Inc.,16,124.72,20
+7082,Paper Towels,Cleaning,C,OfficeMax,22,98.66,28
+7083,Keyboard,Electronics,B,OfficeMax,23,130.67,34
+7084,Ethanol,Chemicals,A,FurniTech,11,212.95,21
+7090,Hydrochloric Acid,Chemicals,B,ChemSupply Co.,28,88.15,32
+7091,Lab Coat,Safety Equipment,D,LabSource,36,43.71,45
+7092,Ear Protection,Safety Equipment,D,ChemSupply Co.,34,6.46,36
+7096,Mouse,Electronics,C,ChemSupply Co.,29,82.94,36
+7097,Trash Bags,Cleaning,B,CleanAll Ltd.,24,41.83,30
+7100,Toluene,Chemicals,B,TechWorld Inc.,10,76.4,26
+7102,Hydrochloric Acid,Chemicals,A,OfficeMax,6,255.34,14
+7104,Trash Bags,Cleaning,B,TechWorld Inc.,14,75.68,18
+7108,Pipettes,Laboratory,A,FurniTech,13,64.51,17
+7111,Office Desk,Furniture,C,OfficeMax,24,64.19,40
+7112,Chemical Gloves,Safety Equipment,D,TechWorld Inc.,23,76.83,29
+7113,Respirator,Safety Equipment,D,ChemSupply Co.,38,59.91,48
+7115,Methanol,Chemicals,A,CleanAll Ltd.,15,83.35,19
+7118,Toilet Paper,Cleaning,C,OfficeMax,22,70.03,28
+7128,Printer,Electronics,B,FurniTech,18,69.72,28
+7131,Safety Helmet,Safety Equipment,D,ChemSupply Co.,30,29.16,38
+7133,Toilet Paper,Cleaning,B,ChemSupply Co.,30,47.97,33
+7137,Trash Bags,Cleaning,B,LabSource,23,47.83,34
+7141,Bunsen Burner,Laboratory,A,CleanAll Ltd.,5,266.66,23
+7143,Tablet,Electronics,B,ChemSupply Co.,20,32.83,26
+7144,Beakers,Laboratory,A,OfficeMax,9,87.67,12
+7145,Bunsen Burner,Laboratory,B,OfficeMax,25,34.61,32
+7147,Paper Towels,Cleaning,B,CleanAll Ltd.,13,128.07,17
+7149,Wet Mop,Cleaning,C,ChemSupply Co.,21,27.92,35
+7151,Coffee Table,Furniture,C,TechWorld Inc.,26,80.63,33
+7154,Flask Set,Laboratory,B,FurniTech,25,116.65,28
+7169,Floor Cleaner,Cleaning,C,TechWorld Inc.,20,84.36,26
+7170,Laptop,Electronics,B,LabSource,11,98.29,23
+7171,Paper Towels,Cleaning,C,TechWorld Inc.,30,84.4,38
+7172,Methanol,Chemicals,B,OfficeMax,30,53.22,32
+7173,Desktop Computer,Electronics,B,LabSource,21,48.31,32
+7175,Pen Set,Office Supplies,D,CleanAll Ltd.,40,20.67,42
+7176,Office Desk,Furniture,D,LabSource,36,45.53,45
+7177,Acetone,Chemicals,A,TechWorld Inc.,11,109.64,25
+7181,Mouse,Electronics,D,ChemSupply Co.,32,68.91,35
+7183,Monitor,Electronics,D,OfficeMax,34,74.71,36
+7184,Monitor,Electronics,C,ChemSupply Co.,19,78.25,24
+7189,Methanol,Chemicals,B,ChemSupply Co.,25,75.27,31
+7202,Coffee Table,Furniture,C,TechWorld Inc.,23,74.08,34
+7205,Sofa,Furniture,C,ChemSupply Co.,24,43.38,31
+7212,Coffee Table,Furniture,C,FurniTech,27,72.43,34
+7215,Ethanol,Chemicals,A,TechWorld Inc.,11,137.9,12
+7218,Filing Cabinet,Furniture,C,FurniTech,23,81.13,29
+7220,Xylene,Chemicals,A,LabSource,7,226.26,10
+7224,Marker Set,Office Supplies,C,FurniTech,27,41.61,34
+7226,First Aid Kit,Safety Equipment,D,TechWorld Inc.,30,47.29,38
+7228,Keyboard,Electronics,D,FurniTech,24,13.93,31
+7233,Scanner,Electronics,C,LabSource,20,75.09,31
+7234,All-Purpose Cleaner,Cleaning,B,FurniTech,24,119.98,30
+7245,Centrifuge,Laboratory,C,TechWorld Inc.,23,51.38,29
+7247,Conference Table,Furniture,C,LabSource,26,33.51,33
+7256,External Hard Drive,Electronics,C,OfficeMax,33,20.0,40
+7262,Coffee Table,Furniture,D,ChemSupply Co.,30,64.84,40
+7263,All-Purpose Cleaner,Cleaning,C,FurniTech,32,65.03,37
+7264,Chloroform,Chemicals,A,LabSource,18,86.85,19
+7268,Petri Dishes,Laboratory,A,LabSource,12,234.12,21
+7271,Analytical Balance,Laboratory,A,TechWorld Inc.,16,204.03,21
+7277,Chloroform,Chemicals,A,LabSource,17,177.32,21
+7279,Toilet Paper,Cleaning,B,ChemSupply Co.,24,129.48,30
+7280,Beakers,Laboratory,B,CleanAll Ltd.,25,145.63,27
+7282,Fire Extinguisher,Safety Equipment,D,FurniTech,33,69.34,42
+7285,Keyboard,Electronics,D,TechWorld Inc.,34,42.23,41
+7286,All-Purpose Cleaner,Cleaning,B,FurniTech,28,99.71,34
+7287,Laptop,Electronics,B,ChemSupply Co.,14,35.54,19
+7293,Beakers,Laboratory,B,CleanAll Ltd.,18,102.1,20
+7294,Flask Set,Laboratory,B,OfficeMax,10,135.37,23
+7301,Keyboard,Electronics,B,ChemSupply Co.,21,66.49,25
+7303,Toluene,Chemicals,B,CleanAll Ltd.,20,98.46,26
+7306,Pen Set,Office Supplies,D,LabSource,34,79.74,43
+7307,Emergency Eyewash,Safety Equipment,D,LabSource,40,75.16,50
+7308,Tablet,Electronics,B,OfficeMax,20,146.37,22
+7309,Office Chair,Furniture,C,TechWorld Inc.,28,15.83,39
+7319,Monitor,Electronics,C,OfficeMax,33,70.84,40
+7321,File Folders,Office Supplies,D,CleanAll Ltd.,28,46.29,36
+7322,Beakers,Laboratory,A,FurniTech,11,258.24,12
+7324,Glass Cleaner,Cleaning,B,TechWorld Inc.,18,134.72,23
+7327,Ethanol,Chemicals,A,LabSource,16,262.38,21
+7328,Glass Cleaner,Cleaning,B,FurniTech,24,99.31,30
+7329,Hand Sanitizer,Cleaning,B,TechWorld Inc.,12,119.56,33
+7331,Ear Protection,Safety Equipment,D,LabSource,20,48.96,25
+7334,Ethanol,Chemicals,B,LabSource,23,40.6,29
+7335,Safety Helmet,Safety Equipment,D,LabSource,37,41.76,47
+7338,Pipettes,Laboratory,A,TechWorld Inc.,12,234.72,21
+7339,Paper Towels,Cleaning,B,LabSource,23,59.57,29
+7342,Formaldehyde,Chemicals,A,OfficeMax,12,196.71,13
+7349,Hydrochloric Acid,Chemicals,B,LabSource,18,144.38,23
+7354,Analytical Balance,Laboratory,C,CleanAll Ltd.,30,46.73,39
+7355,Toilet Paper,Cleaning,B,CleanAll Ltd.,18,45.69,33
+7356,Centrifuge,Laboratory,A,TechWorld Inc.,7,112.8,12
+7357,File Folders,Office Supplies,C,CleanAll Ltd.,21,50.96,26
+7359,Respirator,Safety Equipment,D,OfficeMax,35,14.19,44
+7361,Keyboard,Electronics,C,LabSource,25,59.73,32
+7362,Glass Cleaner,Cleaning,B,FurniTech,12,61.43,16
+7366,Ethanol,Chemicals,B,FurniTech,20,70.83,26
+7369,Centrifuge,Laboratory,B,CleanAll Ltd.,20,89.28,28
+7371,Microscope,Laboratory,C,ChemSupply Co.,20,18.32,25
+7374,Xylene,Chemicals,B,ChemSupply Co.,18,149.12,32
+7375,Paper Towels,Cleaning,C,CleanAll Ltd.,24,24.54,40
+7377,Safety Goggles,Safety Equipment,D,OfficeMax,33,15.86,42
+7378,Paper A4,Office Supplies,D,FurniTech,36,54.74,45
+7379,Dust Mop,Cleaning,B,TechWorld Inc.,28,57.52,35
+7382,Filing Cabinet,Furniture,C,OfficeMax,37,59.11,38
+7387,Trash Bags,Cleaning,C,TechWorld Inc.,24,35.72,40
+7388,Benzene,Chemicals,A,CleanAll Ltd.,20,101.41,22
+7390,Bookshelf,Furniture,C,FurniTech,29,46.63,37
+7391,Flask Set,Laboratory,B,FurniTech,16,65.86,20
+7393,Methanol,Chemicals,A,CleanAll Ltd.,8,291.62,15
+7395,Petri Dishes,Laboratory,C,ChemSupply Co.,26,98.45,33
+7398,Emergency Eyewash,Safety Equipment,D,FurniTech,38,42.17,41
+7400,Sodium Hydroxide,Chemicals,B,FurniTech,17,64.07,25
+7405,Methanol,Chemicals,A,CleanAll Ltd.,6,276.67,11
+7406,Beakers,Laboratory,C,LabSource,21,55.76,27
+7409,Flask Set,Laboratory,B,OfficeMax,26,145.84,28
+7410,Pen Set,Office Supplies,C,LabSource,31,18.6,39
+7411,Benzene,Chemicals,B,TechWorld Inc.,15,55.37,35
+7412,Acetone,Chemicals,A,LabSource,7,55.23,22
+7413,Paper A3,Office Supplies,D,FurniTech,37,50.07,40
+7414,Toilet Paper,Cleaning,C,LabSource,20,74.2,25
+7416,Hand Sanitizer,Cleaning,B,ChemSupply Co.,26,119.67,34
+7417,Dust Mop,Cleaning,B,ChemSupply Co.,21,143.02,24
+7418,Printer,Electronics,D,OfficeMax,36,54.17,45
+7421,Analytical Balance,Laboratory,C,TechWorld Inc.,20,49.61,33
+7425,Bunsen Burner,Laboratory,B,LabSource,25,146.21,32
+7431,Whiteboard,Furniture,D,CleanAll Ltd.,37,33.74,47
+7433,Microscope,Laboratory,A,LabSource,20,220.09,25
+7437,Sodium Hydroxide,Chemicals,A,LabSource,12,269.32,16
+7439,Sodium Hydroxide,Chemicals,A,ChemSupply Co.,18,182.55,21
+7442,Paper A4,Office Supplies,C,ChemSupply Co.,22,27.6,33
+7443,Binder Clips,Office Supplies,C,LabSource,28,49.76,36
+7445,Bunsen Burner,Laboratory,B,FurniTech,18,130.24,24
+7451,UPS,Electronics,B,ChemSupply Co.,18,86.79,22
+7453,Tablet,Electronics,B,LabSource,11,125.53,16
+7459,Analytical Balance,Laboratory,A,TechWorld Inc.,20,114.12,23
+7462,Sodium Hydroxide,Chemicals,A,CleanAll Ltd.,5,174.77,16
+7463,UPS,Electronics,B,ChemSupply Co.,27,79.89,34
+7465,Paper Towels,Cleaning,C,LabSource,18,17.94,23
+7466,Acetone,Chemicals,A,TechWorld Inc.,5,119.78,15
+7468,Printer,Electronics,C,OfficeMax,31,24.55,39
+7469,Hand Sanitizer,Cleaning,C,LabSource,33,90.35,40
+7470,Chemical Gloves,Safety Equipment,D,TechWorld Inc.,24,49.1,31
+7474,Methanol,Chemicals,A,OfficeMax,9,216.75,14
+7475,Disinfectant,Cleaning,B,LabSource,16,74.2,27
+7482,Pen Set,Office Supplies,D,OfficeMax,32,79.56,40
+7486,Ear Protection,Safety Equipment,D,FurniTech,30,22.6,45
+7487,Xylene,Chemicals,B,ChemSupply Co.,13,149.07,17
+7491,Safety Goggles,Safety Equipment,D,OfficeMax,37,76.63,39
+7493,First Aid Kit,Safety Equipment,D,OfficeMax,20,18.23,26
+7494,Toilet Paper,Cleaning,B,CleanAll Ltd.,12,32.94,16
+7495,Floor Cleaner,Cleaning,B,LabSource,12,91.76,21
+7500,Paper Towels,Cleaning,B,LabSource,20,65.11,25
+7501,Ethanol,Chemicals,A,ChemSupply Co.,19,263.27,24
+7503,Acetone,Chemicals,B,LabSource,12,105.08,21
+7505,Glass Cleaner,Cleaning,C,LabSource,32,68.0,40
+7506,UPS,Electronics,C,ChemSupply Co.,35,44.97,40
+7508,Microscope,Laboratory,B,ChemSupply Co.,18,63.94,20
+7509,Paper A3,Office Supplies,D,FurniTech,42,22.4,47
+7511,Safety Helmet,Safety Equipment,D,OfficeMax,28,54.21,36
+7512,Microscope,Laboratory,B,OfficeMax,12,89.6,15
+7515,Desktop Computer,Electronics,B,LabSource,10,79.68,35
+7519,Sodium Hydroxide,Chemicals,A,FurniTech,11,198.25,12
+7524,Staples Box,Office Supplies,C,LabSource,22,36.5,33
+7525,Mouse,Electronics,C,LabSource,24,58.21,31
+7527,Filing Cabinet,Furniture,C,LabSource,20,40.72,37
+7529,Bunsen Burner,Laboratory,B,ChemSupply Co.,19,56.69,29
+7530,Pipettes,Laboratory,C,LabSource,36,26.59,38
+7531,Microscope,Laboratory,C,OfficeMax,26,69.52,37
+7532,Wet Mop,Cleaning,B,OfficeMax,11,139.94,27
+7536,First Aid Kit,Safety Equipment,D,ChemSupply Co.,30,53.25,31
+7537,Staples Box,Office Supplies,D,LabSource,28,65.21,36
+7540,Bunsen Burner,Laboratory,B,ChemSupply Co.,18,49.28,19
+7542,Marker Set,Office Supplies,D,FurniTech,34,78.21,47
+7543,Safety Helmet,Safety Equipment,D,ChemSupply Co.,42,13.49,43
+7547,Marker Set,Office Supplies,D,OfficeMax,28,14.89,35
+7548,Toluene,Chemicals,B,TechWorld Inc.,14,83.32,22
+7550,External Hard Drive,Electronics,C,ChemSupply Co.,31,49.27,39
+7556,Toluene,Chemicals,B,OfficeMax,21,99.48,32
+7560,Toilet Paper,Cleaning,C,ChemSupply Co.,27,70.03,31
+7561,Flask Set,Laboratory,A,TechWorld Inc.,7,203.97,14
+7562,Monitor,Electronics,C,OfficeMax,20,82.3,26
+7563,Mouse,Electronics,C,ChemSupply Co.,18,20.91,23
+7566,First Aid Kit,Safety Equipment,D,ChemSupply Co.,24,15.8,31
+7568,Glass Cleaner,Cleaning,B,CleanAll Ltd.,15,132.84,19
+7570,Emergency Eyewash,Safety Equipment,D,LabSource,38,47.55,48
+7574,Floor Cleaner,Cleaning,B,FurniTech,20,63.35,30
+7581,Methanol,Chemicals,A,CleanAll Ltd.,10,194.06,13
+7584,Bunsen Burner,Laboratory,C,ChemSupply Co.,30,89.43,39
+7586,Scissors,Office Supplies,D,TechWorld Inc.,41,22.92,48
+7588,Hand Sanitizer,Cleaning,B,OfficeMax,11,35.46,17
+7594,Toilet Paper,Cleaning,B,ChemSupply Co.,11,149.91,30
+7608,Glass Cleaner,Cleaning,C,FurniTech,27,53.37,37
+7609,Binder Clips,Office Supplies,D,LabSource,37,75.73,45
+7610,Toilet Paper,Cleaning,B,TechWorld Inc.,16,131.74,20
+7613,UPS,Electronics,B,TechWorld Inc.,23,39.36,32
+7616,Face Shield,Safety Equipment,D,OfficeMax,33,74.24,44
+7617,Pen Set,Office Supplies,C,OfficeMax,25,92.37,32
+7619,Analytical Balance,Laboratory,B,TechWorld Inc.,13,47.86,20
+7620,Lab Coat,Safety Equipment,D,ChemSupply Co.,37,53.34,40
+7626,UPS,Electronics,D,LabSource,33,40.98,42
+7627,Glass Cleaner,Cleaning,B,CleanAll Ltd.,17,121.68,22
+7629,Analytical Balance,Laboratory,B,FurniTech,21,52.0,26
+7630,Bunsen Burner,Laboratory,A,OfficeMax,9,63.37,25
+7634,Acetone,Chemicals,A,TechWorld Inc.,10,199.93,21
+7639,Chloroform,Chemicals,A,CleanAll Ltd.,6,211.48,10
+7641,Monitor,Electronics,C,OfficeMax,32,86.34,40
+7642,Filing Cabinet,Furniture,D,FurniTech,24,27.32,30
+7646,Acetone,Chemicals,B,FurniTech,22,69.63,28
+7649,Ethanol,Chemicals,A,TechWorld Inc.,10,282.44,19
+7652,Marker Set,Office Supplies,C,TechWorld Inc.,16,38.73,21
+7653,Wet Mop,Cleaning,B,LabSource,29,51.89,31
+7655,Conference Table,Furniture,D,CleanAll Ltd.,30,59.02,38
+7666,Benzene,Chemicals,B,CleanAll Ltd.,23,138.07,24
+7670,Sodium Hydroxide,Chemicals,B,CleanAll Ltd.,26,118.51,32
+7676,Tape Dispenser,Office Supplies,C,CleanAll Ltd.,23,67.9,28
+7683,Xylene,Chemicals,B,ChemSupply Co.,20,46.26,28
+7687,Cork Board,Furniture,C,FurniTech,26,69.44,40
+7694,Sofa,Furniture,C,FurniTech,23,25.57,40
+7700,Ethanol,Chemicals,A,CleanAll Ltd.,7,215.49,25
+7706,Flask Set,Laboratory,C,OfficeMax,21,43.48,27
+7707,Ethanol,Chemicals,A,CleanAll Ltd.,11,262.55,14
+7710,Filing Cabinet,Furniture,C,TechWorld Inc.,17,58.75,22
+7712,Scanner,Electronics,B,CleanAll Ltd.,12,127.28,26
+7715,Chloroform,Chemicals,B,ChemSupply Co.,26,145.03,28
+7716,Conference Table,Furniture,D,TechWorld Inc.,23,46.4,29
+7725,Tape Dispenser,Office Supplies,D,TechWorld Inc.,33,64.33,42
+7727,Coffee Table,Furniture,C,LabSource,32,78.89,40
+7734,Hydrochloric Acid,Chemicals,A,FurniTech,19,258.3,24
+7735,Staples Box,Office Supplies,D,OfficeMax,31,48.39,39
+7739,Acetone,Chemicals,B,FurniTech,23,43.79,32
+7743,Glass Cleaner,Cleaning,B,TechWorld Inc.,11,111.32,20
+7746,Benzene,Chemicals,B,OfficeMax,20,81.34,27
+7755,Hand Sanitizer,Cleaning,C,TechWorld Inc.,20,52.01,25
+7756,Printer,Electronics,C,OfficeMax,20,28.23,22
+7759,Beakers,Laboratory,B,CleanAll Ltd.,20,119.37,26
+7760,Office Desk,Furniture,C,LabSource,27,79.25,34
+7765,Test Tubes,Laboratory,B,CleanAll Ltd.,16,91.34,21
+7766,Toluene,Chemicals,B,LabSource,18,72.95,24
+7768,External Hard Drive,Electronics,B,ChemSupply Co.,18,85.06,23
+7773,Acetone,Chemicals,A,LabSource,14,249.19,24
+7782,Office Chair,Furniture,D,FurniTech,40,73.51,50
+7784,File Folders,Office Supplies,C,ChemSupply Co.,21,62.46,27
+7786,Bookshelf,Furniture,C,TechWorld Inc.,32,24.13,40
+7788,Formaldehyde,Chemicals,A,FurniTech,10,246.63,13
+7789,Beakers,Laboratory,B,OfficeMax,15,87.91,21
+7790,Test Tubes,Laboratory,A,ChemSupply Co.,16,185.19,21
+7791,Flask Set,Laboratory,B,TechWorld Inc.,13,110.34,28
+7794,Desktop Computer,Electronics,D,FurniTech,35,8.7,43
+7795,Acetone,Chemicals,A,TechWorld Inc.,20,142.31,25
+7800,Scissors,Office Supplies,C,LabSource,27,69.99,35
+7801,Laptop,Electronics,D,ChemSupply Co.,43,49.92,45
+7802,Floor Cleaner,Cleaning,C,FurniTech,18,23.25,23
+7805,Floor Cleaner,Cleaning,B,LabSource,11,88.27,18
+7808,Ethanol,Chemicals,B,FurniTech,16,129.22,21
+7811,Bookshelf,Furniture,C,OfficeMax,20,74.98,25
+7812,Bookshelf,Furniture,C,ChemSupply Co.,30,87.25,37
+7815,Benzene,Chemicals,B,TechWorld Inc.,32,49.86,34
+7821,File Folders,Office Supplies,D,LabSource,39,16.69,42
+7823,Marker Set,Office Supplies,C,ChemSupply Co.,20,73.31,25
+7824,Sodium Hydroxide,Chemicals,A,LabSource,9,75.51,24
+7826,Microscope,Laboratory,B,ChemSupply Co.,27,74.34,34
+7828,Scissors,Office Supplies,C,CleanAll Ltd.,22,20.36,28
+7832,Whiteboard,Furniture,C,ChemSupply Co.,31,44.34,39
+7833,Marker Set,Office Supplies,D,TechWorld Inc.,42,51.31,49
+7834,Toilet Paper,Cleaning,B,FurniTech,21,81.49,24
+7840,Centrifuge,Laboratory,A,FurniTech,13,164.09,17
+7844,Xylene,Chemicals,A,LabSource,11,86.87,14
+7848,Face Shield,Safety Equipment,D,LabSource,32,8.78,40
+7850,Printer,Electronics,B,CleanAll Ltd.,15,59.67,19
+7853,Standing Desk,Furniture,C,OfficeMax,26,87.46,33
+7854,Cork Board,Furniture,C,ChemSupply Co.,24,39.17,30
+7856,Beakers,Laboratory,C,ChemSupply Co.,26,76.28,33
+7858,Ethanol,Chemicals,A,LabSource,19,125.32,24
+7860,Mouse,Electronics,C,LabSource,20,95.99,24
+7862,Beakers,Laboratory,B,FurniTech,12,35.15,16
+7863,Respirator,Safety Equipment,D,ChemSupply Co.,28,65.36,35
+7865,UPS,Electronics,D,TechWorld Inc.,31,51.33,37
+7870,Lab Coat,Safety Equipment,D,CleanAll Ltd.,25,52.88,32
+7871,Conference Table,Furniture,C,TechWorld Inc.,24,76.35,31
+7874,Sodium Hydroxide,Chemicals,B,CleanAll Ltd.,18,75.25,33
+7876,Hand Sanitizer,Cleaning,B,OfficeMax,17,77.43,18
+7877,Flask Set,Laboratory,C,CleanAll Ltd.,16,49.29,21
+7879,Toluene,Chemicals,B,LabSource,28,62.23,33
+7880,Petri Dishes,Laboratory,A,ChemSupply Co.,8,52.71,16
+7881,Acetone,Chemicals,B,OfficeMax,22,61.5,28
+7883,pH Meter,Laboratory,B,LabSource,13,133.51,26
+7884,Methanol,Chemicals,B,LabSource,23,44.46,29
+7885,Formaldehyde,Chemicals,A,CleanAll Ltd.,19,204.81,20
+7888,Scissors,Office Supplies,D,OfficeMax,32,67.86,40
+7889,Floor Cleaner,Cleaning,B,FurniTech,13,84.82,25
+7891,Benzene,Chemicals,B,OfficeMax,23,68.39,29
+7895,Tape Dispenser,Office Supplies,D,ChemSupply Co.,38,79.05,48
+7902,Petri Dishes,Laboratory,B,LabSource,25,122.17,30
+7903,Wet Mop,Cleaning,B,TechWorld Inc.,23,46.48,29
+7910,Ear Protection,Safety Equipment,D,FurniTech,44,77.01,48
+7914,Petri Dishes,Laboratory,B,TechWorld Inc.,26,72.2,33
+7916,Methanol,Chemicals,B,FurniTech,14,126.64,22
+7917,Sofa,Furniture,C,ChemSupply Co.,26,56.43,37
+7927,Safety Goggles,Safety Equipment,D,LabSource,25,43.13,32
+7933,Dust Mop,Cleaning,B,CleanAll Ltd.,14,112.69,26
+7934,Emergency Eyewash,Safety Equipment,D,CleanAll Ltd.,36,36.44,46
+7937,Glass Cleaner,Cleaning,B,CleanAll Ltd.,23,55.7,26
+7940,Paper A4,Office Supplies,C,LabSource,39,64.73,40
+7941,Staples Box,Office Supplies,D,TechWorld Inc.,34,52.72,43
+7942,Bookshelf,Furniture,C,LabSource,30,62.86,39
+7945,Scissors,Office Supplies,D,ChemSupply Co.,35,38.78,44
+7947,Office Chair,Furniture,C,TechWorld Inc.,22,70.65,35
+7951,Hydrochloric Acid,Chemicals,A,FurniTech,14,132.23,16
+7955,Sofa,Furniture,C,FurniTech,17,75.25,22
+7956,Filing Cabinet,Furniture,D,FurniTech,32,42.53,41
+7957,Trash Bags,Cleaning,B,TechWorld Inc.,12,120.14,16
+7961,Office Chair,Furniture,D,CleanAll Ltd.,31,42.75,50
+7965,Toluene,Chemicals,A,OfficeMax,12,189.3,15
+7967,Mouse,Electronics,D,CleanAll Ltd.,32,5.47,40
+7969,Dust Mop,Cleaning,B,LabSource,21,92.72,29
+7973,Chloroform,Chemicals,B,LabSource,29,85.87,33
+7974,Xylene,Chemicals,A,FurniTech,5,111.41,22
+7976,Hydrochloric Acid,Chemicals,A,FurniTech,9,203.79,10
+7985,Wet Mop,Cleaning,B,LabSource,28,65.69,31
+7989,Floor Cleaner,Cleaning,C,OfficeMax,20,37.97,38
+7992,Mouse,Electronics,B,ChemSupply Co.,20,125.37,25
+7993,Beakers,Laboratory,A,TechWorld Inc.,23,68.32,24
+7996,Desktop Computer,Electronics,D,ChemSupply Co.,28,31.39,36
+8005,Xylene,Chemicals,B,FurniTech,24,119.98,26
+8007,Scissors,Office Supplies,D,LabSource,36,77.88,37
+8008,Mouse,Electronics,B,OfficeMax,16,43.62,22
+8010,Safety Goggles,Safety Equipment,D,LabSource,35,24.67,49
+8014,Chloroform,Chemicals,A,LabSource,8,206.12,20
+8015,Toluene,Chemicals,B,CleanAll Ltd.,15,125.4,28
+8019,Xylene,Chemicals,A,CleanAll Ltd.,14,215.87,16
+8022,Safety Goggles,Safety Equipment,D,ChemSupply Co.,22,45.02,28
+8023,Centrifuge,Laboratory,A,ChemSupply Co.,14,238.8,20
+8025,Methanol,Chemicals,B,TechWorld Inc.,14,145.6,28
+8026,Glass Cleaner,Cleaning,B,ChemSupply Co.,18,57.53,20
+8027,Trash Bags,Cleaning,B,ChemSupply Co.,27,145.6,31
+8031,Wet Mop,Cleaning,B,FurniTech,14,54.51,33
+8033,Desktop Computer,Electronics,B,LabSource,17,133.31,29
+8035,Paper Towels,Cleaning,B,FurniTech,26,40.3,31
+8037,Office Chair,Furniture,D,FurniTech,36,65.45,37
+8039,Sofa,Furniture,D,CleanAll Ltd.,31,5.7,35
+8045,Bunsen Burner,Laboratory,B,ChemSupply Co.,16,135.61,21
+8049,Monitor,Electronics,D,ChemSupply Co.,27,52.55,34
+8052,Sofa,Furniture,C,CleanAll Ltd.,23,33.88,29
+8057,Cork Board,Furniture,C,CleanAll Ltd.,25,72.22,28
+8058,Whiteboard,Furniture,C,FurniTech,26,78.81,35
+8059,Toluene,Chemicals,A,LabSource,16,90.7,21
+8062,Safety Helmet,Safety Equipment,D,FurniTech,40,27.15,43
+8063,Coffee Table,Furniture,D,CleanAll Ltd.,43,66.44,48
+8065,Scanner,Electronics,B,TechWorld Inc.,16,72.35,20
+8066,Petri Dishes,Laboratory,C,CleanAll Ltd.,29,87.94,37
+8067,Tablet,Electronics,B,ChemSupply Co.,28,141.18,35
+8068,Wet Mop,Cleaning,B,CleanAll Ltd.,12,128.47,16
+8071,Analytical Balance,Laboratory,A,LabSource,8,198.34,23
+8075,Lab Coat,Safety Equipment,D,LabSource,23,9.7,29
+8077,pH Meter,Laboratory,B,LabSource,15,38.1,29
+8081,Coffee Table,Furniture,C,TechWorld Inc.,29,31.95,32
+8082,Staples Box,Office Supplies,C,CleanAll Ltd.,21,22.46,36
+8087,Hand Sanitizer,Cleaning,C,LabSource,24,85.43,31
+8088,Toilet Paper,Cleaning,B,TechWorld Inc.,16,143.06,23
+8089,Petri Dishes,Laboratory,B,ChemSupply Co.,24,34.1,30
+8094,Chemical Gloves,Safety Equipment,D,FurniTech,47,26.26,49
+8096,Wet Mop,Cleaning,C,CleanAll Ltd.,24,85.24,31
+8098,Binder Clips,Office Supplies,D,OfficeMax,39,79.74,49
+8100,First Aid Kit,Safety Equipment,D,ChemSupply Co.,38,18.27,48
+8106,Keyboard,Electronics,C,LabSource,22,73.73,23
+8111,Test Tubes,Laboratory,A,FurniTech,7,242.0,17
+8113,Test Tubes,Laboratory,A,TechWorld Inc.,12,73.65,16
+8115,Filing Cabinet,Furniture,C,OfficeMax,25,45.32,32
+8121,Sofa,Furniture,C,FurniTech,27,24.64,39
+8122,pH Meter,Laboratory,C,LabSource,23,96.21,29
+8124,Cork Board,Furniture,C,TechWorld Inc.,37,64.95,40
+8127,Monitor,Electronics,D,FurniTech,32,15.45,40
+8133,Safety Helmet,Safety Equipment,D,ChemSupply Co.,20,48.55,26
+8136,Laptop,Electronics,D,LabSource,28,60.04,36
+8138,Pipettes,Laboratory,A,FurniTech,18,133.41,23
+8139,Conference Table,Furniture,D,ChemSupply Co.,20,5.91,25
+8141,Benzene,Chemicals,B,CleanAll Ltd.,15,92.93,30
+8143,Sofa,Furniture,D,ChemSupply Co.,38,67.2,48
+8145,pH Meter,Laboratory,A,TechWorld Inc.,12,242.84,17
+8146,Coffee Table,Furniture,C,FurniTech,20,59.36,32
+8150,Glass Cleaner,Cleaning,C,ChemSupply Co.,25,30.41,40
+8151,Sodium Hydroxide,Chemicals,A,ChemSupply Co.,12,91.77,15
+8153,Stapler,Office Supplies,D,OfficeMax,20,53.61,25
+8154,Laptop,Electronics,C,LabSource,21,56.29,29
+8155,Cork Board,Furniture,C,CleanAll Ltd.,20,74.45,24
+8156,Bookshelf,Furniture,C,LabSource,21,16.06,27
+8160,External Hard Drive,Electronics,B,LabSource,25,47.36,32
+8162,Flask Set,Laboratory,A,ChemSupply Co.,14,218.98,23
+8164,First Aid Kit,Safety Equipment,D,LabSource,28,45.39,35
+8165,Toluene,Chemicals,A,ChemSupply Co.,17,186.81,21
+8169,Test Tubes,Laboratory,C,FurniTech,25,84.36,30
+8172,External Hard Drive,Electronics,B,CleanAll Ltd.,22,59.06,25
+8183,Pen Set,Office Supplies,D,TechWorld Inc.,25,10.91,32
+8184,All-Purpose Cleaner,Cleaning,C,TechWorld Inc.,24,56.98,31
+8186,Trash Bags,Cleaning,C,OfficeMax,26,18.35,33
+8187,Methanol,Chemicals,B,ChemSupply Co.,23,33.19,30
+8188,Laptop,Electronics,B,FurniTech,17,57.67,28
+8190,Hand Sanitizer,Cleaning,B,CleanAll Ltd.,26,143.78,35
+8195,Sofa,Furniture,C,ChemSupply Co.,22,93.04,28
+8200,All-Purpose Cleaner,Cleaning,C,LabSource,21,91.19,32
+8201,UPS,Electronics,C,FurniTech,29,18.57,38
+8205,Hydrochloric Acid,Chemicals,A,ChemSupply Co.,14,173.28,18
+8206,Centrifuge,Laboratory,A,TechWorld Inc.,10,122.2,17
+8207,Lab Coat,Safety Equipment,D,CleanAll Ltd.,37,28.59,47
+8209,Paper A4,Office Supplies,C,FurniTech,21,87.85,34
+8210,Stapler,Office Supplies,D,ChemSupply Co.,46,72.34,47
+8211,Chemical Gloves,Safety Equipment,D,CleanAll Ltd.,22,43.83,28
+8213,Office Desk,Furniture,C,FurniTech,19,21.75,24
+8214,UPS,Electronics,C,FurniTech,24,43.74,31
+8217,Acetone,Chemicals,B,OfficeMax,14,107.72,15
+8219,Paper A3,Office Supplies,C,ChemSupply Co.,28,98.3,39
+8220,Flask Set,Laboratory,B,FurniTech,10,40.41,30
+8222,Lab Coat,Safety Equipment,D,OfficeMax,32,14.82,41
+8223,UPS,Electronics,C,FurniTech,29,17.14,36
+8224,Mouse,Electronics,B,LabSource,29,78.96,32
+8226,Staples Box,Office Supplies,D,TechWorld Inc.,32,69.69,41
+8228,Bunsen Burner,Laboratory,B,FurniTech,20,137.35,35
+8234,Safety Helmet,Safety Equipment,D,ChemSupply Co.,33,17.75,47
+8235,pH Meter,Laboratory,B,OfficeMax,23,120.26,30
+8241,Fire Extinguisher,Safety Equipment,D,TechWorld Inc.,34,29.83,47
+8244,Binder Clips,Office Supplies,C,ChemSupply Co.,24,95.29,26
+8246,Desktop Computer,Electronics,C,FurniTech,24,18.95,31
+8247,Paper Towels,Cleaning,C,LabSource,37,29.87,40
+8248,Trash Bags,Cleaning,C,LabSource,17,49.27,22
+8249,Acetone,Chemicals,A,ChemSupply Co.,8,82.78,15
+8250,Formaldehyde,Chemicals,A,TechWorld Inc.,9,214.7,15
+8252,Mouse,Electronics,B,LabSource,27,55.8,35
+8257,Centrifuge,Laboratory,A,OfficeMax,9,71.65,13
+8259,Centrifuge,Laboratory,A,TechWorld Inc.,9,101.11,21
+8262,Petri Dishes,Laboratory,A,LabSource,19,226.06,24
+8264,Acetone,Chemicals,A,LabSource,11,122.92,14
+8265,All-Purpose Cleaner,Cleaning,C,ChemSupply Co.,20,83.99,26
+8269,Test Tubes,Laboratory,B,OfficeMax,22,40.87,23
+8270,Marker Set,Office Supplies,C,OfficeMax,30,21.79,38
+8273,Toluene,Chemicals,A,ChemSupply Co.,20,77.68,25
+8278,External Hard Drive,Electronics,B,CleanAll Ltd.,18,49.14,35
+8279,Glass Cleaner,Cleaning,B,CleanAll Ltd.,13,130.59,34
+8282,Safety Goggles,Safety Equipment,D,FurniTech,36,58.58,45
+8285,Stapler,Office Supplies,D,CleanAll Ltd.,31,78.21,39
+8289,Acetone,Chemicals,A,CleanAll Ltd.,17,261.95,22
+8294,Benzene,Chemicals,A,OfficeMax,7,287.43,19
+8295,Cork Board,Furniture,D,CleanAll Ltd.,32,78.2,41
+8297,Marker Set,Office Supplies,D,TechWorld Inc.,33,62.67,40
+8298,Flask Set,Laboratory,A,CleanAll Ltd.,8,134.37,14
+8300,Beakers,Laboratory,A,CleanAll Ltd.,10,178.42,11
+8304,Tablet,Electronics,C,CleanAll Ltd.,27,71.38,34
+8305,Dust Mop,Cleaning,B,CleanAll Ltd.,19,93.84,22
+8307,Ethanol,Chemicals,A,TechWorld Inc.,22,228.21,25
+8308,Formaldehyde,Chemicals,A,ChemSupply Co.,8,236.34,15
+8310,Ear Protection,Safety Equipment,D,TechWorld Inc.,35,77.27,44
+8311,Acetone,Chemicals,A,FurniTech,15,242.2,23
+8315,Monitor,Electronics,B,OfficeMax,26,102.41,33
+8316,Analytical Balance,Laboratory,B,LabSource,19,130.23,24
+8317,Benzene,Chemicals,B,LabSource,20,41.64,30
+8319,Formaldehyde,Chemicals,A,ChemSupply Co.,12,110.9,15
+8320,Paper A3,Office Supplies,D,FurniTech,44,47.24,46
+8323,Tablet,Electronics,C,TechWorld Inc.,30,81.35,31
+8324,Paper Towels,Cleaning,C,OfficeMax,20,23.75,26
+8327,Petri Dishes,Laboratory,A,OfficeMax,14,262.02,18
+8329,Test Tubes,Laboratory,A,CleanAll Ltd.,10,246.71,23
+8330,Printer,Electronics,C,ChemSupply Co.,24,98.36,28
+8333,Toilet Paper,Cleaning,B,CleanAll Ltd.,26,115.72,29
+8337,Flask Set,Laboratory,B,FurniTech,10,139.33,17
+8338,Petri Dishes,Laboratory,C,TechWorld Inc.,25,56.56,32
+8343,Pen Set,Office Supplies,C,FurniTech,26,81.82,33
+8352,Floor Cleaner,Cleaning,C,CleanAll Ltd.,26,61.96,38
+8354,Floor Cleaner,Cleaning,B,LabSource,15,129.18,24
+8356,pH Meter,Laboratory,B,ChemSupply Co.,24,142.97,31
+8357,Acetone,Chemicals,A,ChemSupply Co.,10,185.57,12
+8358,Monitor,Electronics,C,ChemSupply Co.,28,63.96,34
+8361,Pen Set,Office Supplies,D,TechWorld Inc.,22,39.77,28
+8362,Ethanol,Chemicals,A,OfficeMax,6,192.87,16
+8363,UPS,Electronics,C,FurniTech,20,36.09,25
+8365,Printer,Electronics,B,CleanAll Ltd.,22,35.85,34
+8366,Fire Extinguisher,Safety Equipment,D,TechWorld Inc.,36,53.98,50
+8369,Pen Set,Office Supplies,C,OfficeMax,28,57.36,30
+8372,Whiteboard,Furniture,C,ChemSupply Co.,20,89.8,32
+8376,Dust Mop,Cleaning,B,FurniTech,14,135.73,16
+8379,Hand Sanitizer,Cleaning,B,LabSource,13,51.95,17
+8381,Binder Clips,Office Supplies,C,FurniTech,29,71.87,40
+8389,Monitor,Electronics,C,CleanAll Ltd.,29,25.7,37
+8390,Chemical Gloves,Safety Equipment,D,LabSource,32,46.7,40
+8396,Glass Cleaner,Cleaning,B,ChemSupply Co.,11,142.48,22
+8399,Formaldehyde,Chemicals,A,CleanAll Ltd.,16,220.66,20
+8400,Petri Dishes,Laboratory,B,OfficeMax,13,46.41,18
+8402,Scissors,Office Supplies,C,LabSource,25,31.15,29
+8404,External Hard Drive,Electronics,D,FurniTech,40,60.1,50
+8406,Hand Sanitizer,Cleaning,C,OfficeMax,20,26.57,39
+8407,Petri Dishes,Laboratory,B,FurniTech,18,70.36,26
+8410,Xylene,Chemicals,B,CleanAll Ltd.,21,133.62,22
+8411,Pen Set,Office Supplies,D,LabSource,31,31.16,42
+8415,Wet Mop,Cleaning,C,TechWorld Inc.,26,27.4,33
+8416,Mouse,Electronics,D,CleanAll Ltd.,37,31.28,40
+8417,Standing Desk,Furniture,D,CleanAll Ltd.,32,55.91,48
+8418,First Aid Kit,Safety Equipment,D,OfficeMax,32,14.95,40
+8424,Flask Set,Laboratory,A,OfficeMax,14,192.97,21
+8426,Pipettes,Laboratory,B,TechWorld Inc.,12,105.59,21
+8435,Ear Protection,Safety Equipment,D,ChemSupply Co.,26,68.52,33
+8440,All-Purpose Cleaner,Cleaning,C,CleanAll Ltd.,23,35.96,27
+8441,Lab Coat,Safety Equipment,D,CleanAll Ltd.,46,18.58,47
+8443,Ethanol,Chemicals,A,FurniTech,8,226.6,11
+8444,Mouse,Electronics,C,TechWorld Inc.,24,39.4,39
+8445,Sodium Hydroxide,Chemicals,A,CleanAll Ltd.,14,83.34,21
+8448,Filing Cabinet,Furniture,C,FurniTech,25,61.63,39
+8454,First Aid Kit,Safety Equipment,D,ChemSupply Co.,20,42.14,25
+8455,Scissors,Office Supplies,C,TechWorld Inc.,23,82.15,38
+8458,Monitor,Electronics,C,CleanAll Ltd.,28,42.89,35
+8460,Petri Dishes,Laboratory,A,FurniTech,11,187.92,23
+8466,Printer,Electronics,C,FurniTech,30,39.53,34
+8467,Safety Helmet,Safety Equipment,D,TechWorld Inc.,31,59.08,37
+8468,Lab Coat,Safety Equipment,D,CleanAll Ltd.,39,44.15,49
+8471,Beakers,Laboratory,C,OfficeMax,32,74.22,40
+8476,Printer,Electronics,C,LabSource,26,99.79,33
+8477,Hydrochloric Acid,Chemicals,B,OfficeMax,13,81.35,17
+8478,Chloroform,Chemicals,B,LabSource,14,127.57,18
+8479,Microscope,Laboratory,A,FurniTech,9,139.94,16
+8482,Trash Bags,Cleaning,B,FurniTech,18,107.9,29
+8483,Trash Bags,Cleaning,B,OfficeMax,19,77.84,25
+8485,External Hard Drive,Electronics,D,FurniTech,28,30.49,36
+8489,Desktop Computer,Electronics,C,ChemSupply Co.,24,54.19,40
+8490,Keyboard,Electronics,B,LabSource,24,118.9,27
+8491,Centrifuge,Laboratory,A,ChemSupply Co.,13,204.56,17
+8498,Toilet Paper,Cleaning,B,FurniTech,17,64.1,34
+8503,Xylene,Chemicals,A,OfficeMax,13,169.14,21
+8505,Microscope,Laboratory,B,TechWorld Inc.,21,147.76,25
+8509,Dust Mop,Cleaning,C,LabSource,30,88.69,36
+8510,Test Tubes,Laboratory,C,TechWorld Inc.,20,98.77,25
+8512,Tablet,Electronics,D,ChemSupply Co.,36,15.92,40
+8516,Centrifuge,Laboratory,B,FurniTech,20,134.4,25
+8518,Office Chair,Furniture,C,CleanAll Ltd.,31,30.94,39
+8525,File Folders,Office Supplies,D,OfficeMax,38,18.25,48
+8527,Methanol,Chemicals,B,LabSource,21,85.09,27
+8529,Floor Cleaner,Cleaning,C,ChemSupply Co.,29,86.92,32
+8531,All-Purpose Cleaner,Cleaning,B,ChemSupply Co.,18,128.6,35
+8532,Analytical Balance,Laboratory,C,ChemSupply Co.,24,87.52,30
+8534,Hydrochloric Acid,Chemicals,A,FurniTech,19,270.0,24
+8535,Disinfectant,Cleaning,B,ChemSupply Co.,27,64.14,35
+8536,Stapler,Office Supplies,D,FurniTech,22,45.96,28
+8537,Floor Cleaner,Cleaning,C,LabSource,20,81.27,31
+8538,Disinfectant,Cleaning,C,LabSource,31,65.26,39
+8539,Safety Helmet,Safety Equipment,D,FurniTech,39,18.72,49
+8540,File Folders,Office Supplies,D,FurniTech,36,13.23,46
+8543,Bunsen Burner,Laboratory,A,TechWorld Inc.,7,292.36,13
+8545,Centrifuge,Laboratory,A,TechWorld Inc.,19,69.96,24
+8548,Flask Set,Laboratory,B,FurniTech,10,109.18,18
+8549,Face Shield,Safety Equipment,D,OfficeMax,32,14.36,36
+8561,Dust Mop,Cleaning,C,ChemSupply Co.,32,59.17,38
+8562,Sodium Hydroxide,Chemicals,B,TechWorld Inc.,13,112.39,17
+8564,Dust Mop,Cleaning,B,FurniTech,22,141.58,26
+8570,Sofa,Furniture,C,ChemSupply Co.,16,55.94,21
+8571,Beakers,Laboratory,A,CleanAll Ltd.,19,284.29,24
+8575,Methanol,Chemicals,B,ChemSupply Co.,18,38.23,26
+8578,Acetone,Chemicals,B,OfficeMax,20,59.88,25
+8579,Paper A3,Office Supplies,C,ChemSupply Co.,29,20.12,36
+8581,Acetone,Chemicals,A,OfficeMax,13,279.98,25
+8582,Centrifuge,Laboratory,C,FurniTech,28,59.72,32
+8583,Binder Clips,Office Supplies,C,CleanAll Ltd.,36,37.73,40
+8590,Respirator,Safety Equipment,D,FurniTech,32,43.58,43
+8596,Tape Dispenser,Office Supplies,D,CleanAll Ltd.,23,11.71,29
+8603,Ethanol,Chemicals,B,OfficeMax,10,48.95,23
+8605,Petri Dishes,Laboratory,B,TechWorld Inc.,14,41.93,30
+8607,Tablet,Electronics,D,OfficeMax,37,5.23,47
+8609,Floor Cleaner,Cleaning,C,CleanAll Ltd.,20,85.89,25
+8611,Desktop Computer,Electronics,B,ChemSupply Co.,22,59.96,28
+8614,Pen Set,Office Supplies,D,CleanAll Ltd.,36,58.31,46
+8615,Toilet Paper,Cleaning,B,CleanAll Ltd.,28,41.12,35
+8620,Toluene,Chemicals,B,LabSource,16,130.63,20
+8621,Scanner,Electronics,D,FurniTech,26,72.52,33
+8622,Paper Towels,Cleaning,B,CleanAll Ltd.,11,46.71,31
+8626,Tablet,Electronics,B,LabSource,18,32.4,23
+8630,UPS,Electronics,B,CleanAll Ltd.,22,64.78,28
+8634,Benzene,Chemicals,A,FurniTech,10,72.95,13
+8643,UPS,Electronics,C,TechWorld Inc.,19,69.33,24
+8647,Bunsen Burner,Laboratory,B,CleanAll Ltd.,18,49.38,26
+8651,UPS,Electronics,B,OfficeMax,20,134.62,25
+8654,File Folders,Office Supplies,C,CleanAll Ltd.,25,43.23,37
+8659,Scanner,Electronics,D,CleanAll Ltd.,39,62.03,43
+8666,Monitor,Electronics,C,LabSource,23,99.99,25
+8668,Keyboard,Electronics,B,LabSource,21,52.96,29
+8670,Conference Table,Furniture,D,FurniTech,33,20.49,42
+8671,Test Tubes,Laboratory,B,LabSource,28,69.36,35
+8674,Flask Set,Laboratory,A,ChemSupply Co.,14,171.13,18
+8677,Hand Sanitizer,Cleaning,B,LabSource,30,143.66,32
+8678,Analytical Balance,Laboratory,A,OfficeMax,20,231.34,24
+8681,Wet Mop,Cleaning,C,CleanAll Ltd.,29,16.1,39
+8682,Xylene,Chemicals,A,ChemSupply Co.,7,82.17,11
+8683,Paper Towels,Cleaning,C,ChemSupply Co.,26,60.53,35
+8684,Sofa,Furniture,D,LabSource,23,35.57,29
+8685,Analytical Balance,Laboratory,C,ChemSupply Co.,27,96.24,37
+8686,Laptop,Electronics,D,FurniTech,39,28.58,49
+8691,Beakers,Laboratory,B,CleanAll Ltd.,16,111.78,35
+8694,Office Desk,Furniture,C,CleanAll Ltd.,23,48.29,31
+8697,Scissors,Office Supplies,C,OfficeMax,22,81.23,28
+8700,Floor Cleaner,Cleaning,B,LabSource,20,74.01,25
+8716,Xylene,Chemicals,B,OfficeMax,24,74.8,30
+8718,Paper A3,Office Supplies,D,LabSource,26,54.85,33
+8721,Face Shield,Safety Equipment,D,FurniTech,23,38.97,29
+8726,Coffee Table,Furniture,D,LabSource,32,27.47,41
+8728,Toluene,Chemicals,B,TechWorld Inc.,14,133.81,29
+8729,All-Purpose Cleaner,Cleaning,C,CleanAll Ltd.,34,58.31,35
+8731,Centrifuge,Laboratory,A,LabSource,20,153.91,25
+8732,Sofa,Furniture,C,TechWorld Inc.,23,92.94,29
+8734,Paper A3,Office Supplies,C,ChemSupply Co.,17,45.24,22
+8738,Trash Bags,Cleaning,B,LabSource,11,70.46,28
+8741,Fire Extinguisher,Safety Equipment,D,LabSource,39,12.92,49
+8745,Coffee Table,Furniture,C,ChemSupply Co.,29,34.71,32
+8750,Xylene,Chemicals,B,OfficeMax,10,101.97,17
+8751,Bunsen Burner,Laboratory,A,ChemSupply Co.,17,203.33,22
+8759,Cork Board,Furniture,D,CleanAll Ltd.,32,68.95,47
+8760,Desktop Computer,Electronics,C,CleanAll Ltd.,33,27.6,36
+8761,Xylene,Chemicals,B,LabSource,21,54.38,32
+8777,Disinfectant,Cleaning,C,FurniTech,27,87.04,32
+8780,Methanol,Chemicals,A,TechWorld Inc.,10,273.71,22
+8782,Dust Mop,Cleaning,B,OfficeMax,23,98.47,29
+8783,Glass Cleaner,Cleaning,C,OfficeMax,27,86.89,34
+8785,Benzene,Chemicals,A,OfficeMax,17,238.07,19
+8786,Benzene,Chemicals,A,TechWorld Inc.,7,220.4,16
+8788,Xylene,Chemicals,B,TechWorld Inc.,13,136.2,17
+8793,Methanol,Chemicals,A,ChemSupply Co.,16,144.46,21
+8794,Formaldehyde,Chemicals,B,CleanAll Ltd.,20,103.92,25
+8808,Respirator,Safety Equipment,D,CleanAll Ltd.,30,26.12,44
+8810,Toilet Paper,Cleaning,B,LabSource,16,138.92,21
+8814,Methanol,Chemicals,B,OfficeMax,19,31.47,30
+8816,Paper A4,Office Supplies,C,ChemSupply Co.,20,45.05,26
+8828,Lab Coat,Safety Equipment,D,TechWorld Inc.,24,42.13,31
+8831,Ear Protection,Safety Equipment,D,TechWorld Inc.,30,58.48,34
+8833,Paper Towels,Cleaning,C,CleanAll Ltd.,28,77.22,30
+8835,All-Purpose Cleaner,Cleaning,C,CleanAll Ltd.,29,37.52,36
+8837,Respirator,Safety Equipment,D,LabSource,33,78.0,42
+8839,Ear Protection,Safety Equipment,D,FurniTech,40,79.91,44
+8843,Acetone,Chemicals,A,FurniTech,15,296.03,16
+8844,Office Desk,Furniture,D,FurniTech,33,77.38,42
+8845,Wet Mop,Cleaning,B,TechWorld Inc.,18,83.71,30
+8847,Floor Cleaner,Cleaning,C,FurniTech,28,79.03,35
+8849,Acetone,Chemicals,B,FurniTech,12,87.4,16
+8854,Office Desk,Furniture,D,FurniTech,35,59.04,39
+8856,Floor Cleaner,Cleaning,B,OfficeMax,10,61.09,28
+8857,Toluene,Chemicals,B,CleanAll Ltd.,17,79.05,29
+8860,Filing Cabinet,Furniture,D,LabSource,22,28.15,28
+8863,Ethanol,Chemicals,A,CleanAll Ltd.,18,213.69,23
+8864,Emergency Eyewash,Safety Equipment,D,CleanAll Ltd.,29,30.94,37
+8866,Bunsen Burner,Laboratory,B,OfficeMax,17,69.34,22
+8875,Toluene,Chemicals,A,ChemSupply Co.,12,259.31,21
+8876,Safety Helmet,Safety Equipment,D,LabSource,34,26.38,43
+8877,Microscope,Laboratory,A,ChemSupply Co.,16,177.25,23
+8879,Coffee Table,Furniture,C,FurniTech,33,65.93,34
+8880,Tape Dispenser,Office Supplies,D,FurniTech,36,48.14,48
+8883,Pipettes,Laboratory,C,TechWorld Inc.,20,28.41,25
+8885,Hydrochloric Acid,Chemicals,B,TechWorld Inc.,18,121.78,28
+8888,Flask Set,Laboratory,C,CleanAll Ltd.,21,65.41,35
+8889,Monitor,Electronics,B,OfficeMax,29,55.28,31
+8890,Microscope,Laboratory,C,TechWorld Inc.,23,69.06,39
+8894,External Hard Drive,Electronics,B,CleanAll Ltd.,16,129.75,29
+8898,Monitor,Electronics,D,ChemSupply Co.,24,69.96,30
+8905,Pipettes,Laboratory,A,FurniTech,8,155.68,11
+8911,Keyboard,Electronics,C,CleanAll Ltd.,21,61.9,27
+8912,Hydrochloric Acid,Chemicals,B,OfficeMax,23,66.62,26
+8914,Formaldehyde,Chemicals,A,OfficeMax,17,86.33,22
+8916,Sodium Hydroxide,Chemicals,A,TechWorld Inc.,13,256.71,18
+8917,Dust Mop,Cleaning,C,OfficeMax,24,71.94,31
+8919,Pipettes,Laboratory,B,TechWorld Inc.,23,64.18,34
+8920,Pipettes,Laboratory,B,TechWorld Inc.,13,78.78,17
+8922,Microscope,Laboratory,A,ChemSupply Co.,5,221.41,11
+8925,Ethanol,Chemicals,A,FurniTech,8,108.47,19
+8928,Xylene,Chemicals,B,LabSource,12,103.6,16
+8936,Stapler,Office Supplies,D,OfficeMax,33,60.04,42
+8940,Ethanol,Chemicals,A,TechWorld Inc.,19,143.06,20
+8944,Ethanol,Chemicals,A,FurniTech,7,168.22,14
+8947,Toluene,Chemicals,B,FurniTech,26,128.84,29
+8951,Benzene,Chemicals,A,CleanAll Ltd.,19,257.16,20
+8952,Analytical Balance,Laboratory,A,LabSource,13,254.78,14
+8954,Paper A3,Office Supplies,C,CleanAll Ltd.,29,51.09,39
+8960,Office Desk,Furniture,C,TechWorld Inc.,25,79.18,32
+8961,Petri Dishes,Laboratory,A,FurniTech,17,132.43,25
+8963,Safety Goggles,Safety Equipment,D,CleanAll Ltd.,30,52.55,38
+8964,Bookshelf,Furniture,C,LabSource,30,60.46,38
+8973,Ethanol,Chemicals,A,FurniTech,10,123.88,15
+8974,Face Shield,Safety Equipment,D,CleanAll Ltd.,31,12.16,39
+8976,Disinfectant,Cleaning,C,CleanAll Ltd.,24,58.19,31
+8979,Toluene,Chemicals,B,TechWorld Inc.,21,149.99,26
+8983,Toluene,Chemicals,A,TechWorld Inc.,17,177.13,25
+8984,Test Tubes,Laboratory,A,FurniTech,9,183.0,18
+8985,Safety Helmet,Safety Equipment,D,OfficeMax,39,18.98,45
+8990,Laptop,Electronics,B,CleanAll Ltd.,12,100.08,30
+8991,Stapler,Office Supplies,C,FurniTech,16,94.57,21
+8997,Methanol,Chemicals,B,CleanAll Ltd.,16,118.6,30
+9000,Marker Set,Office Supplies,C,TechWorld Inc.,21,55.31,27
+9003,Analytical Balance,Laboratory,A,TechWorld Inc.,8,207.57,11
+9009,Laptop,Electronics,B,TechWorld Inc.,28,111.47,35
+9013,Microscope,Laboratory,A,ChemSupply Co.,10,292.66,24
+9014,Emergency Eyewash,Safety Equipment,D,OfficeMax,36,20.27,45
+9023,Sodium Hydroxide,Chemicals,B,OfficeMax,16,140.94,21
+9028,Hydrochloric Acid,Chemicals,B,LabSource,13,45.33,19
+9031,Sofa,Furniture,C,ChemSupply Co.,27,27.91,34
+9037,Whiteboard,Furniture,C,CleanAll Ltd.,21,20.09,27
+9039,Chloroform,Chemicals,B,OfficeMax,14,138.36,30
+9041,Desktop Computer,Electronics,C,CleanAll Ltd.,20,21.32,22
+9042,Pipettes,Laboratory,B,CleanAll Ltd.,19,125.32,24
+9044,Paper Towels,Cleaning,B,LabSource,15,99.11,19
+9047,Floor Cleaner,Cleaning,B,LabSource,27,115.32,34
+9055,Keyboard,Electronics,D,LabSource,26,66.92,33
+9056,Scanner,Electronics,C,TechWorld Inc.,23,69.85,24
+9059,Xylene,Chemicals,A,CleanAll Ltd.,8,202.78,18
+9063,Hydrochloric Acid,Chemicals,B,LabSource,22,129.48,25
+9065,Bookshelf,Furniture,D,CleanAll Ltd.,36,68.6,46
+9072,UPS,Electronics,B,CleanAll Ltd.,18,91.65,30
+9075,Test Tubes,Laboratory,B,OfficeMax,12,100.65,15
+9076,Benzene,Chemicals,A,CleanAll Ltd.,6,154.44,23
+9080,Acetone,Chemicals,B,TechWorld Inc.,16,59.81,20
+9084,Bunsen Burner,Laboratory,A,LabSource,10,202.46,17
+9088,Respirator,Safety Equipment,D,FurniTech,25,63.01,32
+9089,Conference Table,Furniture,C,FurniTech,28,85.38,40
+9091,Scanner,Electronics,D,TechWorld Inc.,32,8.78,40
+9093,Sofa,Furniture,D,TechWorld Inc.,30,17.68,49
+9094,Formaldehyde,Chemicals,B,FurniTech,19,34.62,20
+9098,Face Shield,Safety Equipment,D,CleanAll Ltd.,38,24.67,48
+9099,Laptop,Electronics,B,FurniTech,25,79.72,31
+9102,Acetone,Chemicals,A,CleanAll Ltd.,10,97.3,17
+9106,Ethanol,Chemicals,A,OfficeMax,14,211.25,21
+9108,Wet Mop,Cleaning,C,CleanAll Ltd.,33,42.01,34
+9111,Analytical Balance,Laboratory,B,CleanAll Ltd.,11,85.46,29
+9116,pH Meter,Laboratory,A,FurniTech,13,179.95,23
+9124,Filing Cabinet,Furniture,D,TechWorld Inc.,32,13.02,37
+9125,Keyboard,Electronics,D,FurniTech,40,77.66,49
+9127,Tablet,Electronics,C,TechWorld Inc.,32,58.98,40
+9130,Monitor,Electronics,D,FurniTech,34,36.01,50
+9132,Dust Mop,Cleaning,B,OfficeMax,13,110.75,33
+9138,Ethanol,Chemicals,B,TechWorld Inc.,23,40.98,32
+9140,Centrifuge,Laboratory,A,ChemSupply Co.,12,278.14,16
+9141,Pen Set,Office Supplies,D,ChemSupply Co.,34,71.11,44
+9143,Sodium Hydroxide,Chemicals,B,TechWorld Inc.,22,33.26,23
+9146,Formaldehyde,Chemicals,A,CleanAll Ltd.,9,82.56,22
+9149,Toilet Paper,Cleaning,B,TechWorld Inc.,21,37.79,27
+9150,Petri Dishes,Laboratory,B,TechWorld Inc.,13,96.99,15
+9152,Hand Sanitizer,Cleaning,C,ChemSupply Co.,27,89.78,35
+9155,Cork Board,Furniture,C,OfficeMax,28,74.92,33
+9156,Sodium Hydroxide,Chemicals,B,FurniTech,15,117.71,29
+9162,Desktop Computer,Electronics,B,FurniTech,33,144.65,35
+9164,Wet Mop,Cleaning,C,FurniTech,22,36.91,30
+9165,Mouse,Electronics,B,CleanAll Ltd.,11,145.79,26
+9171,Bunsen Burner,Laboratory,B,LabSource,12,40.45,21
+9173,Methanol,Chemicals,B,LabSource,10,93.81,34
+9175,Xylene,Chemicals,A,OfficeMax,6,227.19,25
+9176,Toluene,Chemicals,B,LabSource,19,99.07,24
+9179,pH Meter,Laboratory,A,CleanAll Ltd.,23,186.61,24
+9180,Acetone,Chemicals,B,FurniTech,18,71.77,34
+9181,Desktop Computer,Electronics,B,LabSource,10,37.27,31
+9182,Lab Coat,Safety Equipment,D,OfficeMax,36,48.17,49
+9183,Pipettes,Laboratory,B,ChemSupply Co.,18,52.22,24
+9184,Pipettes,Laboratory,A,FurniTech,7,91.51,16
+9188,Benzene,Chemicals,B,CleanAll Ltd.,29,73.3,33
+9189,Dust Mop,Cleaning,B,TechWorld Inc.,23,53.38,35
+9194,Marker Set,Office Supplies,C,TechWorld Inc.,22,26.41,28
+9207,Paper Towels,Cleaning,C,FurniTech,20,22.06,26
+9209,Ethanol,Chemicals,A,LabSource,10,288.41,13
+9212,Marker Set,Office Supplies,D,LabSource,32,67.35,38
+9213,Tape Dispenser,Office Supplies,D,FurniTech,30,24.39,39
+9215,Mouse,Electronics,D,CleanAll Ltd.,32,45.25,50
+9219,Analytical Balance,Laboratory,B,LabSource,21,51.62,27
+9226,Desktop Computer,Electronics,C,CleanAll Ltd.,19,29.42,24
+9227,Coffee Table,Furniture,D,LabSource,25,5.58,32
+9229,Xylene,Chemicals,B,TechWorld Inc.,17,121.38,31
+9231,Sofa,Furniture,C,LabSource,23,72.21,27
+9235,Bookshelf,Furniture,C,CleanAll Ltd.,22,58.13,28
+9237,Xylene,Chemicals,B,OfficeMax,23,143.07,35
+9238,Tablet,Electronics,B,FurniTech,17,45.36,20
+9245,Hand Sanitizer,Cleaning,C,ChemSupply Co.,25,81.44,30
+9246,Xylene,Chemicals,B,OfficeMax,30,136.74,34
+9248,Toilet Paper,Cleaning,C,ChemSupply Co.,29,77.7,30
+9250,Desktop Computer,Electronics,B,OfficeMax,24,104.47,29
+9251,Conference Table,Furniture,C,CleanAll Ltd.,32,19.69,37
+9252,External Hard Drive,Electronics,B,CleanAll Ltd.,25,71.48,34
+9254,Disinfectant,Cleaning,B,ChemSupply Co.,14,66.72,29
+9257,External Hard Drive,Electronics,C,LabSource,16,58.74,20
+9258,Formaldehyde,Chemicals,B,ChemSupply Co.,21,102.48,27
+9261,Xylene,Chemicals,B,LabSource,21,62.17,32
+9262,Laptop,Electronics,B,CleanAll Ltd.,23,128.28,29
+9263,Monitor,Electronics,B,TechWorld Inc.,29,133.43,35
+9264,Flask Set,Laboratory,A,TechWorld Inc.,18,245.9,20
+9265,Sodium Hydroxide,Chemicals,B,FurniTech,23,70.92,31
+9268,Hand Sanitizer,Cleaning,C,ChemSupply Co.,22,61.18,28
+9269,Desktop Computer,Electronics,C,FurniTech,29,65.17,40
+9277,Fire Extinguisher,Safety Equipment,D,LabSource,39,63.78,49
+9280,Floor Cleaner,Cleaning,B,ChemSupply Co.,19,55.38,24
+9283,Test Tubes,Laboratory,B,CleanAll Ltd.,20,66.92,30
+9287,pH Meter,Laboratory,A,ChemSupply Co.,14,119.23,20
+9291,Keyboard,Electronics,B,CleanAll Ltd.,14,52.24,29
+9295,Xylene,Chemicals,B,TechWorld Inc.,14,116.74,30
+9296,Acetone,Chemicals,A,FurniTech,16,225.34,21
+9303,pH Meter,Laboratory,A,LabSource,19,155.43,24
+9306,Tablet,Electronics,B,OfficeMax,24,115.44,31
+9307,Marker Set,Office Supplies,D,ChemSupply Co.,34,29.34,48
+9312,Dust Mop,Cleaning,B,TechWorld Inc.,29,82.7,35
+9315,File Folders,Office Supplies,C,FurniTech,20,86.36,25
+9317,Binder Clips,Office Supplies,C,ChemSupply Co.,22,74.06,29
+9319,Whiteboard,Furniture,C,ChemSupply Co.,24,58.0,31
+9323,Toilet Paper,Cleaning,B,LabSource,20,53.93,26
+9325,Analytical Balance,Laboratory,A,TechWorld Inc.,12,291.13,16
+9336,Chloroform,Chemicals,B,OfficeMax,14,121.1,26
+9340,Sodium Hydroxide,Chemicals,B,FurniTech,13,61.59,32
+9344,Tablet,Electronics,B,TechWorld Inc.,24,109.51,31
+9345,Whiteboard,Furniture,C,OfficeMax,30,73.49,36
+9352,Marker Set,Office Supplies,C,OfficeMax,20,84.1,37
+9357,First Aid Kit,Safety Equipment,D,LabSource,31,67.83,34
+9358,Benzene,Chemicals,A,ChemSupply Co.,13,142.95,24
+9360,Monitor,Electronics,B,LabSource,16,106.3,33
+9364,Ethanol,Chemicals,A,LabSource,8,196.23,11
+9367,Analytical Balance,Laboratory,C,CleanAll Ltd.,19,48.2,24
+9370,Bookshelf,Furniture,D,TechWorld Inc.,42,59.08,50
+9372,Trash Bags,Cleaning,C,OfficeMax,24,20.58,34
+9376,All-Purpose Cleaner,Cleaning,C,FurniTech,20,16.93,26
+9378,Monitor,Electronics,D,LabSource,37,75.32,47
+9380,Staples Box,Office Supplies,D,OfficeMax,39,55.68,49
+9382,Lab Coat,Safety Equipment,D,ChemSupply Co.,25,34.55,32
+9386,Analytical Balance,Laboratory,B,FurniTech,19,83.68,33
+9388,Centrifuge,Laboratory,B,TechWorld Inc.,18,65.29,23
+9399,Glass Cleaner,Cleaning,B,CleanAll Ltd.,25,111.98,26
+9407,All-Purpose Cleaner,Cleaning,C,CleanAll Ltd.,32,48.24,34
+9416,Disinfectant,Cleaning,C,OfficeMax,16,56.47,20
+9419,Safety Goggles,Safety Equipment,D,OfficeMax,27,51.43,34
+9420,Bookshelf,Furniture,D,FurniTech,29,28.7,37
+9421,Centrifuge,Laboratory,B,LabSource,27,142.26,35
+9422,Chloroform,Chemicals,B,TechWorld Inc.,30,89.46,34
+9426,Wet Mop,Cleaning,B,TechWorld Inc.,16,124.33,21
+9427,Test Tubes,Laboratory,B,TechWorld Inc.,30,119.47,34
+9428,Floor Cleaner,Cleaning,C,ChemSupply Co.,28,46.15,36
+9430,Scissors,Office Supplies,D,OfficeMax,37,5.52,44
+9431,Centrifuge,Laboratory,A,LabSource,12,64.55,15
+9434,External Hard Drive,Electronics,C,FurniTech,28,59.37,35
+9437,Hydrochloric Acid,Chemicals,B,CleanAll Ltd.,25,51.91,31
+9438,Petri Dishes,Laboratory,B,TechWorld Inc.,25,49.01,35
+9441,pH Meter,Laboratory,C,OfficeMax,31,22.84,32
+9444,Fire Extinguisher,Safety Equipment,D,LabSource,35,58.6,39
+9445,Printer,Electronics,B,FurniTech,28,108.5,33
+9456,Tablet,Electronics,B,ChemSupply Co.,24,73.9,30
+9458,Scissors,Office Supplies,C,ChemSupply Co.,25,47.76,32
+9460,Glass Cleaner,Cleaning,B,OfficeMax,12,123.89,15
+9468,Formaldehyde,Chemicals,B,OfficeMax,11,148.51,28
+9470,Laptop,Electronics,B,LabSource,14,128.46,28
+9474,Flask Set,Laboratory,A,CleanAll Ltd.,14,181.12,21
+9475,All-Purpose Cleaner,Cleaning,B,LabSource,12,104.45,21
+9476,Emergency Eyewash,Safety Equipment,D,LabSource,32,38.59,40
+9478,pH Meter,Laboratory,A,OfficeMax,10,269.19,13
+9484,Sodium Hydroxide,Chemicals,A,CleanAll Ltd.,9,293.83,24
+9487,Bookshelf,Furniture,C,TechWorld Inc.,30,33.69,40
+9488,Fire Extinguisher,Safety Equipment,D,FurniTech,40,54.63,50
+9490,Dust Mop,Cleaning,B,CleanAll Ltd.,21,81.33,22
+9492,Hydrochloric Acid,Chemicals,B,LabSource,13,85.07,24
+9497,Flask Set,Laboratory,A,FurniTech,18,115.26,19
+9503,Emergency Eyewash,Safety Equipment,D,FurniTech,38,67.08,48
+9504,Conference Table,Furniture,C,ChemSupply Co.,20,16.72,31
+9506,Coffee Table,Furniture,C,OfficeMax,20,16.38,25
+9511,Monitor,Electronics,D,TechWorld Inc.,42,15.38,50
+9513,Office Chair,Furniture,D,TechWorld Inc.,35,42.49,44
+9515,Desktop Computer,Electronics,B,ChemSupply Co.,27,128.89,34
+9517,All-Purpose Cleaner,Cleaning,C,CleanAll Ltd.,18,73.45,23
+9518,Trash Bags,Cleaning,C,OfficeMax,32,24.45,40
+9519,Hydrochloric Acid,Chemicals,A,OfficeMax,13,283.98,24
+9522,Benzene,Chemicals,B,ChemSupply Co.,18,34.01,23
+9523,Methanol,Chemicals,B,ChemSupply Co.,14,124.48,18
+9524,Trash Bags,Cleaning,B,FurniTech,17,75.1,24
+9525,Formaldehyde,Chemicals,A,ChemSupply Co.,9,150.56,22
+9532,Safety Helmet,Safety Equipment,D,LabSource,29,30.07,37
+9534,Filing Cabinet,Furniture,C,OfficeMax,38,16.59,39
+9538,Ethanol,Chemicals,B,OfficeMax,21,117.81,28
+9542,Scissors,Office Supplies,D,CleanAll Ltd.,33,21.67,42
+9549,Microscope,Laboratory,C,LabSource,22,81.24,28
+9551,Trash Bags,Cleaning,B,FurniTech,17,57.73,19
+9556,Analytical Balance,Laboratory,B,FurniTech,24,103.11,30
+9557,Emergency Eyewash,Safety Equipment,D,CleanAll Ltd.,42,13.95,46
+9559,Desktop Computer,Electronics,C,FurniTech,31,54.99,35
+9563,Floor Cleaner,Cleaning,B,FurniTech,16,83.38,32
+9564,Ear Protection,Safety Equipment,D,TechWorld Inc.,28,13.28,35
+9565,Fire Extinguisher,Safety Equipment,D,OfficeMax,39,33.23,49
+9569,Acetone,Chemicals,B,LabSource,16,40.98,24
+9570,All-Purpose Cleaner,Cleaning,B,CleanAll Ltd.,23,73.67,25
+9573,Pipettes,Laboratory,A,FurniTech,12,153.1,17
+9574,Toilet Paper,Cleaning,B,OfficeMax,15,129.76,33
+9577,pH Meter,Laboratory,A,LabSource,11,213.26,22
+9578,Flask Set,Laboratory,B,CleanAll Ltd.,17,103.95,35
+9584,Toilet Paper,Cleaning,B,TechWorld Inc.,19,35.95,27
+9585,Petri Dishes,Laboratory,B,CleanAll Ltd.,19,147.96,33
+9588,Safety Helmet,Safety Equipment,D,TechWorld Inc.,35,11.4,44
+9593,Coffee Table,Furniture,D,OfficeMax,32,51.76,41
+9602,Trash Bags,Cleaning,B,OfficeMax,27,120.23,28
+9604,Filing Cabinet,Furniture,C,FurniTech,17,24.27,22
+9608,Office Chair,Furniture,D,FurniTech,20,29.93,26
+9610,Filing Cabinet,Furniture,C,LabSource,28,57.24,35
+9611,Paper Towels,Cleaning,C,OfficeMax,24,54.13,28
+9612,Laptop,Electronics,B,FurniTech,10,55.98,31
+9618,Methanol,Chemicals,B,CleanAll Ltd.,19,115.8,24
+9619,Test Tubes,Laboratory,A,ChemSupply Co.,15,204.05,21
+9622,Safety Helmet,Safety Equipment,D,OfficeMax,43,48.77,48
+9623,Centrifuge,Laboratory,A,OfficeMax,9,259.34,11
+9626,Scissors,Office Supplies,C,FurniTech,25,57.51,32
+9630,Hydrochloric Acid,Chemicals,B,ChemSupply Co.,25,119.28,31
+9632,Scissors,Office Supplies,C,FurniTech,16,22.25,21
+9638,External Hard Drive,Electronics,C,OfficeMax,32,74.58,40
+9641,External Hard Drive,Electronics,B,TechWorld Inc.,19,37.38,26
+9642,Ear Protection,Safety Equipment,D,ChemSupply Co.,26,15.84,33
+9643,UPS,Electronics,C,ChemSupply Co.,23,72.62,29
+9646,Toilet Paper,Cleaning,B,TechWorld Inc.,27,131.56,34
+9650,pH Meter,Laboratory,A,OfficeMax,13,159.58,15
+9652,Trash Bags,Cleaning,B,FurniTech,13,56.49,34
+9654,Printer,Electronics,B,FurniTech,11,124.17,27
+9655,UPS,Electronics,B,CleanAll Ltd.,20,129.2,35
+9656,External Hard Drive,Electronics,B,ChemSupply Co.,27,65.98,34
+9660,Safety Goggles,Safety Equipment,D,OfficeMax,24,52.07,30
+9662,Ear Protection,Safety Equipment,D,ChemSupply Co.,31,24.19,39
+9666,Microscope,Laboratory,A,OfficeMax,17,64.89,22
+9669,Trash Bags,Cleaning,C,FurniTech,27,36.06,35
+9671,UPS,Electronics,B,CleanAll Ltd.,17,118.71,24
+9676,Xylene,Chemicals,A,LabSource,9,102.51,12
+9682,Tablet,Electronics,C,FurniTech,30,84.03,33
+9685,Paper A3,Office Supplies,D,OfficeMax,38,37.43,48
+9690,Sofa,Furniture,C,ChemSupply Co.,26,51.76,38
+9693,Filing Cabinet,Furniture,D,ChemSupply Co.,44,26.63,46
+9694,Flask Set,Laboratory,B,LabSource,23,128.12,31
+9695,Ear Protection,Safety Equipment,D,OfficeMax,34,34.35,48
+9697,Chloroform,Chemicals,B,FurniTech,31,95.3,33
+9698,Sodium Hydroxide,Chemicals,A,LabSource,11,181.59,18
+9702,Chemical Gloves,Safety Equipment,D,OfficeMax,36,17.31,45
+9707,Marker Set,Office Supplies,D,LabSource,38,23.78,48
+9715,File Folders,Office Supplies,D,TechWorld Inc.,40,64.19,48
+9717,Petri Dishes,Laboratory,A,ChemSupply Co.,18,101.03,23
+9722,Safety Goggles,Safety Equipment,D,FurniTech,31,53.55,34
+9725,File Folders,Office Supplies,D,CleanAll Ltd.,21,8.75,27
+9726,Benzene,Chemicals,A,TechWorld Inc.,6,105.74,17
+9727,Ethanol,Chemicals,B,FurniTech,15,116.7,23
+9728,Laptop,Electronics,C,FurniTech,20,80.29,25
+9729,Paper A4,Office Supplies,C,ChemSupply Co.,20,68.12,39
+9730,Sodium Hydroxide,Chemicals,B,LabSource,23,131.93,35
+9733,Ear Protection,Safety Equipment,D,OfficeMax,34,53.31,44
+9734,Disinfectant,Cleaning,C,ChemSupply Co.,29,78.72,30
+9742,Scanner,Electronics,B,FurniTech,26,98.42,33
+9743,Keyboard,Electronics,B,CleanAll Ltd.,14,110.81,34
+9745,Tape Dispenser,Office Supplies,C,OfficeMax,16,91.56,21
+9746,Desktop Computer,Electronics,C,LabSource,23,48.32,39
+9757,Chemical Gloves,Safety Equipment,D,TechWorld Inc.,45,16.1,47
+9763,Wet Mop,Cleaning,B,CleanAll Ltd.,19,53.25,24
+9767,Laptop,Electronics,B,ChemSupply Co.,15,145.47,27
+9768,Tablet,Electronics,D,CleanAll Ltd.,35,44.24,38
+9771,Pipettes,Laboratory,B,CleanAll Ltd.,25,89.67,32
+9774,Toluene,Chemicals,B,CleanAll Ltd.,24,138.07,30
+9775,Dust Mop,Cleaning,C,OfficeMax,28,91.28,35
+9777,Test Tubes,Laboratory,B,ChemSupply Co.,20,50.98,26
+9778,All-Purpose Cleaner,Cleaning,C,LabSource,29,48.56,34
+9781,Safety Helmet,Safety Equipment,D,FurniTech,39,46.12,49
+9790,Microscope,Laboratory,B,FurniTech,10,40.4,23
+9794,Bunsen Burner,Laboratory,C,ChemSupply Co.,21,98.48,30
+9795,Stapler,Office Supplies,D,LabSource,28,67.72,35
+9796,Floor Cleaner,Cleaning,B,TechWorld Inc.,10,135.39,34
+9798,Petri Dishes,Laboratory,A,ChemSupply Co.,16,124.01,24
+9803,Cork Board,Furniture,C,FurniTech,24,75.72,31
+9805,Formaldehyde,Chemicals,A,LabSource,9,96.5,16
+9809,Emergency Eyewash,Safety Equipment,D,TechWorld Inc.,43,49.38,44
+9814,Disinfectant,Cleaning,B,ChemSupply Co.,23,63.46,29
+9815,Office Desk,Furniture,C,FurniTech,21,67.62,27
+9820,Chemical Gloves,Safety Equipment,D,TechWorld Inc.,21,79.35,27
+9827,Petri Dishes,Laboratory,B,OfficeMax,12,114.47,16
+9831,Stapler,Office Supplies,D,FurniTech,35,72.31,46
+9835,Xylene,Chemicals,B,CleanAll Ltd.,14,86.67,20
+9839,Pen Set,Office Supplies,C,OfficeMax,37,54.16,38
+9847,Keyboard,Electronics,D,CleanAll Ltd.,34,29.53,50
+9852,Toluene,Chemicals,A,FurniTech,7,130.24,23
+9853,Sodium Hydroxide,Chemicals,A,ChemSupply Co.,6,231.02,19
+9855,Cork Board,Furniture,D,TechWorld Inc.,26,57.3,33
+9857,Petri Dishes,Laboratory,B,CleanAll Ltd.,12,49.38,23
+9858,Bunsen Burner,Laboratory,B,TechWorld Inc.,26,117.96,33
+9863,Analytical Balance,Laboratory,A,CleanAll Ltd.,14,141.47,22
+9864,Monitor,Electronics,B,CleanAll Ltd.,16,44.55,21
+9867,Standing Desk,Furniture,C,LabSource,18,49.94,23
+9881,Sodium Hydroxide,Chemicals,B,ChemSupply Co.,25,129.96,34
+9883,Mouse,Electronics,B,TechWorld Inc.,24,126.39,31
+9884,Ethanol,Chemicals,A,LabSource,6,266.65,20
+9886,Analytical Balance,Laboratory,A,ChemSupply Co.,15,272.75,21
+9887,Hydrochloric Acid,Chemicals,B,TechWorld Inc.,11,80.92,30
+9893,Toilet Paper,Cleaning,B,FurniTech,29,115.27,33
+9894,Face Shield,Safety Equipment,D,ChemSupply Co.,42,22.47,43
+9897,Fire Extinguisher,Safety Equipment,D,LabSource,30,44.16,44
+9902,Toilet Paper,Cleaning,B,FurniTech,14,135.06,24
+9903,Respirator,Safety Equipment,D,TechWorld Inc.,41,62.97,43
+9904,Mouse,Electronics,B,FurniTech,24,94.11,35
+9905,Centrifuge,Laboratory,A,ChemSupply Co.,14,248.15,16
+9911,Lab Coat,Safety Equipment,D,LabSource,20,51.51,25
+9914,Glass Cleaner,Cleaning,B,OfficeMax,15,128.25,19
+9920,Paper Towels,Cleaning,B,LabSource,21,65.6,27
+9921,Disinfectant,Cleaning,B,LabSource,20,39.07,25
+9923,Acetone,Chemicals,B,OfficeMax,17,55.0,22
+9924,Hydrochloric Acid,Chemicals,A,CleanAll Ltd.,6,226.36,11
+9928,Ethanol,Chemicals,B,ChemSupply Co.,14,92.05,33
+9930,Paper Towels,Cleaning,C,OfficeMax,20,47.51,25
+9943,Tablet,Electronics,C,CleanAll Ltd.,26,41.72,39
+9944,Formaldehyde,Chemicals,B,TechWorld Inc.,17,82.3,22
+9948,Xylene,Chemicals,A,OfficeMax,15,266.34,16
+9953,Laptop,Electronics,D,FurniTech,26,76.31,33
+9958,Bunsen Burner,Laboratory,C,ChemSupply Co.,20,85.73,30
+9960,Office Desk,Furniture,D,FurniTech,36,71.89,46
+9966,External Hard Drive,Electronics,D,TechWorld Inc.,33,9.05,44
+9967,Flask Set,Laboratory,A,LabSource,15,209.55,18
+9968,Benzene,Chemicals,B,FurniTech,12,48.72,16
+9971,Hydrochloric Acid,Chemicals,B,FurniTech,13,126.0,28
+9972,Pipettes,Laboratory,B,ChemSupply Co.,29,48.8,32
+9974,UPS,Electronics,D,FurniTech,21,18.64,27
+9976,Sodium Hydroxide,Chemicals,A,LabSource,14,114.06,18
+9979,Keyboard,Electronics,D,TechWorld Inc.,20,55.11,25
+9984,Microscope,Laboratory,B,OfficeMax,12,134.65,15
+9985,Sodium Hydroxide,Chemicals,B,ChemSupply Co.,21,129.09,32
+9986,Binder Clips,Office Supplies,C,CleanAll Ltd.,20,97.7,23
+9990,Sodium Hydroxide,Chemicals,B,CleanAll Ltd.,26,137.38,35
+9991,Coffee Table,Furniture,C,TechWorld Inc.,30,66.36,35
+9992,Microscope,Laboratory,A,ChemSupply Co.,8,182.73,10
+9994,Glass Cleaner,Cleaning,B,OfficeMax,28,93.59,33
+10008,Flask Set,Laboratory,B,ChemSupply Co.,24,74.87,30
+10009,Standing Desk,Furniture,D,OfficeMax,25,8.52,32
+10011,Keyboard,Electronics,B,LabSource,23,130.88,26
+10012,Printer,Electronics,B,TechWorld Inc.,16,124.95,26
+10013,Bunsen Burner,Laboratory,C,ChemSupply Co.,18,73.81,23
+10015,Laptop,Electronics,D,ChemSupply Co.,32,78.52,41
+10016,Staples Box,Office Supplies,C,ChemSupply Co.,17,27.47,22
+10018,Laptop,Electronics,B,OfficeMax,26,146.96,27
+10019,Monitor,Electronics,B,CleanAll Ltd.,15,100.0,34
+10020,Sodium Hydroxide,Chemicals,B,CleanAll Ltd.,17,32.75,34
+10023,External Hard Drive,Electronics,C,FurniTech,20,82.16,25
+10024,Centrifuge,Laboratory,A,ChemSupply Co.,17,162.74,24
+10025,Monitor,Electronics,D,CleanAll Ltd.,20,28.9,25
+10028,Lab Coat,Safety Equipment,D,CleanAll Ltd.,35,46.11,44
+10031,Acetone,Chemicals,A,LabSource,8,246.77,22
+10034,Floor Cleaner,Cleaning,B,CleanAll Ltd.,12,105.14,16
+10041,Ethanol,Chemicals,A,ChemSupply Co.,19,202.27,22
+10043,Trash Bags,Cleaning,C,ChemSupply Co.,25,82.33,32
+10045,Sodium Hydroxide,Chemicals,A,ChemSupply Co.,16,237.6,20
+10047,Acetone,Chemicals,A,FurniTech,20,172.29,25
+10048,All-Purpose Cleaner,Cleaning,C,CleanAll Ltd.,18,42.76,23
+10050,Paper A4,Office Supplies,D,OfficeMax,42,13.85,50
+10054,Centrifuge,Laboratory,A,FurniTech,19,272.16,24
+10060,Hand Sanitizer,Cleaning,B,TechWorld Inc.,10,106.52,31
+10061,Ethanol,Chemicals,A,TechWorld Inc.,10,108.66,13
+10062,Laptop,Electronics,D,CleanAll Ltd.,33,29.3,47
+10066,Chloroform,Chemicals,A,TechWorld Inc.,6,247.3,19
+10067,Laptop,Electronics,C,CleanAll Ltd.,25,93.93,32
+10068,pH Meter,Laboratory,A,CleanAll Ltd.,11,172.83,18
+10069,External Hard Drive,Electronics,B,OfficeMax,10,145.07,34
+10073,Lab Coat,Safety Equipment,D,TechWorld Inc.,36,24.58,46
+10074,Scanner,Electronics,B,OfficeMax,23,132.36,28
+10076,Tablet,Electronics,D,CleanAll Ltd.,26,56.46,33
+10078,Trash Bags,Cleaning,C,CleanAll Ltd.,26,55.67,30
+10080,Printer,Electronics,D,CleanAll Ltd.,39,57.07,49
+10087,Petri Dishes,Laboratory,A,CleanAll Ltd.,15,272.8,19
+10089,Stapler,Office Supplies,D,TechWorld Inc.,24,53.18,30
+10091,Beakers,Laboratory,A,CleanAll Ltd.,18,117.08,23
+10094,Tablet,Electronics,D,ChemSupply Co.,31,7.14,43
+10098,First Aid Kit,Safety Equipment,D,FurniTech,47,10.98,49

@@ -43,10 +43,19 @@ def plot_histogram(df: pd.DataFrame, col: str) -> str:
 
 def plot_line(df: pd.DataFrame, x_col: str, y_col: str) -> str:
     logging.info(f"plot_line called on {x_col} vs {y_col}")
-    fig, ax = plt.subplots(figsize=(6,4))
-    ax.plot(df[x_col], df[y_col], marker='o')
+    fig, ax = plt.subplots(figsize=(10,6))
+    n_points = len(df)
+    if n_points > 2000:
+        hb = ax.hexbin(df[x_col], df[y_col], gridsize=50, cmap='Blues', mincnt=1, alpha=0.7)
+        plt.colorbar(hb, ax=ax, label='Count in bin')
+    elif n_points > 500:
+        ax.scatter(df[x_col], df[y_col], s=10, alpha=0.3)
+    else:
+        ax.plot(df[x_col], df[y_col], marker='o')
     ax.set_title(f"{y_col} vs {x_col}")
-    ax.set_xlabel(x_col); ax.set_ylabel(y_col)
+    ax.set_xlabel(x_col)
+    ax.set_ylabel(y_col)
+    ax.grid(True, linestyle='--', alpha=0.5)
     return save_plot(fig, f"{x_col}_{y_col}_line.png")
 
 def plot_stock_levels(df: pd.DataFrame) -> str:
@@ -74,10 +83,17 @@ def plot_box(df: pd.DataFrame, col: str) -> str:
 
 def plot_scatter(df: pd.DataFrame, x_col: str, y_col: str) -> str:
     logging.info(f"plot_scatter called on {x_col} vs {y_col}")
-    fig, ax = plt.subplots(figsize=(6,4))
-    ax.scatter(df[x_col], df[y_col])
+    fig, ax = plt.subplots(figsize=(10,6))
+    n_points = len(df)
+    if n_points > 2000:
+        hb = ax.hexbin(df[x_col], df[y_col], gridsize=50, cmap='Blues', mincnt=1, alpha=0.7)
+        plt.colorbar(hb, ax=ax, label='Count in bin')
+    else:
+        ax.scatter(df[x_col], df[y_col], s=10, alpha=0.3)
     ax.set_title(f"{y_col} vs {x_col}")
-    ax.set_xlabel(x_col); ax.set_ylabel(y_col)
+    ax.set_xlabel(x_col)
+    ax.set_ylabel(y_col)
+    ax.grid(True, linestyle='--', alpha=0.5)
     return save_plot(fig, f"{x_col}_{y_col}_scatter.png")
 
 def plot_hazard_distribution(df: pd.DataFrame) -> str:
